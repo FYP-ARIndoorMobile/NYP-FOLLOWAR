@@ -13,12 +13,10 @@ public class Button : BaseButtonController
 
     public Transform[] desk;
 
-
     void Start()
     {
         rootG = line.GetComponent<meshLine>();
         rootController = Controller.GetComponent<RootController>();
-
     }
 
     protected override void OnClick(string objectName)

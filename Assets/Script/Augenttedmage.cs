@@ -6,7 +6,7 @@ using GoogleARCore;
 public class Augenttedmage : MonoBehaviour
 {
     private List<AugmentedImage> augmentedImageList = new List<AugmentedImage>();
-    [SerializeField] private GameObject ObjPrefab;
+    [SerializeField] private GameObject ObjPrefab;   
     [SerializeField] private DebugUIManager UIManager;
     public GameObject arObj = null;
     [SerializeField] private bool isPlaneHorizontal;
@@ -86,11 +86,11 @@ public class Augenttedmage : MonoBehaviour
                         anchor.transform.rotation = lastAnchorRot;
                     }
 
-                    AnchorUpdateBuffer();
+                    //AnchorUpdateBuffer();
                     AlineWithGround(arObj);
 
                     //Print Rotation
-                    //UIManager.UpdatingDebugLog("R: " + arObj.transform.rotation.eulerAngles.ToString());
+                    UIManager.UpdatingDebugLog("R: " + arObj.transform.rotation.eulerAngles.ToString());
 
                     //DisplayAnchorChange();
                 }
