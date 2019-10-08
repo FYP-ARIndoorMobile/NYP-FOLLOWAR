@@ -13,12 +13,13 @@ public class Button : BaseButtonController
 
     public Transform[] desk;
 
+    [SerializeField] private GameObject endPointObj;
 
     void Start()
     {
         rootG = line.GetComponent<meshLine>();
         rootController = Controller.GetComponent<RootController>();
-
+        //Instantiate(endPointObj, desk[0].transform.position + new Vector3(0,1,0), Quaternion.identity);
     }
 
     protected override void OnClick(string objectName)
@@ -36,14 +37,46 @@ public class Button : BaseButtonController
     private void ButtonClick(string objectName)
     {
         Reset();
-        if ("Button1".Equals(objectName)) { rootG.target = desk[0]; rootController.InstantiateFlag = true; }
-        if ("Button2".Equals(objectName)) { rootG.target = desk[1]; rootController.InstantiateFlag = true; }
-        if ("Button3".Equals(objectName)) { rootG.target = desk[2]; rootController.InstantiateFlag = true; }
-        if ("Button4".Equals(objectName)) { rootG.target = desk[3]; rootController.InstantiateFlag = true; }
-        if ("Button5".Equals(objectName)) { rootG.target = desk[4]; rootController.InstantiateFlag = true; }
-        if ("Button6".Equals(objectName)) { rootG.target = desk[5]; rootController.InstantiateFlag = true; }
-        if ("Button7".Equals(objectName)) { rootG.target = desk[6]; rootController.InstantiateFlag = true; }
-        if ("Button8".Equals(objectName)) { rootG.target = desk[7]; rootController.InstantiateFlag = true; }
+        if ("Button1".Equals(objectName)) 
+        {
+            rootG.target = desk[0]; rootController.InstantiateFlag = true;
+            Instantiate(endPointObj, desk[0].transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+        }
+        if ("Button2".Equals(objectName)) 
+        {
+            rootG.target = desk[1]; rootController.InstantiateFlag = true;
+            Instantiate(endPointObj, desk[1].transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+        }
+        if ("Button3".Equals(objectName)) 
+        {
+            rootG.target = desk[2]; rootController.InstantiateFlag = true;
+            Instantiate(endPointObj, desk[2].transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+        }
+        if ("Button4".Equals(objectName)) 
+        {
+            rootG.target = desk[3]; rootController.InstantiateFlag = true;
+            Instantiate(endPointObj, desk[3].transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+        }
+        if ("Button5".Equals(objectName)) 
+        {
+            rootG.target = desk[4]; rootController.InstantiateFlag = true;
+            Instantiate(endPointObj, desk[4].transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+        }
+        if ("Button6".Equals(objectName)) 
+        {
+            rootG.target = desk[5]; rootController.InstantiateFlag = true;
+            Instantiate(endPointObj, desk[5].transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+        }
+        if ("Button7".Equals(objectName)) 
+        {
+            rootG.target = desk[6]; rootController.InstantiateFlag = true;
+            Instantiate(endPointObj, desk[6].transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+        }
+        if ("Button8".Equals(objectName))
+        {
+            rootG.target = desk[7]; rootController.InstantiateFlag = true;
+            Instantiate(endPointObj, desk[7].transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+        }
     }
 
     //private void Button2Click()
