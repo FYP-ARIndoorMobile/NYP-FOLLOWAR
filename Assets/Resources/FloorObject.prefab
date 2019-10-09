@@ -2575,7 +2575,7 @@ MonoBehaviour:
   - {fileID: 856910294963719804}
   - {fileID: 856910295843446644}
   - {fileID: 856910295688147725}
-  endPointObj: {fileID: 3303228037145261827, guid: 8cfef656c31de0f4a87919156e490302,
+  endPointObj: {fileID: 3303228037145227724, guid: 8cfef656c31de0f4a87919156e490302,
     type: 3}
 --- !u!1 &856910296292190455
 GameObject:
