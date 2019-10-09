@@ -19,6 +19,9 @@ public class SetLocation : MonoBehaviour
     [SerializeField]
     double lng;
 
+    [SerializeField]
+    float posHeight;
+
     protected virtual void Awake()
     {
         if (_map == null)
@@ -34,6 +37,7 @@ public class SetLocation : MonoBehaviour
     void moveWaypointToGeoLocation()
     {
         waypoint.MoveToGeocoordinate(lat, lng, _map.CenterMercator, _map.WorldRelativeScale);
+        waypoint.transform.position = new Vector3(transform.position.x, transform.position.y + posHeight, transform.position.z);
     }
 }
 
