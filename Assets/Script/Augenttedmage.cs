@@ -90,7 +90,7 @@ public class Augenttedmage : MonoBehaviour
                     AlineWithGround(arObj);
 
                     //Print Rotation
-                    UIManager.UpdatingDebugLog("R: " + arObj.transform.rotation.eulerAngles.ToString());
+                    //UIManager.UpdatingDebugLog("R: " + arObj.transform.rotation.eulerAngles.ToString());
 
                     //DisplayAnchorChange();
                 }

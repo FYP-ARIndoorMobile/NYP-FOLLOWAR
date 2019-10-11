@@ -2565,7 +2565,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   line: {fileID: 856910296220881056}
-  Controller: {fileID: 856910295338783533}
   desk:
   - {fileID: 856910295374746822}
   - {fileID: 856910295810264049}
