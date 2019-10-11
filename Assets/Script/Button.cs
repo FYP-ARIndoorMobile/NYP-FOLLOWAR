@@ -39,42 +39,42 @@ public class Button : BaseButtonController
         Reset();
         if ("Button1".Equals(objectName)) 
         {
-            rootG.target = desk[0]; rootController.InstantiateFlag = true;
+            rootG.target = desk[0];
             Instantiate(endPointObj, desk[0].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
         }
         if ("Button2".Equals(objectName)) 
         {
-            rootG.target = desk[1]; rootController.InstantiateFlag = true;
+            rootG.target = desk[1];
             Instantiate(endPointObj, desk[1].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
         }
         if ("Button3".Equals(objectName)) 
         {
-            rootG.target = desk[2]; rootController.InstantiateFlag = true;
+            rootG.target = desk[2];
             Instantiate(endPointObj, desk[2].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
         }
         if ("Button4".Equals(objectName)) 
         {
-            rootG.target = desk[3]; rootController.InstantiateFlag = true;
+            rootG.target = desk[3];
             Instantiate(endPointObj, desk[3].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
         }
         if ("Button5".Equals(objectName)) 
         {
-            rootG.target = desk[4]; rootController.InstantiateFlag = true;
+            rootG.target = desk[4];
             Instantiate(endPointObj, desk[4].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
         }
         if ("Button6".Equals(objectName)) 
         {
-            rootG.target = desk[5]; rootController.InstantiateFlag = true;
+            rootG.target = desk[5];
             Instantiate(endPointObj, desk[5].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
         }
         if ("Button7".Equals(objectName)) 
         {
-            rootG.target = desk[6]; rootController.InstantiateFlag = true;
+            rootG.target = desk[6];
             Instantiate(endPointObj, desk[6].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
         }
         if ("Button8".Equals(objectName))
         {
-            rootG.target = desk[7]; rootController.InstantiateFlag = true;
+            rootG.target = desk[7];
             Instantiate(endPointObj, desk[7].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
         }
     }

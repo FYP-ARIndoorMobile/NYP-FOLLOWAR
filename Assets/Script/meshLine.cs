@@ -7,7 +7,7 @@ public class meshLine : MonoBehaviour
 {
     public Transform target;        // 目的地
 
-    [SerializeField] NavMeshAgent agent;     // 追いかける物
+    [SerializeField] NavMeshAgent[] agent;     // 追いかける物
 
     [SerializeField] LineRenderer line;      // ターゲットまでの道のり
 
@@ -23,13 +23,14 @@ public class meshLine : MonoBehaviour
     void Update()
     {
         // 目的地を設定   Set the destination
-        agent.SetDestination(target.position);
+        agent[0].SetDestination(target.position);
+        agent[1].SetDestination(target.position);
 
         // 経路取得       Get route
         path = new NavMeshPath();
 
         // 経路計算       Route calculation
-        agent.CalculatePath(target.position, path);
+        agent[1].CalculatePath(target.position, path);
 
         // 線を描画       LineRender
         line.positionCount = path.corners.Length;
