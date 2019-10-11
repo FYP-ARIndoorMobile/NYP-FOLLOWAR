@@ -55,16 +55,6 @@ public class Augenttedmage : MonoBehaviour
                         PosOffset = new Vector3(0, 0, -14);
                         RotOffset = new Vector3(0, 0, 0);
                     }
-                    //else if (image.Name == "Keyboard")
-                    //{
-                    //    UIManager.DebugLog("Keyboard");
-                    //    RotOffset = new Vector3(0, 0, 0);
-                    //}
-                    //else if (image.Name == "Winter")
-                    //{
-                    //    UIManager.DebugLog("Winter");
-                    //    RotOffset = new Vector3(0, 0, 0);
-                    //}
                     DebugUIManager.instance.DebugLog("Offset: " + PosOffset.ToString() + RotOffset.ToString());
                 }
                 else
