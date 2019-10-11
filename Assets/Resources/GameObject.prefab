@@ -2363,7 +2363,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b79a1d85425a34988d0583a2a714da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 6537604220604099598}
+  StartingPoint: {fileID: 5757698227683151471}
+  arrowPoint: {fileID: 228675901308858756}
   agent:
   - {fileID: 6954591178307331903}
   - {fileID: 5435524776805559021}
@@ -2392,7 +2394,7 @@ MonoBehaviour:
   - {fileID: 7370145810617068500}
   - {fileID: 6799773589761897399}
   - {fileID: 6386982187481921563}
-  endPointObj: {fileID: 3303228037145227724, guid: 8cfef656c31de0f4a87919156e490302,
+  endPointPrefab: {fileID: 3303228037145227724, guid: 8cfef656c31de0f4a87919156e490302,
     type: 3}
 --- !u!1 &5848991086269164978
 GameObject:

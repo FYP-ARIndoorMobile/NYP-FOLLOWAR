@@ -7,7 +7,6 @@ public class Augenttedmage : MonoBehaviour
 {
     private List<AugmentedImage> augmentedImageList = new List<AugmentedImage>();
     [SerializeField] private GameObject ObjPrefab;   
-    [SerializeField] private DebugUIManager UIManager;
     public GameObject arObj = null;
     [SerializeField] private bool isPlaneHorizontal;
     private Vector3 PosOffset, RotOffset;
@@ -22,7 +21,7 @@ public class Augenttedmage : MonoBehaviour
 
     void Update()
     {
-        UIManager.UpdateStatus(Session.Status, false);
+        DebugUIManager.instance.UpdateStatus(Session.Status, false);
         if (Session.Status != SessionStatus.Tracking)
         {
             //  Return because I can't track
@@ -36,7 +35,7 @@ public class Augenttedmage : MonoBehaviour
         {
             if (image.TrackingState == TrackingState.Tracking)
             {
-                UIManager.UpdateStatus(Session.Status, true);
+                DebugUIManager.instance.UpdateStatus(Session.Status, true);
                 if (arObj == null)
                 {
                     //トラッキング中かつarObjがNullなのでオブジェクトを生成する
@@ -47,26 +46,16 @@ public class Augenttedmage : MonoBehaviour
 
                     if (image.Name == "Earth")
                     {
-                        UIManager.DebugLog("Earth detected");
+                        DebugUIManager.instance.DebugLog("Earth detected");
                         RotOffset = new Vector3(0, 0, 180);
                     }
                     else if (image.Name == "Cafe")
                     {
-                        UIManager.DebugLog("Cafe detected");
+                        DebugUIManager.instance.DebugLog("Cafe detected");
                         PosOffset = new Vector3(0, 0, -14);
                         RotOffset = new Vector3(0, 0, 0);
                     }
-                    //else if (image.Name == "Keyboard")
-                    //{
-                    //    UIManager.DebugLog("Keyboard");
-                    //    RotOffset = new Vector3(0, 0, 0);
-                    //}
-                    //else if (image.Name == "Winter")
-                    //{
-                    //    UIManager.DebugLog("Winter");
-                    //    RotOffset = new Vector3(0, 0, 0);
-                    //}
-                    UIManager.DebugLog("Offset: " + PosOffset.ToString() + RotOffset.ToString());
+                    DebugUIManager.instance.DebugLog("Offset: " + PosOffset.ToString() + RotOffset.ToString());
                 }
                 else
                 {
@@ -108,7 +97,7 @@ public class Augenttedmage : MonoBehaviour
         //Only update anchor position after it updates beyond a certain distance
         if (Vector3.Distance(anchor.transform.position, lastAnchorPos) > bufferDist)
         {
-            UIManager.DebugLog("Anchor moved (>" + bufferDist + "): " + Vector3.Distance(anchor.transform.position, lastAnchorPos).ToString());
+            DebugUIManager.instance.DebugLog("Anchor moved (>" + bufferDist + "): " + Vector3.Distance(anchor.transform.position, lastAnchorPos).ToString());
             lastAnchorPos = anchor.transform.position;
         }
         else
@@ -118,7 +107,7 @@ public class Augenttedmage : MonoBehaviour
         //Only update anchor rotation after it updates beyond a certain angle
         if (Quaternion.Angle(anchor.transform.rotation, lastAnchorRot) > bufferAngle)
         {
-            UIManager.DebugLog("Anchor rotated (>" + bufferAngle + "): " + Quaternion.Angle(anchor.transform.rotation, lastAnchorRot).ToString());
+            DebugUIManager.instance.DebugLog("Anchor rotated (>" + bufferAngle + "): " + Quaternion.Angle(anchor.transform.rotation, lastAnchorRot).ToString());
             lastAnchorRot = anchor.transform.rotation;
         }
         else
@@ -131,12 +120,12 @@ public class Augenttedmage : MonoBehaviour
     {
         if (anchor.transform.position != lastAnchorPos)
         {
-            UIManager.DebugLog("Anchor moved: " + (Vector3.Distance(anchor.transform.position, lastAnchorPos)).ToString());
+            DebugUIManager.instance.DebugLog("Anchor moved: " + (Vector3.Distance(anchor.transform.position, lastAnchorPos)).ToString());
             lastAnchorPos = anchor.transform.position;
         }
         if (anchor.transform.rotation != lastAnchorRot)
         {
-            UIManager.DebugLog("Anchor rotated: " + (Quaternion.Angle(anchor.transform.rotation, lastAnchorRot)).ToString());
+            DebugUIManager.instance.DebugLog("Anchor rotated: " + (Quaternion.Angle(anchor.transform.rotation, lastAnchorRot)).ToString());
             lastAnchorRot = anchor.transform.rotation;
         }
     }

@@ -4,30 +4,29 @@ using UnityEngine;
 
 public class DebugButtonInput : MonoBehaviour
 {
-    public DebugUIManager UIManager;
 
     public void buttonToggleStatus()
     {
-        UIManager.ToggleStatus();
+        DebugUIManager.instance.ToggleStatus();
     }
 
     public void buttonToggleCaminfo()
     {
-        UIManager.ToggleCamPos();
+        DebugUIManager.instance.ToggleCamPos();
     }
 
     public void buttonToggleFPS()
     {
-        UIManager.ToggleFPS();
+        DebugUIManager.instance.ToggleFPS();
     }
 
     public void buttonToggleDebug()
     {
-        UIManager.ToggleDebug();
+        DebugUIManager.instance.ToggleDebug();
     }
 
     public void buttonLock()
     {
-        UIManager.LockButon();
+        DebugUIManager.instance.LockButon();
     }
 }
