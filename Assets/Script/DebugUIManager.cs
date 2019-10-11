@@ -7,6 +7,8 @@ using GoogleARCore;
 
 public class DebugUIManager : MonoBehaviour
 {
+    public static DebugUIManager instance = null;
+
     public TextMeshProUGUI CamPos, trackingStatus, debug, FPS;
     public Camera FirstPersonCamera;
     public GameObject PointCloud, PlaneVis;
@@ -14,6 +16,19 @@ public class DebugUIManager : MonoBehaviour
     public UnityEngine.UI.Button buttonLock;
     public bool boolStatus, boolCamPos, boolDebug, boolFPS, boolPointCloud, boolPlaneVis, boolLock;
     private SessionStatus CurrStatus;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+    }
 
     void Start()
     {
