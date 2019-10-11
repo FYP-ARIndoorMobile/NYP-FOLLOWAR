@@ -28,7 +28,6 @@ public class DebugUIManager : MonoBehaviour
             Destroy(this.gameObject);
             return;
         }
-        ////Test
     }
 
     void Start()
