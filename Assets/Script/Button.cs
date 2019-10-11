@@ -166,6 +166,9 @@ public class Button : BaseButtonController
     {
         GameObject[] deskTag = GameObject.FindGameObjectsWithTag("Star");
 
+        rootG.arrowPoint.transform.position = rootG.StartingPoint.transform.position;
+
+
         for (int i = 0; i < deskTag.Length; i++)
         {
             Destroy(deskTag[i]);

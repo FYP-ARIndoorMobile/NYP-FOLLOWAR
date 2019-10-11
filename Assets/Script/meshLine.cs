@@ -7,6 +7,9 @@ public class meshLine : MonoBehaviour
 {
     public Transform target;        // 目的地
 
+    public GameObject StartingPoint;    // statePoint
+    public GameObject arrowPoint;           // arrowObj
+
     [SerializeField] NavMeshAgent[] agent;     // 追いかける物
 
     [SerializeField] LineRenderer line;      // ターゲットまでの道のり
