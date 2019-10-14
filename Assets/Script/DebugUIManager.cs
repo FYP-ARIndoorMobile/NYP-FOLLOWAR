@@ -159,4 +159,9 @@ public class DebugUIManager : MonoBehaviour
             DebugLog(lockStatus);
         }
     }
+
+    public void LogPosition()
+    {
+        DebugLog(FirstPersonCamera.transform.position.ToString() + "\n");
+    }
 }

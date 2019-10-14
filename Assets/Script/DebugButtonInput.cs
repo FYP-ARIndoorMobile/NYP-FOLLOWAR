@@ -29,4 +29,9 @@ public class DebugButtonInput : MonoBehaviour
     {
         DebugUIManager.instance.LockButon();
     }
+
+    public void buttonLogPos()
+    {
+        DebugUIManager.instance.LogPosition();
+    }
 }
