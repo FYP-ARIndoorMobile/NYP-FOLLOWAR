@@ -20,12 +20,13 @@ public class Button : BaseButtonController
     {
         rootG = line.GetComponent<meshLine>();
         rootController = Controller.GetComponent<RootController>();
+
     }
 
 
     private void Update()
     {
-        if (endPointObj == null)
+       if (endPointObj != null)
         {
             endPointObj.transform.rotation = Quaternion.Euler(0, endPointObj.transform.rotation.eulerAngles.y, 0);
         }
@@ -50,7 +51,7 @@ public class Button : BaseButtonController
             rootG.target = desk[0];
             if (endPointObj == null)
             {
-                Instantiate(endPointPrefab, desk[0].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
+                endPointObj = Instantiate(endPointPrefab, desk[0].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
             }
             else
             {
