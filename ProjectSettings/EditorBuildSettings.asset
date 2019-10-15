@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/IndoorAR.unity
     guid: 08f2158c737abdc4088c737b6a5ac1b1
   - enabled: 1
+    path: Assets/Scenes/MapBoxScenes/Instruction.unity
+    guid: a336379c22be73e4eb2b93fc1eef9af7
+  - enabled: 1
     path: Assets/Scenes/MapBoxScenes/GPSAR.unity
     guid: ca0e3f239d3b75a4fbaf8029f20913be
   m_configObjects: {}
