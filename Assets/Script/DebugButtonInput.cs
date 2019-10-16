@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DebugButtonInput : MonoBehaviour
 {
-
     public void buttonToggleStatus()
     {
         DebugUIManager.instance.ToggleStatus();

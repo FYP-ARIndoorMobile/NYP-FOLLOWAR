@@ -129,4 +129,9 @@ public class Augenttedmage : MonoBehaviour
             lastAnchorRot = anchor.transform.rotation;
         }
     }
+
+    public GameObject GetArObj()
+    {
+        return arObj;
+    }
 }
