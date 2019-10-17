@@ -21,6 +21,8 @@ public class Augenttedmage : MonoBehaviour
 
     void Update()
     {
+       // GameObject obj = (GameObject)Resources.Load("Level6_Corridor");
+
         DebugUIManager.instance.UpdateStatus(Session.Status, false);
         if (Session.Status != SessionStatus.Tracking)
         {
@@ -46,9 +48,15 @@ public class Augenttedmage : MonoBehaviour
 
                     if (image.Name == "Keyboard")
                     {
+                      //  obj = GameObject.FindWithTag("root1");
+
+                       // obj.SetActive(false);
+
                         DebugUIManager.instance.DebugLog("Earth detected");
                         PosOffset = new Vector3(7.4f, 0, 0);
                         RotOffset = new Vector3(0, 0, 180);
+                       // PosOffset = new Vector3(-6.9f, 0, 0);
+
                     }
                     else if (image.Name == "Cafe")
                     {

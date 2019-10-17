@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Star
   - root1
+  - root2
   layers:
   - Default
   - TransparentFX
