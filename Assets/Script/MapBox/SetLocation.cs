@@ -39,6 +39,31 @@ public class SetLocation : MonoBehaviour
         waypoint.MoveToGeocoordinate(lat, lng, _map.CenterMercator, _map.WorldRelativeScale);
         waypoint.transform.position = new Vector3(transform.position.x, transform.position.y + posHeight, transform.position.z);
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "Player")
+        {
+            this.gameObject.SetActive(true);
+            Debug.Log("OnTriggerEnter True");
+        }
+    }
+    void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.name == "Player")
+        {
+            this.gameObject.SetActive(true);
+            Debug.Log("OnTriggerEnter True");
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name == "Player")
+        {
+            this.gameObject.SetActive(false);
+            Debug.Log("OnTriggerExit");
+        }
+    }
 }
 
 

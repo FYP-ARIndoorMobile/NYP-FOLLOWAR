@@ -159,7 +159,7 @@ namespace Mapbox.Unity.Ar
 					);
 
 					var position = _map.GeoToWorldPosition(latitudeLongitude, false);
-					position.y = _map.Root.position.y;
+					position.y = _map.Root.position.y + -5;
 					_synchronizationContext.AddSynchronizationNodes(location, position, _arPositionReference.localPosition);
 				}
 			}
