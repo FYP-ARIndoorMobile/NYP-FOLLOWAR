@@ -225,13 +225,13 @@ public class Button : BaseButtonController
             }
         }
 
-        if (nearestObject != null)
-        {
-            DebugUIManager.instance.UpdatingDebugLog(nearestObject.name);
-        }
-        else
-        {
-            DebugUIManager.instance.UpdatingDebugLog("No OBJ");
-        }
+        //if (nearestObject != null)
+        //{
+        //    DebugUIManager.instance.UpdatingDebugLog(nearestObject.name);
+        //}
+        //else
+        //{
+        //    DebugUIManager.instance.UpdatingDebugLog("No OBJ");
+        //}
     }
 }
