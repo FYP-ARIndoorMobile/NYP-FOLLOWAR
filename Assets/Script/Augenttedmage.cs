@@ -44,17 +44,26 @@ public class Augenttedmage : MonoBehaviour
                     lastAnchorRot = anchor.transform.rotation;
                     arObj = Instantiate(ObjPrefab, anchor.transform);
 
-                    if (image.Name == "Earth")
+                    if (image.Name == "Keyboard")
                     {
                         DebugUIManager.instance.DebugLog("Earth detected");
+                        PosOffset = new Vector3(7.4f, 0, 0);
                         RotOffset = new Vector3(0, 0, 180);
                     }
                     else if (image.Name == "Cafe")
                     {
                         DebugUIManager.instance.DebugLog("Cafe detected");
-                        PosOffset = new Vector3(0, 0, -14);
-                        RotOffset = new Vector3(0, 0, 0);
+                        PosOffset = new Vector3(-7, 0, -3);
+                        RotOffset = new Vector3(0, 0, 90);
                     }
+                    //else if (image.Name == "Cafe")
+                    //{
+                    //    DebugUIManager.instance.DebugLog("Cafe detected");
+                    //}
+                    //else if (image.Name == "Cafe")
+                    //{
+                    //    DebugUIManager.instance.DebugLog("Cafe detected");
+                    //}
                     DebugUIManager.instance.DebugLog("Offset: " + PosOffset.ToString() + RotOffset.ToString());
                 }
                 else

@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b18096f64379c64693c44b1e5a9a174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjPrefab: {fileID: 4317279466087809679, guid: 40f7d791b9d725144aab0b22aac203a0,
+  ObjPrefab: {fileID: 5730705156402006600, guid: 2b4033b5d62e67640ab47fbd4610714d,
     type: 3}
   arObj: {fileID: 0}
   isPlaneHorizontal: 0
