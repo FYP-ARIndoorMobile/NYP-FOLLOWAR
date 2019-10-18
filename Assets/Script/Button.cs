@@ -18,13 +18,12 @@ public class Button : BaseButtonController
 
 
     private bool displayPointOfInterests;
-    public GameObject[] PointOfInterests;
+    [SerializeField] private GameObject[] PointOfInterests;
 
     void Start()
     {
         rootG = line.GetComponent<meshLine>();
         rootController = Controller.GetComponent<RootController>();
-
     }
 
 

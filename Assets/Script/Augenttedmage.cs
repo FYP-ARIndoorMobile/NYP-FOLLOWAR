@@ -45,9 +45,9 @@ public class Augenttedmage : MonoBehaviour
                     lastAnchorRot = anchor.transform.rotation;
                     arObj = Instantiate(ObjPrefab, anchor.transform);
 
-                    if (image.Name == "Keyboard")
+                    if (image.Name == "15")
                     {
-                        DebugUIManager.instance.DebugLog("Earth detected");
+                        DebugUIManager.instance.DebugLog("15 detected");
                         PosOffset = new Vector3(7.4f, 0, 0);
                         RotOffset = new Vector3(0, 0, 180);
                     }
