@@ -16,6 +16,7 @@ public class DebugUIManager : MonoBehaviour
     public UnityEngine.UI.Button buttonLock;
     public bool boolStatus, boolCamPos, boolDebug, boolFPS, boolPointCloud, boolPlaneVis, boolLock;
     private SessionStatus CurrStatus;
+    private bool boolDisplayInterestPoint;
 
     private void Awake()
     {
@@ -158,5 +159,10 @@ public class DebugUIManager : MonoBehaviour
             string lockStatus = (boolLock) ? "Locked" : "UnLocked";
             DebugLog(lockStatus);
         }
+    }
+
+    public void LogPosition()
+    {
+        DebugLog(FirstPersonCamera.transform.position.ToString() + "\n");
     }
 }
