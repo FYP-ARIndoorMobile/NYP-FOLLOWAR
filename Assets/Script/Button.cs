@@ -24,6 +24,11 @@ public class Button : BaseButtonController
     {
         rootG = line.GetComponent<meshLine>();
         rootController = Controller.GetComponent<RootController>();
+
+        foreach (GameObject interestPoint in PointOfInterests)
+        {
+            interestPoint.SetActive(false);
+        }
     }
 
 
