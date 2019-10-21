@@ -15,19 +15,19 @@ MonoBehaviour:
   m_Images:
   - Name: 13
     Width: 0
-    Quality: 90
+    Quality: 
     TextureGUID: b29a7945a141d6643b3607a80c8fcf47
   - Name: 15
     Width: 0
-    Quality: 100
+    Quality: 
     TextureGUID: cdc8aea736d15424f82506bd815fddb5
   - Name: 16
     Width: 0
-    Quality: 80
+    Quality: 
     TextureGUID: f0ef01565e7784240a00967f08d7aafa
   - Name: 19
     Width: 0
-    Quality: 100
+    Quality: 
     TextureGUID: 2ceab212f50b1d142bbcadb7d9cc05b1
   - Name: 2
     Width: 0
