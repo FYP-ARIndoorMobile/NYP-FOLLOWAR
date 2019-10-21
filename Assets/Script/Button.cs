@@ -20,10 +20,14 @@ public class Button : BaseButtonController
     private bool displayPointOfInterests;
     [SerializeField] private GameObject[] PointOfInterests;
 
+
+
     void Start()
     {
         rootG = line.GetComponent<meshLine>();
         rootController = Controller.GetComponent<RootController>();
+    
+   
     }
 
 
@@ -53,7 +57,7 @@ public class Button : BaseButtonController
     private void ButtonClick(string objectName)
     {
         Reset();
-        if ("Button1".Equals(objectName)) 
+        if ("Button1".Equals(objectName))
         {
             rootG.target = desk[0];
             if (endPointObj == null)
@@ -66,7 +70,7 @@ public class Button : BaseButtonController
                 endPointObj.transform.rotation = desk[0].transform.rotation;
             }
         }
-        else if ("Button2".Equals(objectName)) 
+        else if ("Button2".Equals(objectName))
         {
             rootG.target = desk[1];
             if (endPointObj == null)
@@ -79,7 +83,7 @@ public class Button : BaseButtonController
                 endPointObj.transform.rotation = desk[1].transform.rotation;
             }
         }
-        else if ("Button3".Equals(objectName)) 
+        else if ("Button3".Equals(objectName))
         {
             rootG.target = desk[2];
             if (endPointObj == null)
@@ -92,7 +96,7 @@ public class Button : BaseButtonController
                 endPointObj.transform.rotation = desk[2].transform.rotation;
             }
         }
-        else if ("Button4".Equals(objectName)) 
+        else if ("Button4".Equals(objectName))
         {
             rootG.target = desk[3];
             if (endPointObj == null)
@@ -105,7 +109,7 @@ public class Button : BaseButtonController
                 endPointObj.transform.rotation = desk[3].transform.rotation;
             }
         }
-        else if ("Button5".Equals(objectName)) 
+        else if ("Button5".Equals(objectName))
         {
             rootG.target = desk[4];
             if (endPointObj == null)
@@ -118,7 +122,7 @@ public class Button : BaseButtonController
                 endPointObj.transform.rotation = desk[4].transform.rotation;
             }
         }
-        else if ("Button6".Equals(objectName)) 
+        else if ("Button6".Equals(objectName))
         {
             rootG.target = desk[5];
             if (endPointObj == null)
@@ -131,7 +135,7 @@ public class Button : BaseButtonController
                 endPointObj.transform.rotation = desk[5].transform.rotation;
             }
         }
-        else if ("Button7".Equals(objectName)) 
+        else if ("Button7".Equals(objectName))
         {
             rootG.target = desk[6];
             if (endPointObj == null)
@@ -161,6 +165,7 @@ public class Button : BaseButtonController
         {
             TogglePointOfInterets();
         }
+      
     }
 
     //private void Button2Click()
