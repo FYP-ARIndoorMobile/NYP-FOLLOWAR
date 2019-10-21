@@ -19,6 +19,8 @@ public class Augenttedmage : MonoBehaviour
     public float bufferDist;
     public float bufferAngle;
 
+    private GameObject[] spawnPoints;
+
     void Update()
     {
 
@@ -43,29 +45,24 @@ public class Augenttedmage : MonoBehaviour
                     anchor = image.CreateAnchor(image.CenterPose);
                     lastAnchorPos = anchor.transform.position;
                     lastAnchorRot = anchor.transform.rotation;
-                    arObj = Instantiate(ObjPrefab, anchor.transform);
 
-                    if (image.Name == "15")
-                    {
-                        DebugUIManager.instance.DebugLog("15 detected");
-                        PosOffset = new Vector3(7.4f, 0, 0);
-                        RotOffset = new Vector3(0, 0, 180);
-                    }
-                    else if (image.Name == "Cafe")
-                    {
-                        DebugUIManager.instance.DebugLog("Cafe detected");
-                        PosOffset = new Vector3(-7, 0, -3);
-                        RotOffset = new Vector3(0, 0, 90);
-                    }
-                    //else if (image.Name == "Cafe")
+                    //arObj = Instantiate(ObjPrefab, anchor.transform);
+
+                    arObj = SpawnAt(image.Name, anchor);
+
+                    //if (image.Name == "15")
                     //{
-                    //    DebugUIManager.instance.DebugLog("Cafe detected");
+                    //    DebugUIManager.instance.DebugLog("15 detected");
+                    //    PosOffset = new Vector3(7.4f, 0, 0);
+                    //    RotOffset = new Vector3(0, 0, 180);
                     //}
                     //else if (image.Name == "Cafe")
                     //{
                     //    DebugUIManager.instance.DebugLog("Cafe detected");
+                    //    PosOffset = new Vector3(-7, 0, -3);
+                    //    RotOffset = new Vector3(0, 0, 90);
                     //}
-                    DebugUIManager.instance.DebugLog("Offset: " + PosOffset.ToString() + RotOffset.ToString());
+                    //DebugUIManager.instance.DebugLog("Offset: " + PosOffset.ToString() + RotOffset.ToString());
                 }
                 else
                 {
@@ -73,9 +70,9 @@ public class Augenttedmage : MonoBehaviour
                     //トラッキング中かつarObjが既に存在するので位置・回転の更新を行う。
                     //Apply appopriate offset
                     arObj.transform.position = image.CenterPose.position;
-                    arObj.transform.position += arObj.transform.TransformPoint(PosOffset);
+                    //arObj.transform.position += arObj.transform.TransformPoint(PosOffset);
                     arObj.transform.rotation = image.CenterPose.rotation;
-                    arObj.transform.Rotate(RotOffset);
+                    //arObj.transform.Rotate(RotOffset);
                     if (isPlaneHorizontal == false)
                         arObj.transform.Rotate(90, 0, 0);
 
@@ -143,5 +140,33 @@ public class Augenttedmage : MonoBehaviour
     public GameObject GetArObj()
     {
         return arObj;
+    }
+
+    private GameObject SpawnAt(string spawnPointName, Anchor anchor)
+    {
+        DebugUIManager.instance.DebugLog("Detected " + spawnPointName);
+
+        GameObject hallwayPrefab = Instantiate(new GameObject(), anchor.transform);
+        GameObject hallwayPrefabChild = Instantiate(ObjPrefab, hallwayPrefab.transform);
+
+        Button hallwayPrefabChildCombined = hallwayPrefabChild.GetComponentInChildren<Button>();
+        spawnPoints = hallwayPrefabChildCombined.GetSpawnPoints();
+
+        foreach (GameObject spawnPoint in spawnPoints)
+        {
+            if (spawnPoint.name == spawnPointName)
+            {
+                hallwayPrefabChildCombined.transform.position = -spawnPoint.transform.position;
+                //hallwayPrefab.transform.rotation = spawnPoint.transform.rotation;
+
+                DebugUIManager.instance.DebugLog("Spawning at" + (-spawnPoint.transform.position).ToString());
+                return hallwayPrefab;
+            }
+        }
+
+        DebugUIManager.instance.DebugLog("Spawn Error");
+        return null;
+        //hallwayPrefabChild.transform.position = spawnPoint.transform.position;
+        //hallwayPrefab.transform.rotation = spawnPoint.transform.rotation;
     }
 }

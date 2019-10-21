@@ -20,6 +20,8 @@ public class Button : BaseButtonController
     private bool displayPointOfInterests;
     [SerializeField] private GameObject[] PointOfInterests;
 
+    [SerializeField] private GameObject[] spawnPoints;
+
     void Start()
     {
         rootG = line.GetComponent<meshLine>();
@@ -237,5 +239,10 @@ public class Button : BaseButtonController
         //{
         //    DebugUIManager.instance.UpdatingDebugLog("No OBJ");
         //}
+    }
+
+    public GameObject[] GetSpawnPoints()
+    {
+        return spawnPoints;
     }
 }
