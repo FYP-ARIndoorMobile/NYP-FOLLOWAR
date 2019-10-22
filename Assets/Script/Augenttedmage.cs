@@ -20,6 +20,7 @@ public class Augenttedmage : MonoBehaviour
     public float bufferAngle;
 
     private GameObject[] spawnPoints;
+    private float spawnPointRotation;
 
     void Update()
     {
@@ -48,7 +49,7 @@ public class Augenttedmage : MonoBehaviour
 
                     //arObj = Instantiate(ObjPrefab, anchor.transform);
 
-                    arObj = SpawnAt(image.Name, anchor);
+                    spawnPointRotation = SpawnAt(image.Name, anchor);
 
                     //if (image.Name == "15")
                     //{
@@ -90,8 +91,8 @@ public class Augenttedmage : MonoBehaviour
 
                     //DisplayAnchorChange();
 
-                    arObj.transform.Rotate(Vector3.up * 90);
-                    DebugUIManager.instance.UpdatingDebugLog(arObj.transform.rotation.eulerAngles.ToString());
+                    arObj.transform.Rotate(Vector3.up * spawnPointRotation);
+                    //DebugUIManager.instance.UpdatingDebugLog(arObj.transform.rotation.eulerAngles.ToString());
                 }
             }
         }
@@ -145,7 +146,7 @@ public class Augenttedmage : MonoBehaviour
         return arObj;
     }
 
-    private GameObject SpawnAt(string spawnPointName, Anchor anchor)
+    private float SpawnAt(string spawnPointName, Anchor anchor)
     {
         DebugUIManager.instance.DebugLog("Detected " + spawnPointName);
 
@@ -163,11 +164,13 @@ public class Augenttedmage : MonoBehaviour
                 //hallwayPrefab.transform.rotation = spawnPoint.transform.rotation;
 
                 DebugUIManager.instance.DebugLog("Spawning at" + (-spawnPoint.transform.position).ToString());
-                return hallwayPrefab;
+                DebugUIManager.instance.DebugLog("with rotation: " + spawnPoint.transform.rotation.eulerAngles.y);
+                arObj = hallwayPrefab;
+                return spawnPoint.transform.rotation.eulerAngles.y;
             }
         }
 
         DebugUIManager.instance.DebugLog("Spawn Error");
-        return null;
+        return 0;
     }
 }
