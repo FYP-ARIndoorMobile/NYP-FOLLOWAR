@@ -18,10 +18,13 @@ namespace Mapbox.Examples
 
 		[SerializeField]
 		AnimationCurve _curve;
-
+        [SerializeField]
+        GameObject _disablePrefab;
 		AbstractMap _map;
 		void Awake()
 		{
+            _disablePrefab.gameObject.SetActive(false);
+
 			_map = FindObjectOfType<AbstractMap>();
 			_map.OnInitialized += _map_OnInitialized;
 
@@ -44,7 +47,8 @@ namespace Mapbox.Examples
 				if (s == ModuleState.Finished)
 				{
 					_content.SetActive(false);
-				}
+                    _disablePrefab.gameObject.SetActive(true);
+                }
 				else if (s == ModuleState.Working)
 				{
 

@@ -13,8 +13,8 @@
 		Vector3 _cameraStartPos;
 		AbstractMap _map;
 
-		[SerializeField]
-		ForwardGeocodeUserInput _forwardGeocoder;
+		//[SerializeField]
+		//ForwardGeocodeUserInput _forwardGeocoder;
 
 		[SerializeField]
 		Slider _zoomSlider;
@@ -40,11 +40,11 @@
 				_map.OnUpdated += () => { _zoomSlider.value = _map.Zoom; };
 				_zoomSlider.onValueChanged.AddListener(Reload);
 			}
-			if(_forwardGeocoder != null)
-			{
-				_forwardGeocoder.OnGeocoderResponse += ForwardGeocoder_OnGeocoderResponse;
-			}
-			_heroBuildingSelectionUserInput = GetComponentsInChildren<HeroBuildingSelectionUserInput>();
+			//if(_forwardGeocoder != null)
+			//{
+			//	_forwardGeocoder.OnGeocoderResponse += ForwardGeocoder_OnGeocoderResponse;
+			//}
+			////_heroBuildingSelectionUserInput = GetComponentsInChildren<HeroBuildingSelectionUserInput>();
 			if(_heroBuildingSelectionUserInput != null)
 			{
 				for (int i = 0; i < _heroBuildingSelectionUserInput.Length; i++)
@@ -59,7 +59,7 @@
 		{
 			if (null != response.Features && response.Features.Count > 0)
 			{
-				int zoom = _map.AbsoluteZoom;
+				float zoom = _map.AbsoluteZoom;
 				_map.UpdateMap(response.Features[0].Center, zoom);
 			}
 		}
