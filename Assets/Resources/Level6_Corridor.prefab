@@ -5511,7 +5511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c630fe6251a3e704fb1b4369129f0310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footPrintPrefab: {fileID: 1517545619891756, guid: c162c528b139240d0881c95be8c04f2b,
+  footPrintPrefab: {fileID: 2884830486068248433, guid: 4ea67a5a5b0b9ce49ba92069061f80d1,
     type: 3}
   InstantiateFlag: 1
 --- !u!54 &7706662143760807094
