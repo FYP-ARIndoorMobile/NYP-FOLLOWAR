@@ -20,6 +20,7 @@ public class Augenttedmage : MonoBehaviour
     public float bufferAngle;
 
     private GameObject[] spawnPoints;
+    private float spawnPointRotation;
 
     void Update()
     {
@@ -48,7 +49,7 @@ public class Augenttedmage : MonoBehaviour
 
                     //arObj = Instantiate(ObjPrefab, anchor.transform);
 
-                    arObj = SpawnAt(image.Name, anchor);
+                    spawnPointRotation = SpawnAt(image.Name, anchor);
 
                     //if (image.Name == "15")
                     //{
@@ -69,12 +70,12 @@ public class Augenttedmage : MonoBehaviour
 
                     //トラッキング中かつarObjが既に存在するので位置・回転の更新を行う。
                     //Apply appopriate offset
-                    arObj.transform.position = image.CenterPose.position;
+                    arObj.transform.position = image.CenterPose.position + (Vector3.up * -3);
                     //arObj.transform.position += arObj.transform.TransformPoint(PosOffset);
                     arObj.transform.rotation = image.CenterPose.rotation;
-                    //arObj.transform.Rotate(RotOffset);
                     if (isPlaneHorizontal == false)
                         arObj.transform.Rotate(90, 0, 0);
+                    
 
                     if (lockArObj == true)
                     {
@@ -89,6 +90,9 @@ public class Augenttedmage : MonoBehaviour
                     //UIManager.UpdatingDebugLog("R: " + arObj.transform.rotation.eulerAngles.ToString());
 
                     //DisplayAnchorChange();
+
+                    arObj.transform.Rotate(Vector3.up * spawnPointRotation);
+                    //DebugUIManager.instance.UpdatingDebugLog(arObj.transform.rotation.eulerAngles.ToString());
                 }
             }
         }
@@ -142,7 +146,7 @@ public class Augenttedmage : MonoBehaviour
         return arObj;
     }
 
-    private GameObject SpawnAt(string spawnPointName, Anchor anchor)
+    private float SpawnAt(string spawnPointName, Anchor anchor)
     {
         DebugUIManager.instance.DebugLog("Detected " + spawnPointName);
 
@@ -160,13 +164,13 @@ public class Augenttedmage : MonoBehaviour
                 //hallwayPrefab.transform.rotation = spawnPoint.transform.rotation;
 
                 DebugUIManager.instance.DebugLog("Spawning at" + (-spawnPoint.transform.position).ToString());
-                return hallwayPrefab;
+                DebugUIManager.instance.DebugLog("with rotation: " + spawnPoint.transform.rotation.eulerAngles.y);
+                arObj = hallwayPrefab;
+                return spawnPoint.transform.rotation.eulerAngles.y;
             }
         }
 
         DebugUIManager.instance.DebugLog("Spawn Error");
-        return null;
-        //hallwayPrefabChild.transform.position = spawnPoint.transform.position;
-        //hallwayPrefab.transform.rotation = spawnPoint.transform.rotation;
+        return 0;
     }
 }

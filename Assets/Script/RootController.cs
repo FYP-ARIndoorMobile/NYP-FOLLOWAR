@@ -14,6 +14,7 @@ public class RootController : MonoBehaviour
     void Start()
     {
         rigid = this.GetComponent<Rigidbody>();
+        this.transform.position = this.transform.localPosition;
 
     }
 
