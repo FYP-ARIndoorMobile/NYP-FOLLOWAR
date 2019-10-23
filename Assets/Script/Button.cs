@@ -184,7 +184,7 @@ public class Button : BaseButtonController
 
     private void Reset()
     {
-        GameObject[] deskTag = GameObject.FindGameObjectsWithTag("Star");
+        GameObject[] deskTag = GameObject.FindGameObjectsWithTag("Footprint");
 
         rootG.arrowPoint.transform.position = rootG.StartingPoint.transform.position;
 

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -15,6 +15,9 @@ public class meshLine : MonoBehaviour
     [SerializeField] LineRenderer line;      // ターゲットまでの道のり
 
     NavMeshPath path;
+
+
+   // public GameObject arrowObject;
 
     // Start is called before the first frame update
     void Start()
@@ -38,5 +41,12 @@ public class meshLine : MonoBehaviour
         // 線を描画       LineRender
         line.positionCount = path.corners.Length;
         line.SetPositions(path.corners);
+
+        //for (int i = 0; i < path.corners.Length; i++)
+        //{
+        //    Instantiate(arrowObject, path.corners[i], transform.rotation);
+
+        //}
+
     }
 }
