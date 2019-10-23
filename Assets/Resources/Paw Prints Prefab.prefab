@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5185449500891817208}
   m_Layer: 0
   m_Name: Paw Prints Prefab
-  m_TagString: Untagged
+  m_TagString: Footprint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24,10 +24,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9042599450278854702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.047123, y: -0.0031029, z: 0.31036}
+  m_LocalScale: {x: 0.3788588, y: 0.34092134, z: 0.43592322}
   m_Children:
-  - {fileID: 4248480994236778681}
+  - {fileID: 4248480994236912166}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -88,7 +88,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d015bb27f07d30945bebc84041747735, type: 3}
---- !u!4 &4248480994236778681 stripped
+--- !u!4 &4248480994236912166 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: d015bb27f07d30945bebc84041747735,
     type: 3}

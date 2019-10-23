@@ -7,6 +7,8 @@ TagManager:
   - Star
   - root1
   - root2
+  - box
+  - Footprint
   layers:
   - Default
   - TransparentFX
