@@ -63,6 +63,7 @@ public class Button : BaseButtonController
         if ("Button1".Equals(objectName))
         {
             rootG.target = desk[0];
+            rootController.InstantiateFlag = true;
             if (endPointObj == null)
             {
                 endPointObj = Instantiate(endPointPrefab, desk[0].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
@@ -76,6 +77,7 @@ public class Button : BaseButtonController
         else if ("Button2".Equals(objectName))
         {
             rootG.target = desk[1];
+            rootController.InstantiateFlag = true;
             if (endPointObj == null)
             {
                 endPointObj = Instantiate(endPointPrefab, desk[1].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
@@ -89,6 +91,7 @@ public class Button : BaseButtonController
         else if ("Button3".Equals(objectName))
         {
             rootG.target = desk[2];
+            rootController.InstantiateFlag = true;
             if (endPointObj == null)
             {
                 endPointObj = Instantiate(endPointPrefab, desk[2].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
@@ -102,6 +105,7 @@ public class Button : BaseButtonController
         else if ("Button4".Equals(objectName))
         {
             rootG.target = desk[3];
+            rootController.InstantiateFlag = true;
             if (endPointObj == null)
             {
                 endPointObj = Instantiate(endPointPrefab, desk[3].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
@@ -115,6 +119,7 @@ public class Button : BaseButtonController
         else if ("Button5".Equals(objectName))
         {
             rootG.target = desk[4];
+            rootController.InstantiateFlag = true;
             if (endPointObj == null)
             {
                 endPointObj = Instantiate(endPointPrefab, desk[4].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
@@ -128,6 +133,7 @@ public class Button : BaseButtonController
         else if ("Button6".Equals(objectName))
         {
             rootG.target = desk[5];
+            rootController.InstantiateFlag = true;
             if (endPointObj == null)
             {
                 endPointObj = Instantiate(endPointPrefab, desk[5].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
@@ -141,6 +147,7 @@ public class Button : BaseButtonController
         else if ("Button7".Equals(objectName))
         {
             rootG.target = desk[6];
+            rootController.InstantiateFlag = true;
             if (endPointObj == null)
             {
                 endPointObj = Instantiate(endPointPrefab, desk[6].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
@@ -154,6 +161,7 @@ public class Button : BaseButtonController
         else if ("Button8".Equals(objectName))
         {
             rootG.target = desk[7];
+            rootController.InstantiateFlag = true;
             if (endPointObj == null)
             {
                 endPointObj = Instantiate(endPointPrefab, desk[7].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
