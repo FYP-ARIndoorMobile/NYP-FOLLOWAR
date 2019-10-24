@@ -45,6 +45,8 @@ public class Button : BaseButtonController
             endPointObj.transform.rotation = Quaternion.Euler(0, endPointObj.transform.rotation.eulerAngles.y, 0);
             endPointObj.transform.LookAt(DebugUIManager.instance.FirstPersonCamera.transform.position);
             endPointObj.transform.Rotate(0, 180, 0);
+          //  endPointObj.transform.LookAt(rootG.target);
+
         }
     }
 
@@ -61,10 +63,12 @@ public class Button : BaseButtonController
 
     private void ButtonClick(string objectName)
     {
+        
         Reset();
         if ("Button1".Equals(objectName))
         {
             rootG.target = desk[0];
+
             rootController.InstantiateFlag = true;
             if (endPointObj == null)
             {
