@@ -8,14 +8,14 @@ public class RootController : MonoBehaviour
     float time = 0;
 
     Rigidbody rigid;
-    public bool InstantiateFlag = true;
+    public bool InstantiateFlag;
 
     // Start is called before the first frame update
     void Start()
     {
         rigid = this.GetComponent<Rigidbody>();
         this.transform.position = this.transform.localPosition;
-
+        InstantiateFlag = false;
     }
 
     void Update()
