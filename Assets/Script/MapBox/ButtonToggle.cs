@@ -32,7 +32,7 @@ public class ButtonToggle : MonoBehaviour
         }
         else
         {
-           
+
             thePanel.SetActive(false);
             theBtn1.SetActive(false);
             theBtn2.SetActive(false);
