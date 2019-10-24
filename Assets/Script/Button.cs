@@ -43,6 +43,8 @@ public class Button : BaseButtonController
         if (endPointObj != null)
         {
             endPointObj.transform.rotation = Quaternion.Euler(0, endPointObj.transform.rotation.eulerAngles.y, 0);
+            endPointObj.transform.LookAt(DebugUIManager.instance.FirstPersonCamera.transform.position);
+            endPointObj.transform.Rotate(0, 180, 0);
         }
     }
 
