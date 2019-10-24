@@ -14,10 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ARIndoor.unity
     guid: eeceebf71b8820b4cac5e197a906a193
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MapBoxScenes/GPSAR.unity
     guid: ca0e3f239d3b75a4fbaf8029f20913be
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MapBoxScenes/TestOrange.unity
     guid: 73dc13fcc4298914e865e526ddbd649d
   m_configObjects: {}
