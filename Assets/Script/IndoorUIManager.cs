@@ -11,6 +11,8 @@ public class IndoorUIManager : MonoBehaviour
     private IndoorUIComponent LevelsUI, Level1UI, Level2UI, Level3UI, Level4UI;
     public float LevelsSpeed = 1.0f;
 
+    private TouchScreenKeyboard keyboard;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +44,7 @@ public class IndoorUIManager : MonoBehaviour
     void Update()
     {
         //Moving level buttons
-        MovingUI();
+        MovingUI();      
     }
 
     public void OnClick(GameObject obj)
@@ -52,6 +54,9 @@ public class IndoorUIManager : MonoBehaviour
         {
             case "Levels":
                 LevelsStatus = !LevelsStatus;
+                break;
+            case "Test":
+                RoomInput();
                 break;
         }
     }
@@ -85,5 +90,13 @@ public class IndoorUIManager : MonoBehaviour
             Level3UI.transform.position = Vector3.Lerp(Level3UI.transform.position, LevelsUIPos, Time.deltaTime * LevelsSpeed);
             Level4UI.transform.position = Vector3.Lerp(Level4UI.transform.position, LevelsUIPos, Time.deltaTime * LevelsSpeed);
         }
+    }
+
+    private void RoomInput()
+    {
+        if (keyboard == null)
+            keyboard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.NumberPad, false, false, false, false, "Input 3 digit room number", 3);
+        else
+            keyboard = TouchScreenKeyboard.Open(keyboard.text, TouchScreenKeyboardType.NumberPad, false, false, false, false, "Input 3 digit room number", 3);
     }
 }
