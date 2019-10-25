@@ -68,6 +68,9 @@ public class IndoorUIManager : MonoBehaviour
                 break;
             case "Room Number":
             case "Cancel":
+            case "Okay":
+                if (InputBoxUI.gameObject.activeSelf == false)
+                    RoomInputUI.GetComponent<TMP_InputField>().text = "";
                 InputBoxUI.gameObject.SetActive(!InputBoxUI.gameObject.activeSelf);
                 break;
             case "Room Input":
