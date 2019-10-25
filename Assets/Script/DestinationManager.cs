@@ -11,7 +11,8 @@ public class DestinationManager : BaseButtonController
     private RootController rootController;
     [SerializeField] private GameObject Controller;
 
-    public Transform[] desk;
+   
+    public GameObject[] desk;
 
     public GameObject endPointPrefab;
     private GameObject endPointObj;
@@ -65,124 +66,33 @@ public class DestinationManager : BaseButtonController
     {
         
         Reset();
-        if ("Button1".Equals(objectName))
-        {
-            rootG.target = desk[0];
 
-            rootController.InstantiateFlag = true;
-            if (endPointObj == null)
-            {
-                endPointObj = Instantiate(endPointPrefab, desk[0].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
-            }
-            else
-            {
-                endPointObj.transform.position = desk[0].transform.position + new Vector3(0, 0.2f, 0);
-                endPointObj.transform.rotation = desk[0].transform.rotation;
-            }
-        }
-        else if ("Button2".Equals(objectName))
+        for(int i=1;i<desk.Length;i++)
         {
-            rootG.target = desk[1];
-            rootController.InstantiateFlag = true;
-            if (endPointObj == null)
+            if (("Button" + i).Equals(objectName))
             {
-                endPointObj = Instantiate(endPointPrefab, desk[1].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
+                i = i - 1;
+                rootG.target = desk[i].transform;
+                desk[i].SetActive(true);
+
+                rootController.InstantiateFlag = true;
+                if (endPointObj == null)
+                {
+                    endPointObj = Instantiate(endPointPrefab, desk[i].transform.position + new Vector3(0, 0.2f, 0), desk[i].transform.rotation);
+                }
+                else
+                {
+                    endPointObj.transform.position = desk[i].transform.position + new Vector3(0, 0.2f, 0);
+                    endPointObj.transform.rotation = desk[i].transform.rotation;
+                }
+                i = i + 1;
             }
-            else
+
+            else if ("Button9".Equals(objectName))
             {
-                endPointObj.transform.position = desk[1].transform.position + new Vector3(0, 0.2f, 0);
-                endPointObj.transform.rotation = desk[1].transform.rotation;
+                TogglePointOfInterets();
             }
-        }
-        else if ("Button3".Equals(objectName))
-        {
-            rootG.target = desk[2];
-            rootController.InstantiateFlag = true;
-            if (endPointObj == null)
-            {
-                endPointObj = Instantiate(endPointPrefab, desk[2].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
-            }
-            else
-            {
-                endPointObj.transform.position = desk[2].transform.position + new Vector3(0, 0.2f, 0);
-                endPointObj.transform.rotation = desk[2].transform.rotation;
-            }
-        }
-        else if ("Button4".Equals(objectName))
-        {
-            rootG.target = desk[3];
-            rootController.InstantiateFlag = true;
-            if (endPointObj == null)
-            {
-                endPointObj = Instantiate(endPointPrefab, desk[3].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
-            }
-            else
-            {
-                endPointObj.transform.position = desk[3].transform.position + new Vector3(0, 0.2f, 0);
-                endPointObj.transform.rotation = desk[3].transform.rotation;
-            }
-        }
-        else if ("Button5".Equals(objectName))
-        {
-            rootG.target = desk[4];
-            rootController.InstantiateFlag = true;
-            if (endPointObj == null)
-            {
-                endPointObj = Instantiate(endPointPrefab, desk[4].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
-            }
-            else
-            {
-                endPointObj.transform.position = desk[4].transform.position + new Vector3(0, 0.2f, 0);
-                endPointObj.transform.rotation = desk[4].transform.rotation;
-            }
-        }
-        else if ("Button6".Equals(objectName))
-        {
-            rootG.target = desk[5];
-            rootController.InstantiateFlag = true;
-            if (endPointObj == null)
-            {
-                endPointObj = Instantiate(endPointPrefab, desk[5].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
-            }
-            else
-            {
-                endPointObj.transform.position = desk[5].transform.position + new Vector3(0, 0.2f, 0);
-                endPointObj.transform.rotation = desk[5].transform.rotation;
-            }
-        }
-        else if ("Button7".Equals(objectName))
-        {
-            rootG.target = desk[6];
-            rootController.InstantiateFlag = true;
-            if (endPointObj == null)
-            {
-                endPointObj = Instantiate(endPointPrefab, desk[6].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
-            }
-            else
-            {
-                endPointObj.transform.position = desk[6].transform.position + new Vector3(0, 0.2f, 0);
-                endPointObj.transform.rotation = desk[6].transform.rotation;
-            }
-        }
-        else if ("Button8".Equals(objectName))
-        {
-            rootG.target = desk[7];
-            rootController.InstantiateFlag = true;
-            if (endPointObj == null)
-            {
-                endPointObj = Instantiate(endPointPrefab, desk[7].transform.position + new Vector3(0, 0.2f, 0), desk[0].transform.rotation);
-            }
-            else
-            {
-                endPointObj.transform.position = desk[7].transform.position + new Vector3(0, 0.2f, 0);
-                endPointObj.transform.rotation = desk[7].transform.rotation;
-            }
-        }
-        else if ("Button9".Equals(objectName))
-        {
-            TogglePointOfInterets();
-        }
-      
+        }      
     }
 
     //private void Button2Click()
@@ -202,6 +112,11 @@ public class DestinationManager : BaseButtonController
 
         rootG.arrowPoint.transform.position = rootG.StartingPoint.transform.position;
 
+        foreach (GameObject door in desk)
+        {
+            door.SetActive(false);
+
+        }
 
         for (int i = 0; i < deskTag.Length; i++)
         {
