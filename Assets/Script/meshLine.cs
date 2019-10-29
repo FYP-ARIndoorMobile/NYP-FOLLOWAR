@@ -10,9 +10,9 @@ public class meshLine : MonoBehaviour
     public GameObject StartingPoint;    // statePoint
     public GameObject arrowPoint;           // arrowObj
 
-    [SerializeField] NavMeshAgent[] agent;     // 追いかける物
+    [SerializeField]public NavMeshAgent[] agent;     // 追いかける物
 
-    [SerializeField] LineRenderer line;      // ターゲットまでの道のり
+   // [SerializeField] LineRenderer line;      // ターゲットまでの道のり
 
     NavMeshPath path;
 
@@ -39,8 +39,8 @@ public class meshLine : MonoBehaviour
         agent[1].CalculatePath(target.position, path);
 
         // 線を描画       LineRender
-        line.positionCount = path.corners.Length;
-        line.SetPositions(path.corners);
+        //line.positionCount = path.corners.Length;
+        //line.SetPositions(path.corners);
 
         //for (int i = 0; i < path.corners.Length; i++)
         //{

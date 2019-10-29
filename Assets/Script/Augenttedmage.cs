@@ -153,7 +153,7 @@ public class Augenttedmage : MonoBehaviour
         GameObject hallwayPrefab = Instantiate(new GameObject(), anchor.transform);
         GameObject hallwayPrefabChild = Instantiate(ObjPrefab, hallwayPrefab.transform);
 
-        Button hallwayPrefabChildCombined = hallwayPrefabChild.GetComponentInChildren<Button>();
+        DestinationManager hallwayPrefabChildCombined = hallwayPrefabChild.GetComponentInChildren<DestinationManager>();
         spawnPoints = hallwayPrefabChildCombined.GetSpawnPoints();
 
         foreach (GameObject spawnPoint in spawnPoints)

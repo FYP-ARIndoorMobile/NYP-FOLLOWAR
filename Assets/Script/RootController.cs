@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,21 +7,32 @@ public class RootController : MonoBehaviour
     public GameObject footPrintPrefab;
     float time = 0;
 
+    //private meshLine meshLine;
+    //private GameObject TargetPos;
+
     Rigidbody rigid;
-    public bool InstantiateFlag = true;
+    public bool InstantiateFlag;
 
     // Start is called before the first frame update
     void Start()
     {
         rigid = this.GetComponent<Rigidbody>();
+        // ガイドオブジェクトを固定する
         this.transform.position = this.transform.localPosition;
 
+      //  meshLine = TargetPos.GetComponent<meshLine>();
+
+        InstantiateFlag = false;
     }
 
     void Update()
     {
+
+
+    //    this.transform.LookAt(meshLine.target);
+
         // オブジェクトが止まっているならフラグをfalseにする
-        if (rigid.IsSleeping()) { InstantiateFlag = false; }
+        if (rigid.IsSleeping()==true) { InstantiateFlag = false; }
 
 
         this.time += Time.deltaTime;
