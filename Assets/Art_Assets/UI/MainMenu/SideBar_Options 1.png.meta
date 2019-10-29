@@ -1,8 +1,7 @@
 fileFormatVersion: 2
-guid: 85d9ae2a8d7e822469a4a0d7582a5b0a
+guid: 8358b919699e1e244b4de1c8d7f986f0
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: SideBar_Options_0
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -41,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -94,42 +93,22 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Android
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 47
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 1
+    overridden: 0
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: SideBar_Options_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 750
-        height: 1334
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62d4d71147fda0d4e9cdab3054ea3f78
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4341e50fae63fc145ab2202b6684b5a3
+    spriteID: 
     vertices: []
     indices: 
     edges: []
