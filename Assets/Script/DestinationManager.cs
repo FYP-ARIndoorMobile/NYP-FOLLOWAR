@@ -91,6 +91,7 @@ public class DestinationManager : BaseButtonController
             else if ("Button9".Equals(objectName))
             {
                 TogglePointOfInterets();
+
             }
         }      
     }
@@ -130,6 +131,7 @@ public class DestinationManager : BaseButtonController
         foreach (GameObject interestPoint in PointOfInterests)
         {
             interestPoint.SetActive(displayPointOfInterests);
+          
         }
     }
 
@@ -154,6 +156,7 @@ public class DestinationManager : BaseButtonController
             if (interestPoint == nearestObject)
             {
                 interestPoint.SetActive(true);
+               rootG.target = interestPoint.transform;
             }
             else
             {

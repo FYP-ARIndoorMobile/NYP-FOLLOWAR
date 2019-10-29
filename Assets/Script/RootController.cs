@@ -7,6 +7,9 @@ public class RootController : MonoBehaviour
     public GameObject footPrintPrefab;
     float time = 0;
 
+    //private meshLine meshLine;
+    //private GameObject TargetPos;
+
     Rigidbody rigid;
     public bool InstantiateFlag;
 
@@ -16,11 +19,18 @@ public class RootController : MonoBehaviour
         rigid = this.GetComponent<Rigidbody>();
         // ガイドオブジェクトを固定する
         this.transform.position = this.transform.localPosition;
+
+      //  meshLine = TargetPos.GetComponent<meshLine>();
+
         InstantiateFlag = false;
     }
 
     void Update()
     {
+
+
+    //    this.transform.LookAt(meshLine.target);
+
         // オブジェクトが止まっているならフラグをfalseにする
         if (rigid.IsSleeping()==true) { InstantiateFlag = false; }
 
