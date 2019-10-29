@@ -43,7 +43,9 @@
 		void Map_OnInitialized()
 		{
 			_map.OnInitialized -= Map_OnInitialized;
-			_locationProvider.OnLocationUpdated += LocationProvider_OnLocationUpdated;
+
+            // We don't want location updates until we have a map, otherwise our conversion will fail.
+            _locationProvider.OnLocationUpdated += LocationProvider_OnLocationUpdated;
 		}
 
 		void LocationProvider_OnLocationUpdated(Location location)
