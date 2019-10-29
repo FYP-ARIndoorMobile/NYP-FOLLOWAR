@@ -130,7 +130,7 @@ namespace Mapbox.Unity.Ar
 				// With this line, we can control accuracy of Gps updates. 
 				// Be aware that we only get location information if it previously met
 				// the conditions of DeviceLocationProvider:
-				// * desired accuarracy in meters
+				// * desired accuracy in meters
 				// * and update distance in meters
 				if (location.Accuracy > _minimumDesiredAccuracy)
 				{

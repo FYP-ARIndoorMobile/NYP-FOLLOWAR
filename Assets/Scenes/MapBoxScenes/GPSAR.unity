@@ -318,7 +318,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 774c688c40d4a90439be4f03463472c0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1f3a246947d765648908b3c260c41b46, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -515,7 +515,7 @@ RectTransform:
   m_GameObject: {fileID: 514601110}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1265780573}
   m_RootOrder: 0
@@ -598,7 +598,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 774c688c40d4a90439be4f03463472c0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1f3a246947d765648908b3c260c41b46, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4087,7 +4087,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266337323240327109}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37ab97bfa6689994caf97070bd3a37ba, type: 3}
   m_Name: 
@@ -4423,9 +4423,9 @@ MonoBehaviour:
             texturingType: 0
             materials:
             - Materials:
-              - {fileID: 2100000, guid: f3737ed2890d14151b01de93c3871a7c, type: 2}
+              - {fileID: 2100000, guid: 65fb5c4ce7e4e4e1bbd063bbb561cde7, type: 2}
             - Materials:
-              - {fileID: 2100000, guid: f3737ed2890d14151b01de93c3871a7c, type: 2}
+              - {fileID: 2100000, guid: 65fb5c4ce7e4e4e1bbd063bbb561cde7, type: 2}
             atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
               type: 2}
             colorPalette: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,
@@ -5603,8 +5603,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeviceCameraDirection: 0
-  SessionConfig: {fileID: 11400000, guid: 9586a84d6c32f46b6ab7aeb6042f160d, type: 2}
-  CameraConfigFilter: {fileID: 11400000, guid: 200b4cba649e3413088e285251ccf44e, type: 2}
+  SessionConfig: {fileID: 11400000, guid: c4171696a88472845a2f4abad667731c, type: 2}
+  CameraConfigFilter: {fileID: 11400000, guid: 10ffcb130a0d41143b851a2dad735058, type: 2}
 --- !u!1 &1267666129332051311
 GameObject:
   m_ObjectHideFlags: 0
@@ -6142,7 +6142,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 50, y: -50.000122}
+  m_AnchoredPosition: {x: 50, y: -50.000244}
   m_SizeDelta: {x: -100, y: -100}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &1335386040529481675
