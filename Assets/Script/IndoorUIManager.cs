@@ -15,7 +15,7 @@ public class IndoorUIManager : MonoBehaviour
     
     private TouchScreenKeyboard keyboard;
 
-    private IndoorUIComponent InputBoxUI, RoomInputUI, CancelUI, OkayUI;
+    private IndoorUIComponent InputBoxUI, RoomInputUI, CancelUI, OkayUI, InfoUI, ToiletUI;
 
     private DestinationManager destinationManager;
     private bool once;
@@ -51,6 +51,11 @@ public class IndoorUIManager : MonoBehaviour
         OkayUI = GetUIComponent("Okay");
         OkayUI.GetComponent<Button>().interactable = false;
         InputBoxUI.gameObject.SetActive(false);
+
+        InfoUI = GetUIComponent("Info");
+        InfoUI.GetComponent<Button>().interactable = false;
+        ToiletUI = GetUIComponent("Toilet");
+        ToiletUI.GetComponent<Button>().interactable = false;
     }
 
     // Update is called once per frame
@@ -82,6 +87,9 @@ public class IndoorUIManager : MonoBehaviour
                 break;
             case "Room Input":
                 RoomInput();            
+                break;
+            case "Info":
+                destinationManager.TogglePointOfInterets();
                 break;
         }
     }
@@ -213,5 +221,7 @@ public class IndoorUIManager : MonoBehaviour
     public void SetDestinationManager(DestinationManager DM)
     {
         destinationManager = DM;
+        InfoUI.GetComponent<Button>().interactable = true;
+        ToiletUI.GetComponent<Button>().interactable = true;
     }
 }

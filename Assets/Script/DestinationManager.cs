@@ -106,8 +106,6 @@ public class DestinationManager : BaseButtonController
         {
             if (destination.name == objectName)
             {
-                DebugUIManager.instance.DebugLog("Found");
-
                 displayPointOfInterests = false;
                 rootG.target = destination.transform;
                 destination.SetActive(true);
