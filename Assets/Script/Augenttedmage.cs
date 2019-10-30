@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using GoogleARCore;
 
 public class Augenttedmage : MonoBehaviour
@@ -21,6 +22,9 @@ public class Augenttedmage : MonoBehaviour
 
     private GameObject[] spawnPoints;
     private float spawnPointRotation;
+
+
+    [SerializeField] private Button roomInput;
 
     void Update()
     {
@@ -50,6 +54,8 @@ public class Augenttedmage : MonoBehaviour
                     //arObj = Instantiate(ObjPrefab, anchor.transform);
 
                     spawnPointRotation = SpawnAt(image.Name, anchor);
+
+                    roomInput.interactable = true;
 
                     //if (image.Name == "15")
                     //{

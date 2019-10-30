@@ -19,6 +19,7 @@ public class DestinationManager : BaseButtonController
 
 
     private bool displayPointOfInterests;
+
     [SerializeField] private GameObject[] PointOfInterests;
 
     [SerializeField] private GameObject[] spawnPoints;
@@ -67,10 +68,12 @@ public class DestinationManager : BaseButtonController
         
         Reset();
 
-        for(int i=1;i<desk.Length;i++)
+        for (int i=1;i<desk.Length;i++)
         {
             if (("Button" + i).Equals(objectName))
             {
+                displayPointOfInterests = false;
+
                 i = i - 1;
                 rootG.target = desk[i].transform;
                 desk[i].SetActive(true);
@@ -90,8 +93,9 @@ public class DestinationManager : BaseButtonController
 
             else if ("Button9".Equals(objectName))
             {
+            
                 TogglePointOfInterets();
-
+       
             }
         }      
     }
@@ -112,11 +116,17 @@ public class DestinationManager : BaseButtonController
         GameObject[] deskTag = GameObject.FindGameObjectsWithTag("Footprint");
 
         rootG.arrowPoint.transform.position = rootG.StartingPoint.transform.position;
-
+        // 目的地以外のドアを消す
         foreach (GameObject door in desk)
         {
             door.SetActive(false);
 
+        }
+
+        // ベンチを消す
+        foreach (GameObject interestPoint in PointOfInterests)
+        {
+            interestPoint.SetActive(false);
         }
 
         for (int i = 0; i < deskTag.Length; i++)
@@ -131,7 +141,8 @@ public class DestinationManager : BaseButtonController
         foreach (GameObject interestPoint in PointOfInterests)
         {
             interestPoint.SetActive(displayPointOfInterests);
-          
+            rootG.target = interestPoint.transform;
+
         }
     }
 
@@ -155,7 +166,7 @@ public class DestinationManager : BaseButtonController
         {
             if (interestPoint == nearestObject)
             {
-                interestPoint.SetActive(true);
+               interestPoint.SetActive(true);
                rootG.target = interestPoint.transform;
             }
             else
