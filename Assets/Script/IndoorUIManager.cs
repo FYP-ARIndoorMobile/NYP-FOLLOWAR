@@ -17,6 +17,8 @@ public class IndoorUIManager : MonoBehaviour
 
     private IndoorUIComponent InputBoxUI, RoomInputUI, CancelUI, OkayUI;
 
+    private DestinationManager destinationManager;
+    private bool once;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +49,7 @@ public class IndoorUIManager : MonoBehaviour
         RoomInputUI = GetUIComponent("Room Input");
         CancelUI = GetUIComponent("Cancel");
         OkayUI = GetUIComponent("Okay");
-        OkayUI.GetComponent<Button>().interactable = false;
+        //OkayUI.GetComponent<Button>().interactable = false;
         InputBoxUI.gameObject.SetActive(false);
     }
 
@@ -60,15 +62,20 @@ public class IndoorUIManager : MonoBehaviour
 
     public void OnClick(GameObject obj)
     {
-        Debug.Log(obj.name);
+        DebugUIManager.instance.DebugLog(obj.name);
         switch (obj.name)
         {
             case "Levels":
                 LevelsStatus = !LevelsStatus;
                 break;
+            case "Okay":
+                SubmitRoom(RoomInputUI.GetComponent<TMP_InputField>().text);
+                if (InputBoxUI.gameObject.activeSelf == false)
+                    RoomInputUI.GetComponent<TMP_InputField>().text = "";
+                InputBoxUI.gameObject.SetActive(!InputBoxUI.gameObject.activeSelf);
+                break;
             case "Room Number":
             case "Cancel":
-            case "Okay":
                 if (InputBoxUI.gameObject.activeSelf == false)
                     RoomInputUI.GetComponent<TMP_InputField>().text = "";
                 InputBoxUI.gameObject.SetActive(!InputBoxUI.gameObject.activeSelf);
@@ -127,4 +134,77 @@ public class IndoorUIManager : MonoBehaviour
         else
             OkayUI.GetComponent<Button>().interactable = true;
     }
+
+    private void SubmitRoom(string roomNum)
+    {
+        string buttonCode ="";
+        switch (roomNum)
+        {
+            case "0601":
+                buttonCode = "R_Door1";
+                break;
+            case "0615":
+                buttonCode = "R_Door2";
+                break;
+            case "0602":
+                buttonCode = "R_Door3";
+                break;
+            case "0603":
+                buttonCode = "R_Door4";
+                break;
+            //case "0615":
+            //    buttonCode = "R_Door5";
+            //   break;
+            case "0614":
+                buttonCode = "R_Door6";
+                break;
+            case "0604":
+                buttonCode = "R_Door7";
+                break;
+            case "0605":
+                buttonCode = "R_Door8";
+                break;
+            case "0606":
+                buttonCode = "R_Door9";
+                break;
+            //case "0614":
+            //    buttonCode = "R_Door10";
+            //    break;
+            case "0607":
+                buttonCode = "R_Door11";
+                break;
+            case "0608":
+                buttonCode = "R_Door12";
+                break;
+            case "0610":
+                buttonCode = "R_Door13";
+                break;
+
+            case "0622":
+                buttonCode = "L_Door1";
+                break;
+            case "0623":
+                buttonCode = "L_Door2";
+                break;
+            //case "0615":
+            //    buttonCode = "L_Door3";
+            //    break;
+            case "0625":
+                buttonCode = "L_Door4";
+                break;
+            case "0624":
+                buttonCode = "L_Door5";
+                break;
+            case "0626":
+                buttonCode = "L_Door6";
+                break;
+            case "0613":
+                buttonCode = "L_Door7";
+                break;
+            case "0627":
+                buttonCode = "L_Door8";
+                break;
+        }
+        //destinationManager.SetDestination(buttonCode);
+    }   
 }
