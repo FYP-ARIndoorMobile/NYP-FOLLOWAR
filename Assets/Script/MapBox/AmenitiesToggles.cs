@@ -30,14 +30,15 @@ public class AmenitiesToggles : MonoBehaviour
     }
     public void ChangeToggle()
     {
+        isActive = !isActive;
+
         if (isActive)
         {
-            ScrollListType.SetActive(true);
+            ScrollListType.SetActive(isActive);
             for (int i = 0; i < noOfGameObjects; i++)
             {
                 otherObjs[i].SetActive(false);
             }
-            isActive = false;
         }
         else
         {
@@ -46,13 +47,6 @@ public class AmenitiesToggles : MonoBehaviour
                 otherScrollview[i].SetActive(false);
                 otherButtons[i].SetActive(true);
             }
-            isActive = true;
         }
     }
-    void MainPage()
-    {
-
-    }
-
-
 }
