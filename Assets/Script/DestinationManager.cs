@@ -64,8 +64,7 @@ public class DestinationManager : BaseButtonController
     }
 
     private void ButtonClick(string objectName)
-    {
-        
+    { 
         Reset();
 
         for (int i=1;i<desk.Length;i++)
@@ -98,6 +97,33 @@ public class DestinationManager : BaseButtonController
        
             }
         }      
+    }
+
+    public void DestinationSelect(string objectName)
+    {
+        Reset();
+        foreach (GameObject destination in desk)
+        {
+            if (destination.name == objectName)
+            {
+                DebugUIManager.instance.DebugLog("Found");
+
+                displayPointOfInterests = false;
+                rootG.target = destination.transform;
+                destination.SetActive(true);
+
+                rootController.InstantiateFlag = true;
+                if (endPointObj == null)
+                {
+                    endPointObj = Instantiate(endPointPrefab, destination.transform.position + new Vector3(0, 0.2f, 0), destination.transform.rotation);
+                }
+                else
+                {
+                    endPointObj.transform.position = destination.transform.position + new Vector3(0, 0.2f, 0);
+                    endPointObj.transform.rotation = destination.transform.rotation;
+                }
+            }
+        }
     }
 
     //private void Button2Click()

@@ -25,6 +25,7 @@ public class Augenttedmage : MonoBehaviour
 
 
     [SerializeField] private Button roomInput;
+    [SerializeField] private IndoorUIManager IndoorCanvas;
 
     void Update()
     {
@@ -56,6 +57,7 @@ public class Augenttedmage : MonoBehaviour
                     spawnPointRotation = SpawnAt(image.Name, anchor);
 
                     roomInput.interactable = true;
+                    IndoorCanvas.SetDestinationManager(arObj.GetComponentInChildren<DestinationManager>());
 
                     //if (image.Name == "15")
                     //{

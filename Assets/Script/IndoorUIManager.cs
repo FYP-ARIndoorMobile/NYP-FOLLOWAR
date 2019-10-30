@@ -49,7 +49,7 @@ public class IndoorUIManager : MonoBehaviour
         RoomInputUI = GetUIComponent("Room Input");
         CancelUI = GetUIComponent("Cancel");
         OkayUI = GetUIComponent("Okay");
-        //OkayUI.GetComponent<Button>().interactable = false;
+        OkayUI.GetComponent<Button>().interactable = false;
         InputBoxUI.gameObject.SetActive(false);
     }
 
@@ -129,7 +129,8 @@ public class IndoorUIManager : MonoBehaviour
 
     private void RoomInput()
     {
-        if (RoomInputUI.GetComponent<TMP_InputField>().text.Length < 3)
+        //Check input
+        if (RoomInputUI.GetComponent<TMP_InputField>().text.Length < 4)
             OkayUI.GetComponent<Button>().interactable = false;
         else
             OkayUI.GetComponent<Button>().interactable = true;
@@ -137,6 +138,7 @@ public class IndoorUIManager : MonoBehaviour
 
     private void SubmitRoom(string roomNum)
     {
+        //Tranlate door number to door game object
         string buttonCode ="";
         switch (roomNum)
         {
@@ -205,6 +207,11 @@ public class IndoorUIManager : MonoBehaviour
                 buttonCode = "L_Door8";
                 break;
         }
-        //destinationManager.SetDestination(buttonCode);
-    }   
+        destinationManager.DestinationSelect(buttonCode);
+    }
+
+    public void SetDestinationManager(DestinationManager DM)
+    {
+        destinationManager = DM;
+    }
 }
