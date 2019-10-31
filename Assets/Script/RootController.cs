@@ -27,9 +27,12 @@ public class RootController : MonoBehaviour
 
     void Update()
     {
+        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+        transform.LookAt(DebugUIManager.instance.FirstPersonCamera.transform.position);
+        transform.Rotate(0, 180, 0);
+        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
 
-
-    //    this.transform.LookAt(meshLine.target);
+        //    this.transform.LookAt(meshLine.target);
 
         // オブジェクトが止まっているならフラグをfalseにする
         if (rigid.IsSleeping()==true) { InstantiateFlag = false; }

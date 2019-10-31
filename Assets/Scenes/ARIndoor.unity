@@ -163,6 +163,19 @@ MonoBehaviour:
   bufferDist: 0.1
   bufferAngle: 15
   roomInput: {fileID: 2070426828}
+  IndoorCanvas: {fileID: 314663941}
+--- !u!114 &314663941 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7399692618612245143, guid: a0ebf6cdd41ea4a41aa17bd4790059da,
+    type: 3}
+  m_PrefabInstance: {fileID: 2070426827}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd8109b97e54624c9775e802910b683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &587942381 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 20155940112608238, guid: c10877f7cd5764de18d46d7b777d1faa,

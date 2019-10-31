@@ -15,7 +15,7 @@ public class IndoorUIManager : MonoBehaviour
     
     private TouchScreenKeyboard keyboard;
 
-    private IndoorUIComponent InputBoxUI, RoomInputUI, CancelUI, OkayUI;
+    private IndoorUIComponent InputBoxUI, RoomInputUI, CancelUI, OkayUI, InfoUI, ToiletUI;
 
     private DestinationManager destinationManager;
     private bool once;
@@ -49,8 +49,13 @@ public class IndoorUIManager : MonoBehaviour
         RoomInputUI = GetUIComponent("Room Input");
         CancelUI = GetUIComponent("Cancel");
         OkayUI = GetUIComponent("Okay");
-        //OkayUI.GetComponent<Button>().interactable = false;
+        OkayUI.GetComponent<Button>().interactable = false;
         InputBoxUI.gameObject.SetActive(false);
+
+        InfoUI = GetUIComponent("Info");
+        InfoUI.GetComponent<Button>().interactable = false;
+        ToiletUI = GetUIComponent("Toilet");
+        ToiletUI.GetComponent<Button>().interactable = false;
     }
 
     // Update is called once per frame
@@ -82,6 +87,9 @@ public class IndoorUIManager : MonoBehaviour
                 break;
             case "Room Input":
                 RoomInput();            
+                break;
+            case "Info":
+                destinationManager.TogglePointOfInterets();
                 break;
         }
     }
@@ -129,7 +137,8 @@ public class IndoorUIManager : MonoBehaviour
 
     private void RoomInput()
     {
-        if (RoomInputUI.GetComponent<TMP_InputField>().text.Length < 3)
+        //Check input
+        if (RoomInputUI.GetComponent<TMP_InputField>().text.Length < 4)
             OkayUI.GetComponent<Button>().interactable = false;
         else
             OkayUI.GetComponent<Button>().interactable = true;
@@ -137,6 +146,7 @@ public class IndoorUIManager : MonoBehaviour
 
     private void SubmitRoom(string roomNum)
     {
+        //Tranlate door number to door game object
         string buttonCode ="";
         switch (roomNum)
         {
@@ -205,6 +215,13 @@ public class IndoorUIManager : MonoBehaviour
                 buttonCode = "L_Door8";
                 break;
         }
-        //destinationManager.SetDestination(buttonCode);
-    }   
+        destinationManager.DestinationSelect(buttonCode);
+    }
+
+    public void SetDestinationManager(DestinationManager DM)
+    {
+        destinationManager = DM;
+        InfoUI.GetComponent<Button>().interactable = true;
+        ToiletUI.GetComponent<Button>().interactable = true;
+    }
 }
