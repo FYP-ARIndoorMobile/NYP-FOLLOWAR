@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -92,7 +92,6 @@ public class DestinationManager : BaseButtonController
 
             else if ("Button9".Equals(objectName))
             {
-            
                 TogglePointOfInterets();
        
             }
@@ -135,9 +134,9 @@ public class DestinationManager : BaseButtonController
 
     //}
 
-    private void Reset()
+    public void Reset()
     {
-        GameObject[] deskTag = GameObject.FindGameObjectsWithTag("Footprint");
+        GameObject[] deskTag = GameObject.FindGameObjectsWithTag("Arrow Prefab");
 
         rootG.arrowPoint.transform.position = rootG.StartingPoint.transform.position;
         // 目的地以外のドアを消す
@@ -157,6 +156,11 @@ public class DestinationManager : BaseButtonController
         {
             Destroy(deskTag[i]);
         }
+    }
+
+    public void Reset2()
+    {
+        rootController.InstantiateFlag = true;
     }
 
     public void TogglePointOfInterets()

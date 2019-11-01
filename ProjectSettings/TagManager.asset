@@ -9,6 +9,7 @@ TagManager:
   - root2
   - box
   - Footprint
+  - Arrow Prefab
   layers:
   - Default
   - TransparentFX

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,11 +19,17 @@ public class IndoorUIManager : MonoBehaviour
 
     private DestinationManager destinationManager;
     private bool once;
+
+
+    private RootController rootController2;
+    [SerializeField] private GameObject Controller2;
+
     // Start is called before the first frame update
     void Start()
     {
         //Store all UI components
         indoorUIComponents = GetComponentsInChildren<IndoorUIComponent>();
+        rootController2 = Controller2.GetComponent<RootController>();
 
         //Store Level objects
         //LevelsUI = GetUIComponent("Levels");
@@ -89,6 +95,9 @@ public class IndoorUIManager : MonoBehaviour
                 RoomInput();            
                 break;
             case "Info":
+                destinationManager.Reset();
+                destinationManager.Reset2();
+
                 destinationManager.TogglePointOfInterets();
                 break;
         }
