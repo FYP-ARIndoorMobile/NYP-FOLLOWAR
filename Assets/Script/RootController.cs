@@ -13,8 +13,8 @@ public class RootController : MonoBehaviour
     Rigidbody rigid;
     public bool InstantiateFlag;
 
-    GameObject currFootPrint;
-    public float DistFromLastMarker = 1.0f;
+    GameObject previousRootPrint;
+    public float DistFromLastRoot = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -43,10 +43,10 @@ public class RootController : MonoBehaviour
         // フラグがtrueなら生成できる
         if (InstantiateFlag == true)
         {
-            if (currFootPrint == null)
-                currFootPrint = Instantiate(footPrintPrefab, transform.position, transform.rotation);
-            else if (Vector3.Distance(currFootPrint.transform.position, transform.position) > DistFromLastMarker)
-                currFootPrint = Instantiate(footPrintPrefab, transform.position, transform.rotation);
+            if (previousRootPrint == null)
+                previousRootPrint = Instantiate(footPrintPrefab, transform.position, transform.rotation);
+            else if (Vector3.Distance(previousRootPrint.transform.position, transform.position) > DistFromLastRoot)
+                previousRootPrint = Instantiate(footPrintPrefab, transform.position, transform.rotation);
         }
     }
 }
