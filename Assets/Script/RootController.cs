@@ -5,13 +5,16 @@ using UnityEngine;
 public class RootController : MonoBehaviour
 {
     public GameObject footPrintPrefab;
-    float time = 0;
+    //float time = 0;
 
     //private meshLine meshLine;
     //private GameObject TargetPos;
 
     Rigidbody rigid;
     public bool InstantiateFlag;
+
+    GameObject currFootPrint;
+    public float DistFromLastMarker = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -37,13 +40,13 @@ public class RootController : MonoBehaviour
         // オブジェクトが止まっているならフラグをfalseにする
         if (rigid.IsSleeping()==true) { InstantiateFlag = false; }
 
-
-        this.time += Time.deltaTime;
         // フラグがtrueなら生成できる
-        if (this.time > 0.35f && InstantiateFlag == true)
+        if (InstantiateFlag == true)
         {
-            this.time = 0;
-            Instantiate(footPrintPrefab, transform.position, transform.rotation);
+            if (currFootPrint == null)
+                currFootPrint = Instantiate(footPrintPrefab, transform.position, transform.rotation);
+            else if (Vector3.Distance(currFootPrint.transform.position, transform.position) > DistFromLastMarker)
+                currFootPrint = Instantiate(footPrintPrefab, transform.position, transform.rotation);
         }
     }
 }
