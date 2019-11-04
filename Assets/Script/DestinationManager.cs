@@ -75,16 +75,16 @@ public class DestinationManager : BaseButtonController
 
                 i = i - 1;
                 rootG.target = desk[i].transform;
-                desk[i].SetActive(true);
+                //desk[i].SetActive(true);
 
                 rootController.InstantiateFlag = true;
                 if (endPointObj == null)
                 {
-                    endPointObj = Instantiate(endPointPrefab, desk[i].transform.position + new Vector3(0, 0.2f, 0), desk[i].transform.rotation);
+                    endPointObj = Instantiate(endPointPrefab, desk[i].transform.position, desk[i].transform.rotation);
                 }
                 else
                 {
-                    endPointObj.transform.position = desk[i].transform.position + new Vector3(0, 0.2f, 0);
+                    endPointObj.transform.position = desk[i].transform.position;
                     endPointObj.transform.rotation = desk[i].transform.rotation;
                 }
                 i = i + 1;
@@ -107,16 +107,16 @@ public class DestinationManager : BaseButtonController
             {
                 displayPointOfInterests = false;
                 rootG.target = destination.transform;
-                destination.SetActive(true);
+                //destination.SetActive(true);
 
                 rootController.InstantiateFlag = true;
                 if (endPointObj == null)
                 {
-                    endPointObj = Instantiate(endPointPrefab, destination.transform.position + new Vector3(0, 0.2f, 0), destination.transform.rotation);
+                    endPointObj = Instantiate(endPointPrefab, destination.transform.position, destination.transform.rotation);
                 }
                 else
                 {
-                    endPointObj.transform.position = destination.transform.position + new Vector3(0, 0.2f, 0);
+                    endPointObj.transform.position = destination.transform.position;
                     endPointObj.transform.rotation = destination.transform.rotation;
                 }
             }
@@ -194,7 +194,7 @@ public class DestinationManager : BaseButtonController
         {
             if (interestPoint == nearestObject)
             {
-               interestPoint.SetActive(true);
+               //interestPoint.SetActive(true);
                rootG.target = interestPoint.transform;
             }
             else
