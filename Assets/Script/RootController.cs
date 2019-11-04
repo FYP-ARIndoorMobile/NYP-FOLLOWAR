@@ -13,7 +13,7 @@ public class RootController : MonoBehaviour
     Rigidbody rigid;
     public bool InstantiateFlag;
 
-    GameObject previousRootPrint;
+    GameObject previousRoot, newRoot;
     public float DistFromLastRoot = 1.0f;
 
     // Start is called before the first frame update
@@ -43,10 +43,22 @@ public class RootController : MonoBehaviour
         // フラグがtrueなら生成できる
         if (InstantiateFlag == true)
         {
-            if (previousRootPrint == null)
-                previousRootPrint = Instantiate(footPrintPrefab, transform.position, transform.rotation);
-            else if (Vector3.Distance(previousRootPrint.transform.position, transform.position) > DistFromLastRoot)
-                previousRootPrint = Instantiate(footPrintPrefab, transform.position, transform.rotation);
+            //if (previousRootPrint == null)
+            //    previousRootPrint = Instantiate(footPrintPrefab, transform.position, transform.rotation);
+            //else if (Vector3.Distance(previousRootPrint.transform.position, transform.position) > DistFromLastRoot)
+            //    previousRootPrint = Instantiate(footPrintPrefab, transform.position, transform.rotation);
+
+            if (previousRoot == null)
+            {
+                newRoot = Instantiate(footPrintPrefab, transform.position, transform.rotation);
+                previousRoot = newRoot;
+            }
+            else if (Vector3.Distance(previousRoot.transform.position, transform.position) > DistFromLastRoot)
+            {
+                newRoot = Instantiate(footPrintPrefab, transform.position, transform.rotation);
+                previousRoot.transform.LookAt(newRoot.transform.position);
+                previousRoot = newRoot;
+            }
         }
     }
 }
