@@ -7,6 +7,7 @@ public class Vibration : MonoBehaviour
 {
     public static Vibration _instance;
     public Toggle toggle;
+   // public Toggle toggle_Dark;
 
     public static Vibration Instance
     {
@@ -28,8 +29,17 @@ public class Vibration : MonoBehaviour
     {
         if (toggle.isOn == true)
         {
+           // toggle_Dark.isOn = true;
             Vibrate();
+            print("Vibration is On");
         }
+        else
+        {
+           // toggle_Dark.isOn = false;
+            toggle.isOn = false;
+            print("Vibration is Off");
+        }
+        //print("Vibration is Off");
     }
     private void Vibrate()
     {

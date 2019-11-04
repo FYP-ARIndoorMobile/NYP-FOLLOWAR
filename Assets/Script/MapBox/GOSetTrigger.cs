@@ -1,15 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class SetTriggers : MonoBehaviour
+public class GOSetTrigger : MonoBehaviour
 {
     [SerializeField]
-    GameObject _GameObjectPrefab;
-    [SerializeField]
-    GameObject _directionPanel;
-    [SerializeField]
+    GameObject _GameObjectPrefab;    
+[SerializeField]
     Vibration _vibrate;
 
     void Awake()
@@ -19,7 +16,7 @@ public class SetTriggers : MonoBehaviour
     void Start()
     {
         _GameObjectPrefab.SetActive(false);
-        _directionPanel.SetActive(false);
+       
 
     }
 
@@ -32,7 +29,7 @@ public class SetTriggers : MonoBehaviour
                 _vibrate.VibrateToggle();
             }
             _GameObjectPrefab.SetActive(true);
-            _directionPanel.SetActive(true);
+          
         }
     }
     void OnTriggerStay(Collider other)
@@ -41,7 +38,7 @@ public class SetTriggers : MonoBehaviour
         {
             Handheld.Vibrate();
             _GameObjectPrefab.SetActive(true);
-            _directionPanel.SetActive(true);
+           
         }
     }
     void OnTriggerExit(Collider other)
@@ -50,8 +47,6 @@ public class SetTriggers : MonoBehaviour
         {
             Handheld.Vibrate();
             _GameObjectPrefab.SetActive(false);
-            _directionPanel.SetActive(false);
         }
     }
-
 }
