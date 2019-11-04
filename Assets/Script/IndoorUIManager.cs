@@ -100,6 +100,9 @@ public class IndoorUIManager : MonoBehaviour
 
                 destinationManager.TogglePointOfInterets();
                 break;
+            case "Reset":
+                //destinationManager
+                break;
         }
     }
 

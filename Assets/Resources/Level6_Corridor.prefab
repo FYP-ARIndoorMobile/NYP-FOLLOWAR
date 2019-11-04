@@ -9794,7 +9794,7 @@ PrefabInstance:
         type: 3}
       propertyPath: footPrintPrefab
       value: 
-      objectReference: {fileID: 9042599450278854702, guid: 0c47bd05b91f08640bb9af449965f7e1,
+      objectReference: {fileID: 7176932477555365512, guid: 81aa34df92fd56146a80eeaffcf96be0,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cfef656c31de0f4a87919156e490302, type: 3}
