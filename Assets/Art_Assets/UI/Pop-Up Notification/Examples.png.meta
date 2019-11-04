@@ -5,6 +5,12 @@ TextureImporter:
     21300000: Examples_0
     21300002: Examples_1
     21300004: Examples_2
+    21300006: Examples_4
+    21300008: Examples_5
+    21300010: Examples_6
+    21300012: Examples_7
+    21300014: Examples_8
+    21300016: Examples_3
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -113,17 +119,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 464
-        y: 5652
+        y: 6688
         width: 1392
-        height: 2497
+        height: 1461
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e1f1aacfe62f4b4a9f6ec4077338794
+      spriteID: 2e2d6e6df023a144aa028590ad810321
       vertices: []
       indices: 
       edges: []
@@ -133,17 +139,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1860
-        y: 5652
+        y: 6453
         width: 1396
-        height: 2324
+        height: 1524
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd37a650300641a41baa721b68bb8470
+      spriteID: 6a7ce9665901d374094f6b3eb2836ffc
       vertices: []
       indices: 
       edges: []
@@ -157,13 +163,53 @@ TextureImporter:
         width: 1396
         height: 2236
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 880b5a745dbb574408a605d1bce9c20c
+      spriteID: a4e7e9330c175c943b18b10443df51fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Examples_4
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 2175
+        width: 1480
+        height: 1663
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc5eda01c425724bb1cf4a1dd876115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Examples_3
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 5658
+        width: 1396
+        height: 795
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ca2dba95553c3b4cbc5f58712e39d4d
       vertices: []
       indices: 
       edges: []
