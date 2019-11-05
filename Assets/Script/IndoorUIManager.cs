@@ -25,12 +25,7 @@ public class IndoorUIManager : MonoBehaviour
     //[SerializeField] private GameObject Controller2;
 
     public GameObject PopOutObj;
-    public float PopOutHeight;
     public float PopSpeed = 4.0f;
-    public float PopDuration = 2.0f;
-    private Vector3 PopOutPos, PopInPos;
-    private float ElaspedTime;
-    private bool IfPopOut;
 
     // Start is called before the first frame update
     void Start()
@@ -69,10 +64,7 @@ public class IndoorUIManager : MonoBehaviour
         InfoUI = GetUIComponent("Info");
         InfoUI.GetComponent<Button>().interactable = false;
         ToiletUI = GetUIComponent("Toilet");
-        ToiletUI.GetComponent<Button>().interactable = false;
-
-        PopInPos = PopOutObj.transform.position;
-        PopOutPos = PopOutObj.transform.position + new Vector3(0, PopOutHeight, 0);
+        ToiletUI.GetComponent<Button>().interactable = false;   
     }
 
     // Update is called once per frame
@@ -80,8 +72,6 @@ public class IndoorUIManager : MonoBehaviour
     {
         //Moving level buttons
         //MovingUI();
-        if (IfPopOut == true)
-            PopingOut();
     }
 
     public void OnClick(GameObject obj)
@@ -114,7 +104,6 @@ public class IndoorUIManager : MonoBehaviour
                 destinationManager.TogglePointOfInterets();
                 break;
             case "Reset":
-                PopOut();
                 break;
         }
     }
@@ -148,26 +137,6 @@ public class IndoorUIManager : MonoBehaviour
             Level3UI.transform.position = Vector3.Lerp(Level3UI.transform.position, LevelsUIPos, Time.deltaTime * PopSpeed);
             Level4UI.transform.position = Vector3.Lerp(Level4UI.transform.position, LevelsUIPos, Time.deltaTime * PopSpeed);
         }
-    }
-
-    private void PopingOut()
-    {
-        ElaspedTime += Time.deltaTime;
-
-        if (ElaspedTime < PopDuration)
-            PopOutObj.transform.position = Vector3.Lerp(PopOutObj.transform.position, PopOutPos, Time.deltaTime * PopSpeed);
-    }
-
-    public void PopOut()
-    {
-        IfPopOut = true;
-    }
-
-    public void ClosePopOut()
-    {
-        PopOutObj.transform.position = PopInPos;
-        IfPopOut = false;   
-        ElaspedTime = 0;
     }
 
     /*
