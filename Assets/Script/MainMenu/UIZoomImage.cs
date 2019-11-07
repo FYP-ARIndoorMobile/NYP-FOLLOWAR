@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class UIZoomImage :  ScrollRect
 {
-    [SerializeField] float _minZoom = .1f;
+    [SerializeField] float _minZoom = 0.25f;
     [SerializeField] float _maxZoom = 10;
     [SerializeField] float _zoomLerpSpeed = 10f;
     float _currentZoom = 1;

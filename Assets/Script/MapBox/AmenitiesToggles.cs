@@ -9,6 +9,11 @@ public class AmenitiesToggles : MonoBehaviour
     [SerializeField]
     GameObject ScrollListType;
     [SerializeField]
+    GameObject img_closed;
+    [SerializeField]
+    GameObject img_open;
+
+    [SerializeField]
     GameObject[] otherObjs;
 
     [SerializeField]
@@ -27,13 +32,18 @@ public class AmenitiesToggles : MonoBehaviour
     void Start()
     {
         ScrollListType.SetActive(false);
+        img_open.SetActive(false);
+        img_closed.SetActive(true);
     }
     public void ChangeToggle()
     {
         isActive = !isActive;
-
+        img_open.SetActive(false);
+        img_closed.SetActive(true);
         if (isActive)
         {
+            img_open.SetActive(true);
+            img_closed.SetActive(false);
             ScrollListType.SetActive(isActive);
             for (int i = 0; i < noOfGameObjects; i++)
             {
@@ -46,6 +56,7 @@ public class AmenitiesToggles : MonoBehaviour
             {
                 otherScrollview[i].SetActive(false);
                 otherButtons[i].SetActive(true);
+                img_open.SetActive(false);
             }
         }
     }
