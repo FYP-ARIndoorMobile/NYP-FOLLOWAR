@@ -1,0 +1,275 @@
+fileFormatVersion: 2
+guid: dbadaec5e310f1948974fc5cf6f6e1ba
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Back_Hips
+    100002: BackLeft_FootBottom
+    100004: BackLeft_FootKnee
+    100006: BackLeft_FootTop
+    100008: BackRight_FootBottom
+    100010: BackRight_FootKnee
+    100012: BackRight_FootTop
+    100014: //RootNode
+    100016: Chain1
+    100018: Chain2
+    100020: FrontLeft_FootBottom
+    100022: FrontLeft_FootKnee
+    100024: FrontLeft_FootTop
+    100026: FrontRight_FootBottom
+    100028: FrontRight_FootKnee
+    100030: FrontRight_FootTop
+    100032: Head
+    100034: joint30
+    100036: joint30 1
+    100038: joint30 2
+    100040: joint31
+    100042: joint31 1
+    100044: joint31 2
+    100046: joint32
+    100048: joint32 1
+    100050: joint32 2
+    100052: joint33
+    100054: joint34
+    100056: joint35
+    100058: joint36
+    100060: joint37
+    100062: joint38
+    100064: joint39
+    100066: joint40
+    100068: joint41
+    100070: LeftBottomLip
+    100072: LeftCheek
+    100074: LeftEar1
+    100076: LeftEar2
+    100078: LeftEar3
+    100080: LeftEar4
+    100082: LeftEar5
+    100084: LeftEye
+    100086: LeftEyelid
+    100088: LeftTopLip
+    100090: MedallionTop
+    100092: MiddleRibbon1
+    100094: Neck
+    100096: polySurface52
+    100098: polySurface54
+    100100: polySurface57
+    100102: polySurface58
+    100104: polySurface59
+    100106: polySurface61
+    100108: polySurface62
+    100110: RightBottomLip
+    100112: RightCheek
+    100114: RightCheek1
+    100116: RightCheek10
+    100118: RightCheek2
+    100120: RightCheek3
+    100122: RightCheek8
+    100124: RightCheek9
+    100126: RightEar1
+    100128: RightEar2
+    100130: RightEar3
+    100132: RightEar4
+    100134: RightEar5
+    100136: RightEye
+    100138: RightEyelid
+    100140: RightTopLip
+    100142: Spine1
+    100144: Spine2
+    100146: Spine3
+    100148: Tail1
+    100150: Tail2
+    100152: Tail3
+    100154: Tail4
+    100156: Tail5
+    100158: Tail6
+    100160: Tail7
+    100162: TestWhiskers:polySurface1
+    400000: Back_Hips
+    400002: BackLeft_FootBottom
+    400004: BackLeft_FootKnee
+    400006: BackLeft_FootTop
+    400008: BackRight_FootBottom
+    400010: BackRight_FootKnee
+    400012: BackRight_FootTop
+    400014: //RootNode
+    400016: Chain1
+    400018: Chain2
+    400020: FrontLeft_FootBottom
+    400022: FrontLeft_FootKnee
+    400024: FrontLeft_FootTop
+    400026: FrontRight_FootBottom
+    400028: FrontRight_FootKnee
+    400030: FrontRight_FootTop
+    400032: Head
+    400034: joint30
+    400036: joint30 1
+    400038: joint30 2
+    400040: joint31
+    400042: joint31 1
+    400044: joint31 2
+    400046: joint32
+    400048: joint32 1
+    400050: joint32 2
+    400052: joint33
+    400054: joint34
+    400056: joint35
+    400058: joint36
+    400060: joint37
+    400062: joint38
+    400064: joint39
+    400066: joint40
+    400068: joint41
+    400070: LeftBottomLip
+    400072: LeftCheek
+    400074: LeftEar1
+    400076: LeftEar2
+    400078: LeftEar3
+    400080: LeftEar4
+    400082: LeftEar5
+    400084: LeftEye
+    400086: LeftEyelid
+    400088: LeftTopLip
+    400090: MedallionTop
+    400092: MiddleRibbon1
+    400094: Neck
+    400096: polySurface52
+    400098: polySurface54
+    400100: polySurface57
+    400102: polySurface58
+    400104: polySurface59
+    400106: polySurface61
+    400108: polySurface62
+    400110: RightBottomLip
+    400112: RightCheek
+    400114: RightCheek1
+    400116: RightCheek10
+    400118: RightCheek2
+    400120: RightCheek3
+    400122: RightCheek8
+    400124: RightCheek9
+    400126: RightEar1
+    400128: RightEar2
+    400130: RightEar3
+    400132: RightEar4
+    400134: RightEar5
+    400136: RightEye
+    400138: RightEyelid
+    400140: RightTopLip
+    400142: Spine1
+    400144: Spine2
+    400146: Spine3
+    400148: Tail1
+    400150: Tail2
+    400152: Tail3
+    400154: Tail4
+    400156: Tail5
+    400158: Tail6
+    400160: Tail7
+    400162: TestWhiskers:polySurface1
+    2100000: StingrayPBS8
+    2100002: TestWhiskers_StingrayPBS8SG1
+    4300000: polySurface62
+    4300002: polySurface52
+    4300004: polySurface57
+    4300006: polySurface54
+    4300008: polySurface59
+    4300010: polySurface61
+    4300012: polySurface58
+    4300014: TestWhiskers:polySurface1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: polySurface52
+    13700002: polySurface54
+    13700004: polySurface57
+    13700006: polySurface58
+    13700008: polySurface59
+    13700010: polySurface61
+    13700012: polySurface62
+    13700014: TestWhiskers:polySurface1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
