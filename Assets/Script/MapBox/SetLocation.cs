@@ -19,6 +19,7 @@ public class SetLocation : MonoBehaviour
     [SerializeField]
     double lng;
 
+
     [SerializeField]
     float posHeight;
 
@@ -40,30 +41,7 @@ public class SetLocation : MonoBehaviour
         waypoint.transform.position = new Vector3(transform.position.x, transform.position.y + posHeight, transform.position.z);
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.name == "Player")
-        {
-            this.gameObject.SetActive(true);
-            Debug.Log("OnTriggerEnter True");
-        }
-    }
-    void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.name == "Player")
-        {
-            this.gameObject.SetActive(true);
-            Debug.Log("OnTriggerEnter True");
-        }
-    }
-    void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.name == "Player")
-        {
-            this.gameObject.SetActive(false);
-            Debug.Log("OnTriggerExit");
-        }
-    }
+
 }
 
 
