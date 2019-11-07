@@ -11,7 +11,7 @@ public class IndoorUIManager : MonoBehaviour
     private Vector3 LevelsUIPos, Level1UIPos, Level2UIPos, Level3UIPos, Level4UIPos;
     private bool LevelsStatus;
     private IndoorUIComponent LevelsUI, Level1UI, Level2UI, Level3UI, Level4UI;
-    public float LevelsSpeed = 1.0f;
+
     
     private TouchScreenKeyboard keyboard;
 
@@ -21,15 +21,18 @@ public class IndoorUIManager : MonoBehaviour
     private bool once;
 
 
-    private RootController rootController2;
-    [SerializeField] private GameObject Controller2;
+    //private RootController rootController2;
+    //[SerializeField] private GameObject Controller2;
+
+    public GameObject PopOutObj;
+    //public float PopSpeed = 4.0f;
 
     // Start is called before the first frame update
     void Start()
     {
         //Store all UI components
         indoorUIComponents = GetComponentsInChildren<IndoorUIComponent>();
-        rootController2 = Controller2.GetComponent<RootController>();
+        //rootController2 = Controller2.GetComponent<RootController>();
 
         //Store Level objects
         //LevelsUI = GetUIComponent("Levels");
@@ -61,7 +64,7 @@ public class IndoorUIManager : MonoBehaviour
         InfoUI = GetUIComponent("Info");
         InfoUI.GetComponent<Button>().interactable = false;
         ToiletUI = GetUIComponent("Toilet");
-        ToiletUI.GetComponent<Button>().interactable = false;
+        ToiletUI.GetComponent<Button>().interactable = false;   
     }
 
     // Update is called once per frame
@@ -100,6 +103,8 @@ public class IndoorUIManager : MonoBehaviour
 
                 destinationManager.TogglePointOfInterets();
                 break;
+            case "Reset":
+                break;
         }
     }
 
@@ -114,25 +119,27 @@ public class IndoorUIManager : MonoBehaviour
         return null;
     }
 
+    /*
     private void MovingUI()
     {
         if (LevelsStatus == true)
         {
             //Move out
-            Level1UI.transform.position = Vector3.Lerp(Level1UI.transform.position, Level1UIPos, Time.deltaTime * LevelsSpeed);
-            Level2UI.transform.position = Vector3.Lerp(Level2UI.transform.position, Level2UIPos, Time.deltaTime * LevelsSpeed);
-            Level3UI.transform.position = Vector3.Lerp(Level3UI.transform.position, Level3UIPos, Time.deltaTime * LevelsSpeed);
-            Level4UI.transform.position = Vector3.Lerp(Level4UI.transform.position, Level4UIPos, Time.deltaTime * LevelsSpeed);
+            Level1UI.transform.position = Vector3.Lerp(Level1UI.transform.position, Level1UIPos, Time.deltaTime * PopSpeed);
+            Level2UI.transform.position = Vector3.Lerp(Level2UI.transform.position, Level2UIPos, Time.deltaTime * PopSpeed);
+            Level3UI.transform.position = Vector3.Lerp(Level3UI.transform.position, Level3UIPos, Time.deltaTime * PopSpeed);
+            Level4UI.transform.position = Vector3.Lerp(Level4UI.transform.position, Level4UIPos, Time.deltaTime * PopSpeed);
         }
         else
         {
             //Move in
-            Level1UI.transform.position = Vector3.Lerp(Level1UI.transform.position, LevelsUIPos, Time.deltaTime * LevelsSpeed);
-            Level2UI.transform.position = Vector3.Lerp(Level2UI.transform.position, LevelsUIPos, Time.deltaTime * LevelsSpeed);
-            Level3UI.transform.position = Vector3.Lerp(Level3UI.transform.position, LevelsUIPos, Time.deltaTime * LevelsSpeed);
-            Level4UI.transform.position = Vector3.Lerp(Level4UI.transform.position, LevelsUIPos, Time.deltaTime * LevelsSpeed);
+            Level1UI.transform.position = Vector3.Lerp(Level1UI.transform.position, LevelsUIPos, Time.deltaTime * PopSpeed);
+            Level2UI.transform.position = Vector3.Lerp(Level2UI.transform.position, LevelsUIPos, Time.deltaTime * PopSpeed);
+            Level3UI.transform.position = Vector3.Lerp(Level3UI.transform.position, LevelsUIPos, Time.deltaTime * PopSpeed);
+            Level4UI.transform.position = Vector3.Lerp(Level4UI.transform.position, LevelsUIPos, Time.deltaTime * PopSpeed);
         }
     }
+    */
 
     /*
     private void RoomInput()

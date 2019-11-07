@@ -5,13 +5,16 @@ using UnityEngine;
 public class RootController : MonoBehaviour
 {
     public GameObject footPrintPrefab;
-    float time = 0;
+    //float time = 0;
 
     //private meshLine meshLine;
     //private GameObject TargetPos;
 
     Rigidbody rigid;
     public bool InstantiateFlag;
+
+    GameObject previousRoot, newRoot;
+    public float DistFromLastRoot = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -37,13 +40,25 @@ public class RootController : MonoBehaviour
         // オブジェクトが止まっているならフラグをfalseにする
         if (rigid.IsSleeping()==true) { InstantiateFlag = false; }
 
-
-        this.time += Time.deltaTime;
         // フラグがtrueなら生成できる
-        if (this.time > 0.35f && InstantiateFlag == true)
+        if (InstantiateFlag == true)
         {
-            this.time = 0;
-            Instantiate(footPrintPrefab, transform.position, transform.rotation);
+            //if (previousRootPrint == null)
+            //    previousRootPrint = Instantiate(footPrintPrefab, transform.position, transform.rotation);
+            //else if (Vector3.Distance(previousRootPrint.transform.position, transform.position) > DistFromLastRoot)
+            //    previousRootPrint = Instantiate(footPrintPrefab, transform.position, transform.rotation);
+
+            if (previousRoot == null)
+            {
+                newRoot = Instantiate(footPrintPrefab, transform.position, transform.rotation);
+                previousRoot = newRoot;
+            }
+            else if (Vector3.Distance(previousRoot.transform.position, transform.position) > DistFromLastRoot)
+            {
+                newRoot = Instantiate(footPrintPrefab, transform.position, transform.rotation);
+                previousRoot.transform.LookAt(newRoot.transform.position);
+                previousRoot = newRoot;
+            }
         }
     }
 }

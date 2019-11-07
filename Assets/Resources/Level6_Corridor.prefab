@@ -2824,7 +2824,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2516448660565729470}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -6191,7 +6191,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5717455967857288515}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -9790,6 +9790,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7293243553291640593, guid: 8cfef656c31de0f4a87919156e490302,
+        type: 3}
+      propertyPath: footPrintPrefab
+      value: 
+      objectReference: {fileID: 7176932477555365512, guid: 81aa34df92fd56146a80eeaffcf96be0,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cfef656c31de0f4a87919156e490302, type: 3}
 --- !u!1 &7529068596866085325 stripped
