@@ -25,7 +25,7 @@ public class IndoorUIManager : MonoBehaviour
     //[SerializeField] private GameObject Controller2;
 
     public GameObject PopOutObj;
-    public float PopSpeed = 4.0f;
+    //public float PopSpeed = 4.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -119,6 +119,7 @@ public class IndoorUIManager : MonoBehaviour
         return null;
     }
 
+    /*
     private void MovingUI()
     {
         if (LevelsStatus == true)
@@ -138,6 +139,7 @@ public class IndoorUIManager : MonoBehaviour
             Level4UI.transform.position = Vector3.Lerp(Level4UI.transform.position, LevelsUIPos, Time.deltaTime * PopSpeed);
         }
     }
+    */
 
     /*
     private void RoomInput()

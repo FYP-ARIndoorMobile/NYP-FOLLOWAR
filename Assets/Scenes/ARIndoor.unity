@@ -112,6 +112,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &52030991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8547580669373343211, guid: a0ebf6cdd41ea4a41aa17bd4790059da,
+    type: 3}
+  m_PrefabInstance: {fileID: 2070426827}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &148023170
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,6 +170,7 @@ MonoBehaviour:
   bufferAngle: 15
   roomInput: {fileID: 2070426828}
   IndoorCanvas: {fileID: 314663941}
+  Calibrated: {fileID: 52030991}
 --- !u!114 &314663941 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7399692618612245143, guid: a0ebf6cdd41ea4a41aa17bd4790059da,
@@ -899,6 +906,31 @@ PrefabInstance:
     - target: {fileID: 800247794092559214, guid: a0ebf6cdd41ea4a41aa17bd4790059da,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8547580669373343211, guid: a0ebf6cdd41ea4a41aa17bd4790059da,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 83279655838789132, guid: a0ebf6cdd41ea4a41aa17bd4790059da,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245316952217101440, guid: a0ebf6cdd41ea4a41aa17bd4790059da,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2682345329862178030, guid: a0ebf6cdd41ea4a41aa17bd4790059da,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251820155099141197, guid: a0ebf6cdd41ea4a41aa17bd4790059da,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4492461704901982163, guid: a0ebf6cdd41ea4a41aa17bd4790059da,

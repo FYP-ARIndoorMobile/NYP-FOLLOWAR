@@ -23,9 +23,10 @@ public class Augenttedmage : MonoBehaviour
     private GameObject[] spawnPoints;
     private float spawnPointRotation;
 
-
     [SerializeField] private Button roomInput;
     [SerializeField] private IndoorUIManager IndoorCanvas;
+
+    public GameObject Calibrated;    
 
     void Update()
     {
@@ -58,6 +59,7 @@ public class Augenttedmage : MonoBehaviour
 
                     roomInput.interactable = true;
                     IndoorCanvas.SetDestinationManager(arObj.GetComponentInChildren<DestinationManager>());
+                    Calibrated.SetActive(true);
 
                     //if (image.Name == "15")
                     //{
