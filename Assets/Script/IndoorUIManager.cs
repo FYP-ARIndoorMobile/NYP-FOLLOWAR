@@ -231,6 +231,8 @@ public class IndoorUIManager : MonoBehaviour
                 buttonCode = "L_Door8";
                 break;
         }
+        if (buttonCode == "")
+            DebugUIManager.instance.DebugLog("WRONG");
         destinationManager.DestinationSelect(buttonCode);
     }
 
