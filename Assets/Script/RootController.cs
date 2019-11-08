@@ -16,6 +16,9 @@ public class RootController : MonoBehaviour
     GameObject previousRoot, newRoot;
     public float DistFromLastRoot = 1.0f;
 
+    public Animator animationPanda;
+   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +29,7 @@ public class RootController : MonoBehaviour
       //  meshLine = TargetPos.GetComponent<meshLine>();
 
         InstantiateFlag = false;
+
     }
 
     void Update()
@@ -38,7 +42,10 @@ public class RootController : MonoBehaviour
         //    this.transform.LookAt(meshLine.target);
 
         // オブジェクトが止まっているならフラグをfalseにする
-        if (rigid.IsSleeping()==true) { InstantiateFlag = false; }
+        if (rigid.IsSleeping()==true)
+        {
+            InstantiateFlag = false;
+        }
 
         // フラグがtrueなら生成できる
         if (InstantiateFlag == true)
@@ -47,7 +54,7 @@ public class RootController : MonoBehaviour
             //    previousRootPrint = Instantiate(footPrintPrefab, transform.position, transform.rotation);
             //else if (Vector3.Distance(previousRootPrint.transform.position, transform.position) > DistFromLastRoot)
             //    previousRootPrint = Instantiate(footPrintPrefab, transform.position, transform.rotation);
-
+                
             if (previousRoot == null)
             {
                 newRoot = Instantiate(footPrintPrefab, transform.position, transform.rotation);

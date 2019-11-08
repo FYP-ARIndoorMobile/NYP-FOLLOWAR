@@ -1122,6 +1122,7 @@ MonoBehaviour:
     type: 3}
   InstantiateFlag: 1
   DistFromLastRoot: 1
+  animationPanda: {fileID: 2661828614747024236}
 --- !u!1 &2661828614737500378
 GameObject:
   m_ObjectHideFlags: 0
