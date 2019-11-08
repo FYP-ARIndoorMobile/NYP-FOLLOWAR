@@ -78,7 +78,7 @@ public class DestinationManager : BaseButtonController
                 rootController.InstantiateFlag = true;
                 if (endPointObj == null)
                 {
-                    endPointObj = Instantiate(endPointPrefab, desk[i].transform.position, desk[i].transform.rotation);
+                    //endPointObj = Instantiate(endPointPrefab, desk[i].transform.position, desk[i].transform.rotation);
                 }
                 else
                 {
@@ -115,7 +115,7 @@ public class DestinationManager : BaseButtonController
 
                 if (endPointObj == null)
                 {
-                    endPointObj = Instantiate(endPointPrefab, destination.transform.position, destination.transform.rotation);
+                    //endPointObj = Instantiate(endPointPrefab, destination.transform.position, destination.transform.rotation);
                 }
                 else
                 {

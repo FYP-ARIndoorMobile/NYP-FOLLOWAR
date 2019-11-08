@@ -31,7 +31,7 @@ public class RootController : MonoBehaviour
         //  meshLine = TargetPos.GetComponent<meshLine>();
 
         InstantiateFlag = false;
-        ElaspedTime = 0;
+        ElaspedTime = 0;      
     }
 
     void Update()
@@ -40,7 +40,7 @@ public class RootController : MonoBehaviour
         ElaspedTime += Time.deltaTime;
         if (ElaspedTime > 1.0f)
         {
-            DebugUIManager.instance.DebugLog("START");
+            //DebugUIManager.instance.DebugLog("START");
             ElaspedTime = 0;
             if (PrevPos == null)
             {
@@ -49,20 +49,20 @@ public class RootController : MonoBehaviour
             else
             {
                 float distMoved = Vector3.Distance(PrevPos, gameObject.transform.position);
-                DebugUIManager.instance.DebugLog("Dist: " + distMoved.ToString());
+                //DebugUIManager.instance.DebugLog("Dist: " + distMoved.ToString());
                 if (distMoved < 1)
                 {
-                    DebugUIManager.instance.DebugLog("Set Idle");
+                    //DebugUIManager.instance.DebugLog("Set Idle");
                     animationPanda.SetTrigger("SetIdle");
                 }
                 else
                 {
-                    DebugUIManager.instance.DebugLog("Set Walking");
+                    //DebugUIManager.instance.DebugLog("Set Walking");
                     animationPanda.SetTrigger("SetWalking");
                 }
             }
-            DebugUIManager.instance.DebugLog("Prev: " + PrevPos.ToString());
-            DebugUIManager.instance.DebugLog("Curr: " + gameObject.transform.position.ToString());
+            //DebugUIManager.instance.DebugLog("Prev: " + PrevPos.ToString());
+            //DebugUIManager.instance.DebugLog("Curr: " + gameObject.transform.position.ToString());
             PrevPos = gameObject.transform.position;
         }
 
