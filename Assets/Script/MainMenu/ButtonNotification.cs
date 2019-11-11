@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class ButtonToggle : MonoBehaviour
+public class ButtonNotification : MonoBehaviour
 {
+
     [SerializeField]
     GameObject thePanel;
     [SerializeField]
@@ -34,7 +34,7 @@ public class ButtonToggle : MonoBehaviour
         //isON = true;
         if (isActive)
         {
-           
+
             thePanel.SetActive(true);
             theImg1.SetActive(false);
             theImg2.SetActive(false);
@@ -51,7 +51,8 @@ public class ButtonToggle : MonoBehaviour
             thePanel.SetActive(false);
             theImg1.SetActive(false);
             theImg2.SetActive(false);
-          
+
         }
+
     }
 }
