@@ -5,20 +5,20 @@ using UnityEngine.UI;
 
 public class SetTriggers : MonoBehaviour
 {
-    [SerializeField]
-    GameObject _GameObjectPrefab;
+    //[SerializeField]
+    //GameObject _GameObjectPrefab;
     [SerializeField]
     GameObject _directionPanel;
-    [SerializeField]
-    Vibration _vibrate;
+    //[SerializeField]
+    //Vibration _vibrate;
 
     void Awake()
     {
-        _vibrate = FindObjectOfType<Vibration>();
+        //_vibrate = FindObjectOfType<Vibration>();
     }
     void Start()
     {
-        _GameObjectPrefab.SetActive(false);
+       // _GameObjectPrefab.SetActive(false);
         _directionPanel.SetActive(false);
 
     }
@@ -27,11 +27,11 @@ public class SetTriggers : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (_vibrate != null)
-            {
-                _vibrate.VibrateToggle();
-            }
-            _GameObjectPrefab.SetActive(true);
+            //if (_vibrate != null)
+            //{
+            //    _vibrate.VibrateToggle();
+            //}
+           // _GameObjectPrefab.SetActive(true);
             _directionPanel.SetActive(true);
         }
     }
@@ -39,8 +39,8 @@ public class SetTriggers : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Handheld.Vibrate();
-            _GameObjectPrefab.SetActive(true);
+            //Handheld.Vibrate();
+           // _GameObjectPrefab.SetActive(true);
             _directionPanel.SetActive(true);
         }
     }
@@ -48,8 +48,8 @@ public class SetTriggers : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Handheld.Vibrate();
-            _GameObjectPrefab.SetActive(false);
+           // Handheld.Vibrate();
+             //_GameObjectPrefab.SetActive(false);
             _directionPanel.SetActive(false);
         }
     }
