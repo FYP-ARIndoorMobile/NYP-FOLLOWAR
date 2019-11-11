@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class RootController : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class RootController : MonoBehaviour
     private float ElaspedTime;
     private Vector3 PrevPos;
 
+    private NavMeshAgent agent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,12 +34,15 @@ public class RootController : MonoBehaviour
         //  meshLine = TargetPos.GetComponent<meshLine>();
 
         InstantiateFlag = false;
-        ElaspedTime = 0;      
+        ElaspedTime = 0;
+
+        animationPanda = GetComponent<Animator>();
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
     }
 
     void Update()
     {
-
         ElaspedTime += Time.deltaTime;
         if (ElaspedTime > 1.0f)
         {
@@ -79,10 +85,10 @@ public class RootController : MonoBehaviour
             }
         */
 
-        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
-        transform.LookAt(DebugUIManager.instance.FirstPersonCamera.transform.position);
-        transform.Rotate(0, 180, 0);
-        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+        //transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+        //transform.LookAt(DebugUIManager.instance.FirstPersonCamera.transform.position);
+        //transform.Rotate(0, 180, 0);
+        //transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
 
         //    this.transform.LookAt(meshLine.target);
 
@@ -112,5 +118,15 @@ public class RootController : MonoBehaviour
                 previousRoot = newRoot;
             }
         }
+    }
+
+    private void LateUpdate()
+    {
+        DebugUIManager.instance.UpdatingDebugLog((agent.velocity.normalized).ToString());
+        if (agent.velocity.sqrMagnitude > Mathf.Epsilon)
+        {
+            transform.rotation = Quaternion.LookRotation(agent.velocity.normalized);
+            transform.Rotate(0, 180, 0);
+        }       
     }
 }
