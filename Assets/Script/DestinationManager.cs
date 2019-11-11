@@ -109,10 +109,6 @@ public class DestinationManager : BaseButtonController
 
                 rootController.InstantiateFlag = true;
 
-                rootController.animationPanda.SetTrigger("SetWalking");
-                DebugUIManager.instance.DebugLog("Set Walking");
-
-
                 if (endPointObj == null)
                 {
                     //endPointObj = Instantiate(endPointPrefab, destination.transform.position, destination.transform.rotation);
