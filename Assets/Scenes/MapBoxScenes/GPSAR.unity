@@ -351,7 +351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &97486720
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3799,7 +3799,7 @@ GameObject:
   - component: {fileID: 2026449780}
   m_Layer: 12
   m_Name: ARPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6262,6 +6262,7 @@ GameObject:
   - component: {fileID: 1153383214649282437}
   - component: {fileID: 1156546793234943665}
   - component: {fileID: 1265852628473463194}
+  - component: {fileID: 1265852628473463195}
   m_Layer: 0
   m_Name: ArAlignedMap
   m_TagString: Untagged
@@ -6284,9 +6285,26 @@ MonoBehaviour:
   _map: {fileID: 1153960512813327301}
   _locationStrings:
   - 1.37817, 103.84969
-  - 1.37742, 103.84982
   _spawnScale: 50
   _markerPrefab: {fileID: 8403190020759425459, guid: 70f4f1c6915f6f24e8a4db0cee510a7b,
+    type: 3}
+--- !u!114 &1265852628473463195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265852628473463193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf32ea2cc0514b569329f6b6b68f9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _map: {fileID: 1153960512813327301}
+  _locationStrings:
+  - 1.37742, 103.84982
+  _spawnScale: 50
+  _markerPrefab: {fileID: 3054275573245646737, guid: dbdc2dc7a733195418df3f0589254fbc,
     type: 3}
 --- !u!1 &1265921833299277255
 GameObject:

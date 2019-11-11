@@ -39,8 +39,6 @@ public class SetTriggers : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            //Handheld.Vibrate();
-           // _GameObjectPrefab.SetActive(true);
             _directionPanel.SetActive(true);
         }
     }
@@ -48,8 +46,7 @@ public class SetTriggers : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-           // Handheld.Vibrate();
-             //_GameObjectPrefab.SetActive(false);
+           
             _directionPanel.SetActive(false);
         }
     }
