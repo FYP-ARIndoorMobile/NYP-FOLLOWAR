@@ -1987,7 +1987,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &331668261
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3186,7 +3186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9647059, g: 0.8627451, b: 0.07058824, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4993,6 +4993,7 @@ GameObject:
   - component: {fileID: 717541433}
   - component: {fileID: 717541435}
   - component: {fileID: 717541434}
+  - component: {fileID: 717541436}
   m_Layer: 5
   m_Name: txt_Indoor
   m_TagString: Untagged
@@ -5061,6 +5062,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717541432}
   m_CullTransparentMesh: 0
+--- !u!114 &717541436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717541432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &718695979
 GameObject:
   m_ObjectHideFlags: 0
@@ -6548,7 +6564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9647059, g: 0.8627451, b: 0.07058824, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -14083,7 +14099,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 5, y: -5}
-  m_UseGraphicAlpha: 0
+  m_UseGraphicAlpha: 1
 --- !u!1 &1984172822
 GameObject:
   m_ObjectHideFlags: 0
@@ -14243,6 +14259,7 @@ GameObject:
   - component: {fileID: 2010282082}
   - component: {fileID: 2010282081}
   - component: {fileID: 2010282080}
+  - component: {fileID: 2010282083}
   m_Layer: 5
   m_Name: txt_Outdoor
   m_TagString: Untagged
@@ -14311,6 +14328,21 @@ RectTransform:
   m_AnchoredPosition: {x: 437.9, y: 851}
   m_SizeDelta: {x: 1014.5, y: 734}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2010282083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010282079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2017286486
 GameObject:
   m_ObjectHideFlags: 0
@@ -19297,7 +19329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &2226601059169764769
 GameObject:
   m_ObjectHideFlags: 0
