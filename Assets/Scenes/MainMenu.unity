@@ -1027,7 +1027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9647059, g: 0.8627451, b: 0.07058824, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -14000,6 +14000,7 @@ GameObject:
   - component: {fileID: 1973617667}
   - component: {fileID: 1973617669}
   - component: {fileID: 1973617668}
+  - component: {fileID: 1973617670}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -14039,7 +14040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9622642, g: 0.8616592, b: 0.06808472, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -14068,6 +14069,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973617666}
   m_CullTransparentMesh: 0
+--- !u!114 &1973617670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973617666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 0
 --- !u!1 &1984172822
 GameObject:
   m_ObjectHideFlags: 0
@@ -15578,6 +15594,7 @@ GameObject:
   - component: {fileID: 322486033893588432}
   - component: {fileID: 322486033893588435}
   - component: {fileID: 322486033893588434}
+  - component: {fileID: 322486033893588446}
   m_Layer: 5
   m_Name: Btn_Outdoor_word
   m_TagString: Untagged
@@ -15606,6 +15623,21 @@ RectTransform:
   m_AnchoredPosition: {x: 506, y: -389}
   m_SizeDelta: {x: 663.16, y: 750}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &322486033893588446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322486033893588444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 10, y: -10}
+  m_UseGraphicAlpha: 1
 --- !u!222 &322486034409490722
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15678,6 +15710,7 @@ GameObject:
   - component: {fileID: 322486034409490732}
   - component: {fileID: 322486034409490722}
   - component: {fileID: 322486034409490733}
+  - component: {fileID: 322486034409490736}
   m_Layer: 5
   m_Name: txt_Indoor
   m_TagString: Untagged
@@ -15685,6 +15718,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &322486034409490736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322486034409490735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!114 &322486034493316658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15738,6 +15786,7 @@ GameObject:
   - component: {fileID: 322486034493316669}
   - component: {fileID: 322486034493316659}
   - component: {fileID: 322486034493316658}
+  - component: {fileID: 322486034493316670}
   m_Layer: 5
   m_Name: txt_Outdoor
   m_TagString: Untagged
@@ -15764,6 +15813,21 @@ RectTransform:
   m_AnchoredPosition: {x: 437.9, y: 851}
   m_SizeDelta: {x: 1014.5, y: 734}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &322486034493316670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322486034493316668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!114 &322486034550740624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15898,6 +15962,7 @@ GameObject:
   - component: {fileID: 322486034550740625}
   - component: {fileID: 322486034550740624}
   - component: {fileID: 322486034550740627}
+  - component: {fileID: 322486034550740638}
   m_Layer: 5
   m_Name: Btn_Indoor_word
   m_TagString: Untagged
@@ -15905,6 +15970,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &322486034550740638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322486034550740637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 10, y: -10}
+  m_UseGraphicAlpha: 1
 --- !u!224 &406584986028645044
 RectTransform:
   m_ObjectHideFlags: 0
