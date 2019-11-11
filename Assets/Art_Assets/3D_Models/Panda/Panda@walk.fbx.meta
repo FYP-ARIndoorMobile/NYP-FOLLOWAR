@@ -1,0 +1,261 @@
+fileFormatVersion: 2
+guid: 5425ad57276d3ca42bf311eb23cd5136
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Back1
+    100002: Back2
+    100004: Back3
+    100006: bezier1
+    100008: bezier11
+    100010: bezier13
+    100012: bezier15
+    100014: bezier16
+    100016: bezier4
+    100018: bezier5
+    100020: bezier6
+    100022: bezier7
+    100024: bezier8
+    100026: bezier9
+    100028: Head
+    100030: ikHandle1
+    100032: ikHandle2
+    100034: Jaw1
+    100036: Jaw2
+    100038: joint1
+    100040: joint23
+    100042: joint24
+    100044: joint25
+    100046: joint26
+    100048: L_Cheek1
+    100050: L_Elbow
+    100052: L_Eye
+    100054: L_Eyebrow
+    100056: L_Feet
+    100058: L_Hand
+    100060: L_Hip
+    100062: L_Shoulder
+    100064: L_UpperLip
+    100066: L_Wrist
+    100068: Lip1
+    100070: Lip2
+    100072: Lip3
+    100074: Lip4
+    100076: Neck
+    100078: //RootNode
+    100080: pasted__bezier20
+    100082: pasted__bezier21
+    100084: pasted__bezier23
+    100086: pasted__bezier25
+    100088: pasted__bezier26
+    100090: pasted__bezier28
+    100092: pasted__bezier29
+    100094: pasted__bezier30
+    100096: polySurface10
+    100098: polySurface11
+    100100: polySurface8
+    100102: polySurface9
+    100104: pSphere2
+    100106: R_Cheek1
+    100108: R_Elbow
+    100110: R_Eye
+    100112: R_Eyebrow
+    100114: R_Feet
+    100116: R_Hand
+    100118: R_Hip
+    100120: R_Shoulder
+    100122: R_UpperLip
+    100124: R_Wrist
+    100126: Uppermouth
+    400000: Back1
+    400002: Back2
+    400004: Back3
+    400006: bezier1
+    400008: bezier11
+    400010: bezier13
+    400012: bezier15
+    400014: bezier16
+    400016: bezier4
+    400018: bezier5
+    400020: bezier6
+    400022: bezier7
+    400024: bezier8
+    400026: bezier9
+    400028: Head
+    400030: ikHandle1
+    400032: ikHandle2
+    400034: Jaw1
+    400036: Jaw2
+    400038: joint1
+    400040: joint23
+    400042: joint24
+    400044: joint25
+    400046: joint26
+    400048: L_Cheek1
+    400050: L_Elbow
+    400052: L_Eye
+    400054: L_Eyebrow
+    400056: L_Feet
+    400058: L_Hand
+    400060: L_Hip
+    400062: L_Shoulder
+    400064: L_UpperLip
+    400066: L_Wrist
+    400068: Lip1
+    400070: Lip2
+    400072: Lip3
+    400074: Lip4
+    400076: Neck
+    400078: //RootNode
+    400080: pasted__bezier20
+    400082: pasted__bezier21
+    400084: pasted__bezier23
+    400086: pasted__bezier25
+    400088: pasted__bezier26
+    400090: pasted__bezier28
+    400092: pasted__bezier29
+    400094: pasted__bezier30
+    400096: polySurface10
+    400098: polySurface11
+    400100: polySurface8
+    400102: polySurface9
+    400104: pSphere2
+    400106: R_Cheek1
+    400108: R_Elbow
+    400110: R_Eye
+    400112: R_Eyebrow
+    400114: R_Feet
+    400116: R_Hand
+    400118: R_Hip
+    400120: R_Shoulder
+    400122: R_UpperLip
+    400124: R_Wrist
+    400126: Uppermouth
+    2100000: StingrayPBS1
+    4300000: polySurface11
+    4300002: polySurface8
+    4300004: polySurface9
+    7400000: walk
+    9500000: //RootNode
+    13700000: polySurface11
+    13700002: polySurface8
+    13700004: polySurface9
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StingrayPBS1
+    second: {fileID: 2100000, guid: 307d1423fffd7294485884a8378762f9, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walk
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

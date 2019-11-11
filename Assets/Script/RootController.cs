@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class RootController : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class RootController : MonoBehaviour
     GameObject previousRoot, newRoot;
     public float DistFromLastRoot = 1.0f;
 
+    private Animator animationPanda;
+
+    private NavMeshAgent agent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,31 +28,25 @@ public class RootController : MonoBehaviour
         // ガイドオブジェクトを固定する
         this.transform.position = this.transform.localPosition;
 
-      //  meshLine = TargetPos.GetComponent<meshLine>();
-
         InstantiateFlag = false;
+
+        animationPanda = GetComponent<Animator>();
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
     }
 
     void Update()
     {
-        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
-        transform.LookAt(DebugUIManager.instance.FirstPersonCamera.transform.position);
-        transform.Rotate(0, 180, 0);
-        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
-
-        //    this.transform.LookAt(meshLine.target);
-
         // オブジェクトが止まっているならフラグをfalseにする
-        if (rigid.IsSleeping()==true) { InstantiateFlag = false; }
+        if (rigid.IsSleeping() == true)
+        {
+            InstantiateFlag = false;
+        }
 
         // フラグがtrueなら生成できる
         if (InstantiateFlag == true)
         {
-            //if (previousRootPrint == null)
-            //    previousRootPrint = Instantiate(footPrintPrefab, transform.position, transform.rotation);
-            //else if (Vector3.Distance(previousRootPrint.transform.position, transform.position) > DistFromLastRoot)
-            //    previousRootPrint = Instantiate(footPrintPrefab, transform.position, transform.rotation);
-
+            //Place dotted path behind guide object
             if (previousRoot == null)
             {
                 newRoot = Instantiate(footPrintPrefab, transform.position, transform.rotation);
@@ -59,6 +58,25 @@ public class RootController : MonoBehaviour
                 previousRoot.transform.LookAt(newRoot.transform.position);
                 previousRoot = newRoot;
             }
+        }
+    }
+
+    private void LateUpdate()
+    {
+        DebugUIManager.instance.UpdatingDebugLog((agent.velocity.sqrMagnitude).ToString());
+        if (agent.velocity.sqrMagnitude > 1.0f)
+        {
+            animationPanda.SetTrigger("SetWalking");
+            transform.rotation = Quaternion.LookRotation(agent.velocity.normalized);
+            transform.Rotate(0, 180, 0);
+            transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+        }
+        else
+        {
+            animationPanda.SetTrigger("SetIdle");
+            transform.LookAt(DebugUIManager.instance.FirstPersonCamera.transform.position);
+            transform.Rotate(0, 180, 0);
+            transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
         }
     }
 }

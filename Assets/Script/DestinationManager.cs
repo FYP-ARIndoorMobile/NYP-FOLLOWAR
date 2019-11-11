@@ -47,11 +47,9 @@ public class DestinationManager : BaseButtonController
             endPointObj.transform.rotation = Quaternion.Euler(0, endPointObj.transform.rotation.eulerAngles.y, 0);
             endPointObj.transform.LookAt(DebugUIManager.instance.FirstPersonCamera.transform.position);
             endPointObj.transform.Rotate(0, 180, 0);
-          //  endPointObj.transform.LookAt(rootG.target);
-
+            //endPointObj.transform.LookAt(rootG.target);
         }
     }
-
     protected override void OnClick(string objectName)
     {
         // 渡されたオブジェクト名で処理を分岐
@@ -80,7 +78,7 @@ public class DestinationManager : BaseButtonController
                 rootController.InstantiateFlag = true;
                 if (endPointObj == null)
                 {
-                    endPointObj = Instantiate(endPointPrefab, desk[i].transform.position, desk[i].transform.rotation);
+                    //endPointObj = Instantiate(endPointPrefab, desk[i].transform.position, desk[i].transform.rotation);
                 }
                 else
                 {
@@ -110,9 +108,10 @@ public class DestinationManager : BaseButtonController
                 //destination.SetActive(true);
 
                 rootController.InstantiateFlag = true;
+
                 if (endPointObj == null)
                 {
-                    endPointObj = Instantiate(endPointPrefab, destination.transform.position, destination.transform.rotation);
+                    //endPointObj = Instantiate(endPointPrefab, destination.transform.position, destination.transform.rotation);
                 }
                 else
                 {
