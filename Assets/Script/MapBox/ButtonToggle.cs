@@ -8,9 +8,14 @@ public class ButtonToggle : MonoBehaviour
     [SerializeField]
     GameObject thePanel;
     [SerializeField]
-    GameObject theBtn1;
+    GameObject theImg1;
     [SerializeField]
-    GameObject theBtn2;
+    GameObject theImg2;
+
+    [SerializeField]
+    GameObject closed_image;
+    [SerializeField]
+    GameObject opened_image;
 
     bool isActive;
     //private int counter = 0;
@@ -18,6 +23,9 @@ public class ButtonToggle : MonoBehaviour
     void Start()
     {
         thePanel.SetActive(false);
+
+        opened_image.SetActive(false);
+        closed_image.SetActive(true);
     }
     public void ImageActive()
     {
@@ -28,15 +36,21 @@ public class ButtonToggle : MonoBehaviour
         {
            
             thePanel.SetActive(true);
-            theBtn1.SetActive(false);
-            theBtn2.SetActive(false);
+            theImg1.SetActive(false);
+            theImg2.SetActive(false);
+
+            opened_image.SetActive(true);
+            closed_image.SetActive(false);
+
         }
         else
         {
+            opened_image.SetActive(false);
+            closed_image.SetActive(true);
 
             thePanel.SetActive(false);
-            theBtn1.SetActive(false);
-            theBtn2.SetActive(false);
+            theImg1.SetActive(false);
+            theImg2.SetActive(false);
           
         }
     }

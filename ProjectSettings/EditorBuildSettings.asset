@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MapBoxScenes/GPSAR.unity
     guid: ca0e3f239d3b75a4fbaf8029f20913be
-  - enabled: 0
-    path: Assets/Scenes/MapBoxScenes/TestOrange.unity
-    guid: 73dc13fcc4298914e865e526ddbd649d
+  - enabled: 1
+    path: Assets/Scenes/MapBoxScenes/GPSAR2.unity
+    guid: 7fe3b3a4a76d1b14ab265cb262c8f29e
   m_configObjects: {}

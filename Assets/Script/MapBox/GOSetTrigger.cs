@@ -18,8 +18,6 @@ public class GOSetTrigger : MonoBehaviour
     void Start()
     {
         _GameObjectPrefab.SetActive(false);
-
-        
         this.transform.position = this.transform.localPosition;
     }
     void Update()
@@ -34,10 +32,8 @@ public class GOSetTrigger : MonoBehaviour
             //{
             //    _vibrate.VibrateToggle();
             //}
-            print("Hello Touchy TOuch pls");
-            
+           // print("Hello Touchy TOuch pls");            
             _GameObjectPrefab.SetActive(true);
-          
         }
     }
     void OnTriggerStay(Collider other)
@@ -46,17 +42,12 @@ public class GOSetTrigger : MonoBehaviour
         {
             //Handheld.Vibrate();
             _GameObjectPrefab.SetActive(true);
-
-           // Debug.Log("KeepTouch");
-
-
         }
     }
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-         
             _GameObjectPrefab.SetActive(false);
         }
     }
