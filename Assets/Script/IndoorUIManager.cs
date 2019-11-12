@@ -154,7 +154,7 @@ public class IndoorUIManager : MonoBehaviour
     private void RoomInput()
     {
         //Check input
-        if (RoomInputUI.GetComponent<TMP_InputField>().text.Length < 4)
+        if (RoomInputUI.GetComponent<TMP_InputField>().text.Length < 3)
             OkayUI.GetComponent<Button>().interactable = false;
         else
             OkayUI.GetComponent<Button>().interactable = true;

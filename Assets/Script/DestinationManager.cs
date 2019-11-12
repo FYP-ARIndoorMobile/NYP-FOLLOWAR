@@ -156,7 +156,6 @@ public class DestinationManager : BaseButtonController
 
         for (int i = 0; i < deskTag.Length; i++)
         {
-            DebugUIManager.instance.DebugLog(deskTag[i].name);
             Destroy(deskTag[i]);
         }
     }

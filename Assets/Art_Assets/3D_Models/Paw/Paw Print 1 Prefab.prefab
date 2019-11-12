@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5696139543920450634}
   m_Layer: 0
   m_Name: Paw Print 1 Prefab
-  m_TagString: Untagged
+  m_TagString: Arrow Prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

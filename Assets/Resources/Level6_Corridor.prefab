@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3959367990784640117}
   - component: {fileID: 7679174220442315658}
   m_Layer: 0
-  m_Name: L_Door4
+  m_Name: 625
   m_TagString: root1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 9150422987661282923}
   - component: {fileID: 7414244558969655627}
   m_Layer: 0
-  m_Name: R_Door8
+  m_Name: 605
   m_TagString: root1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 7276135229081623179}
   - component: {fileID: 7719429179355783817}
   m_Layer: 0
-  m_Name: L_Door2
+  m_Name: 623
   m_TagString: root1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -450,7 +450,7 @@ GameObject:
   - component: {fileID: 3791130288159463889}
   - component: {fileID: 5073894772495950411}
   m_Layer: 0
-  m_Name: R_Door7
+  m_Name: 604
   m_TagString: root1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -559,7 +559,7 @@ GameObject:
   - component: {fileID: 773021777596634679}
   - component: {fileID: 8289131423306537473}
   m_Layer: 0
-  m_Name: R_Door3
+  m_Name: 602
   m_TagString: root1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -949,7 +949,7 @@ GameObject:
   - component: {fileID: 1022627476390592883}
   - component: {fileID: 9099612226231384996}
   m_Layer: 0
-  m_Name: R_Door13
+  m_Name: 610
   m_TagString: root1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1058,7 +1058,7 @@ GameObject:
   - component: {fileID: 8248192829668748664}
   - component: {fileID: 7026774439699367856}
   m_Layer: 0
-  m_Name: L_Door8
+  m_Name: 627
   m_TagString: root1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1414,7 +1414,7 @@ GameObject:
   - component: {fileID: 4187970799519849812}
   - component: {fileID: 4944863431506406959}
   m_Layer: 0
-  m_Name: R_Door2
+  m_Name: 615
   m_TagString: root1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1563,7 +1563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   line: {fileID: 6356073771275372305}
-  Controller: {fileID: 5020374050303016982}
+  Controller: {fileID: 7529068596866085325}
   desk:
   - {fileID: 6434566965255288430}
   - {fileID: 134287697142110729}
@@ -1573,8 +1573,6 @@ MonoBehaviour:
   - {fileID: 5897079844366003988}
   - {fileID: 1935371806224040363}
   - {fileID: 727369337760687136}
-  endPointPrefab: {fileID: 3303228037145227724, guid: 8cfef656c31de0f4a87919156e490302,
-    type: 3}
   PointOfInterests:
   - {fileID: 6697379907443609711}
   - {fileID: 5491776287543758717}
@@ -1928,7 +1926,7 @@ GameObject:
   - component: {fileID: 4160277428857510939}
   - component: {fileID: 1013410812041548764}
   m_Layer: 0
-  m_Name: L_Door7
+  m_Name: 613
   m_TagString: root1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3798,7 +3796,7 @@ GameObject:
   - component: {fileID: 9063669653701546001}
   - component: {fileID: 4281085992023805028}
   m_Layer: 0
-  m_Name: R_Door4
+  m_Name: 603
   m_TagString: root1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4754,7 +4752,7 @@ GameObject:
   - component: {fileID: 3800097938751925537}
   - component: {fileID: 6439812605352156323}
   m_Layer: 0
-  m_Name: R_Door1
+  m_Name: 601
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5384,6 +5382,44 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Extra
+--- !u!54 &2228536221573144231
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7529068596866085325}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!195 &1075371250277414213
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7529068596866085325}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 2.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 0
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &5036426779182246971
 GameObject:
   m_ObjectHideFlags: 0
@@ -5529,7 +5565,7 @@ GameObject:
   - component: {fileID: 960763877016318020}
   - component: {fileID: 6648770048715650782}
   m_Layer: 0
-  m_Name: R_Door12
+  m_Name: 608
   m_TagString: root1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6241,7 +6277,7 @@ Transform:
   m_Children:
   - {fileID: 2481729346932931675}
   - {fileID: 2265678577839761509}
-  - {fileID: 5020374050303017027}
+  - {fileID: 7529068596866575789}
   - {fileID: 3696695132898772387}
   - {fileID: 179403766361233}
   m_Father: {fileID: 0}
@@ -6340,7 +6376,7 @@ GameObject:
   - component: {fileID: 5749897873728308189}
   - component: {fileID: 6209044211749938839}
   m_Layer: 0
-  m_Name: R_Door11
+  m_Name: 607
   m_TagString: root1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6449,7 +6485,7 @@ GameObject:
   - component: {fileID: 6509246287993124538}
   - component: {fileID: 317179421028262108}
   m_Layer: 0
-  m_Name: L_Door6
+  m_Name: 626
   m_TagString: root1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6727,7 +6763,7 @@ GameObject:
   - component: {fileID: 6923074016320363954}
   - component: {fileID: 21244661464109238}
   m_Layer: 0
-  m_Name: R_Door6
+  m_Name: 614
   m_TagString: root1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6873,8 +6909,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b79a1d85425a34988d0583a2a714da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 5020374050303017027}
-  StartingPoint: {fileID: 5020374050303016982}
+  target: {fileID: 7529068596866575789}
+  StartingPoint: {fileID: 7529068596866085325}
   arrowPoint: {fileID: 8716868654758577623}
   agent:
   - {fileID: 1075371250277414213}
@@ -6922,7 +6958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   line: {fileID: 6356073771275372305}
-  Controller: {fileID: 5020374050303016982}
+  Controller: {fileID: 7529068596866085325}
   desk:
   - {fileID: 4429663501006382134}
   - {fileID: 1246151646340474146}
@@ -6945,8 +6981,6 @@ MonoBehaviour:
   - {fileID: 5897079844366003988}
   - {fileID: 1935371806224040363}
   - {fileID: 727369337760687136}
-  endPointPrefab: {fileID: 3303228037145227724, guid: 8cfef656c31de0f4a87919156e490302,
-    type: 3}
   PointOfInterests:
   - {fileID: 6745451795412544158}
   - {fileID: 6806543665677548503}
@@ -7003,7 +7037,7 @@ GameObject:
   - component: {fileID: 1269410845047873879}
   - component: {fileID: 2513701447586064680}
   m_Layer: 0
-  m_Name: L_Door1
+  m_Name: 622
   m_TagString: root1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8710,44 +8744,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &2228536221573144231
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5020374050303016982}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!195 &1075371250277414213
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5020374050303016982}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 2.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 0
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &7636421366481594285
 GameObject:
   m_ObjectHideFlags: 0
@@ -8984,7 +8980,7 @@ GameObject:
   - component: {fileID: 5391645446111243886}
   - component: {fileID: 869711744644017633}
   m_Layer: 0
-  m_Name: R_Door9
+  m_Name: 606
   m_TagString: root1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9259,7 +9255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   line: {fileID: 6356073771275372305}
-  Controller: {fileID: 5020374050303016982}
+  Controller: {fileID: 7529068596866085325}
   desk:
   - {fileID: 4429663501006382134}
   - {fileID: 1246151646340474146}
@@ -9269,8 +9265,6 @@ MonoBehaviour:
   - {fileID: 6182652582098193453}
   - {fileID: 138252254282435350}
   - {fileID: 99851955350435748}
-  endPointPrefab: {fileID: 3303228037145227724, guid: 8cfef656c31de0f4a87919156e490302,
-    type: 3}
   PointOfInterests:
   - {fileID: 6745451795412544158}
   - {fileID: 6806543665677548503}
@@ -9559,7 +9553,7 @@ Transform:
   m_LocalPosition: {x: 0.11365599, y: -0.024999976, z: -0.76985717}
   m_LocalScale: {x: 0.24999999, y: 1.25, z: 1.2941251}
   m_Children: []
-  m_Father: {fileID: 5020374050303017027}
+  m_Father: {fileID: 7529068596866575789}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &1818787820521586415
@@ -9598,7 +9592,7 @@ GameObject:
   - component: {fileID: 318202686872222114}
   - component: {fileID: 4498890594275829663}
   m_Layer: 0
-  m_Name: L_Door5
+  m_Name: 624
   m_TagString: root1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9800,7 +9794,7 @@ PrefabInstance:
         type: 3}
       propertyPath: animationPanda
       value: 
-      objectReference: {fileID: 5020374050303017046}
+      objectReference: {fileID: 7529068596858782329}
     - target: {fileID: 3303228037154701944, guid: 8cfef656c31de0f4a87919156e490302,
         type: 3}
       propertyPath: m_Controller
@@ -9808,19 +9802,19 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 30e05789a91557e4987f182c3bc2cdc4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cfef656c31de0f4a87919156e490302, type: 3}
---- !u!1 &5020374050303016982 stripped
+--- !u!1 &7529068596866085325 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3303228037145227724, guid: 8cfef656c31de0f4a87919156e490302,
     type: 3}
   m_PrefabInstance: {fileID: 5020374050303016961}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &5020374050303017027 stripped
+--- !u!4 &7529068596866575789 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3303228037144866220, guid: 8cfef656c31de0f4a87919156e490302,
     type: 3}
   m_PrefabInstance: {fileID: 5020374050303016961}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &5020374050303017046 stripped
+--- !u!95 &7529068596858782329 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 3303228037154701944, guid: 8cfef656c31de0f4a87919156e490302,
     type: 3}
