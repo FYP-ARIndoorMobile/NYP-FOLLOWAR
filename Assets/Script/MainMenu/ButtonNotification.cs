@@ -8,14 +8,13 @@ public class ButtonNotification : MonoBehaviour
     [SerializeField]
     GameObject thePanel;
     [SerializeField]
+    GameObject theoptionbuttonPanel;
+    [SerializeField]
     GameObject theImg1;
     [SerializeField]
     GameObject theImg2;
 
-    [SerializeField]
-    GameObject closed_image;
-    [SerializeField]
-    GameObject opened_image;
+
 
     bool isActive;
     //private int counter = 0;
@@ -23,9 +22,8 @@ public class ButtonNotification : MonoBehaviour
     void Start()
     {
         thePanel.SetActive(false);
+        theoptionbuttonPanel.SetActive(false);
 
-        opened_image.SetActive(false);
-        closed_image.SetActive(true);
     }
     public void ImageActive()
     {
@@ -36,20 +34,22 @@ public class ButtonNotification : MonoBehaviour
         {
 
             thePanel.SetActive(true);
+            theoptionbuttonPanel.SetActive(true);
             theImg1.SetActive(false);
             theImg2.SetActive(false);
+     
 
-            opened_image.SetActive(true);
-            closed_image.SetActive(false);
+
 
         }
         else
         {
-            opened_image.SetActive(false);
-            closed_image.SetActive(true);
 
+
+            theoptionbuttonPanel.SetActive(false);
             thePanel.SetActive(false);
             theImg1.SetActive(false);
+    
             theImg2.SetActive(false);
 
         }
