@@ -14,8 +14,8 @@ public class DestinationManager : BaseButtonController
    
     public GameObject[] desk;
 
-    public GameObject endPointPrefab;
-    private GameObject endPointObj;
+    //public GameObject endPointPrefab;
+    //private GameObject endPointObj;
 
 
     private bool displayPointOfInterests;
@@ -42,13 +42,13 @@ public class DestinationManager : BaseButtonController
         {
             FindNearestPOI();
         }
-        if (endPointObj != null)
-        {
-            endPointObj.transform.rotation = Quaternion.Euler(0, endPointObj.transform.rotation.eulerAngles.y, 0);
-            endPointObj.transform.LookAt(DebugUIManager.instance.FirstPersonCamera.transform.position);
-            endPointObj.transform.Rotate(0, 180, 0);
-            //endPointObj.transform.LookAt(rootG.target);
-        }
+        //if (endPointObj != null)
+        //{
+        //    endPointObj.transform.rotation = Quaternion.Euler(0, endPointObj.transform.rotation.eulerAngles.y, 0);
+        //    endPointObj.transform.LookAt(DebugUIManager.instance.FirstPersonCamera.transform.position);
+        //    endPointObj.transform.Rotate(0, 180, 0);
+        //    //endPointObj.transform.LookAt(rootG.target);
+        //}
     }
     protected override void OnClick(string objectName)
     {
@@ -76,15 +76,15 @@ public class DestinationManager : BaseButtonController
                 //desk[i].SetActive(true);
 
                 rootController.InstantiateFlag = true;
-                if (endPointObj == null)
-                {
-                    //endPointObj = Instantiate(endPointPrefab, desk[i].transform.position, desk[i].transform.rotation);
-                }
-                else
-                {
-                    endPointObj.transform.position = desk[i].transform.position;
-                    endPointObj.transform.rotation = desk[i].transform.rotation;
-                }
+                //if (endPointObj == null)
+                //{
+                //    //endPointObj = Instantiate(endPointPrefab, desk[i].transform.position, desk[i].transform.rotation);
+                //}
+                //else
+                //{
+                //    endPointObj.transform.position = desk[i].transform.position;
+                //    endPointObj.transform.rotation = desk[i].transform.rotation;
+                //}
                 i = i + 1;
             }
 
@@ -98,28 +98,31 @@ public class DestinationManager : BaseButtonController
 
     public void DestinationSelect(string objectName)
     {
+        DebugUIManager.instance.DebugLog("here");
         Reset();
         foreach (GameObject destination in desk)
         {
             if (destination.name == objectName)
             {
+                DebugUIManager.instance.DebugLog("found");
                 displayPointOfInterests = false;
                 rootG.target = destination.transform;
                 //destination.SetActive(true);
 
                 rootController.InstantiateFlag = true;
 
-                if (endPointObj == null)
-                {
-                    //endPointObj = Instantiate(endPointPrefab, destination.transform.position, destination.transform.rotation);
-                }
-                else
-                {
-                    endPointObj.transform.position = destination.transform.position;
-                    endPointObj.transform.rotation = destination.transform.rotation;
-                }
+                //if (endPointObj == null)
+                //{
+                //    //endPointObj = Instantiate(endPointPrefab, destination.transform.position, destination.transform.rotation);
+                //}
+                //else
+                //{
+                //    endPointObj.transform.position = destination.transform.position;
+                //    endPointObj.transform.rotation = destination.transform.rotation;
+                //}
             }
         }
+        DebugUIManager.instance.DebugLog("end");
     }
 
     //private void Button2Click()
@@ -136,7 +139,7 @@ public class DestinationManager : BaseButtonController
     public void Reset()
     {
         GameObject[] deskTag = GameObject.FindGameObjectsWithTag("Arrow Prefab");
-
+        
         rootG.arrowPoint.transform.position = rootG.StartingPoint.transform.position;
         // 目的地以外のドアを消す
         foreach (GameObject door in desk)
@@ -153,6 +156,7 @@ public class DestinationManager : BaseButtonController
 
         for (int i = 0; i < deskTag.Length; i++)
         {
+            DebugUIManager.instance.DebugLog(deskTag[i].name);
             Destroy(deskTag[i]);
         }
     }
