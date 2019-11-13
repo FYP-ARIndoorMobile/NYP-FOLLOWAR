@@ -360,7 +360,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 97486719}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -1121,6 +1121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 599557406}
+  - component: {fileID: 599557407}
   m_Layer: 5
   m_Name: GPSON?
   m_TagString: Untagged
@@ -1148,6 +1149,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 134}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &599557407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599557405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 562a9fe49bfc2418099790a804f22711, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &615644178
 GameObject:
   m_ObjectHideFlags: 0
@@ -2042,7 +2055,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1226385352
 Transform:
   m_ObjectHideFlags: 0
@@ -4276,7 +4289,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1579282083034778
 GameObject:
   m_ObjectHideFlags: 0
@@ -4547,7 +4560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2000122, g: 0.2000122, b: 0.2000122, a: 0.2000122}
+  m_Color: {r: 0.9274668, g: 0.9274668, b: 0.9274668, a: 0.9274668}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -6285,7 +6298,7 @@ MonoBehaviour:
   _map: {fileID: 1153960512813327301}
   _locationStrings:
   - 1.37817, 103.84969
-  _spawnScale: 50
+  _spawnScale: 2
   _markerPrefab: {fileID: 8403190020759425459, guid: 70f4f1c6915f6f24e8a4db0cee510a7b,
     type: 3}
 --- !u!114 &1265852628473463195
@@ -6303,7 +6316,7 @@ MonoBehaviour:
   _map: {fileID: 1153960512813327301}
   _locationStrings:
   - 1.37742, 103.84982
-  _spawnScale: 50
+  _spawnScale: 2
   _markerPrefab: {fileID: 3054275573245646737, guid: dbdc2dc7a733195418df3f0589254fbc,
     type: 3}
 --- !u!1 &1265921833299277255

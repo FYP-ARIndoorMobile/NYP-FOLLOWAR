@@ -34,8 +34,8 @@ namespace Mapbox.Unity.MeshGeneration.Factories
 		private Directions _directions;
 		private int _counter;
 
-       // GameObject _directionsGO;
-        GameObject _directionsGOAR;
+        GameObject _directionsGO;
+        GameObject _directionsGOMap;
         private bool _recalculateNext;
 
 		protected virtual void Awake()
@@ -129,49 +129,19 @@ namespace Mapbox.Unity.MeshGeneration.Factories
 				mod.Run(feat, meshData, _map.WorldRelativeScale);
 			}
 
-			//CreateGameObject(meshData);
-            CreateGameObjectAR(meshData);
+			CreateGameObject(meshData);
+            CreateGameObjectMap(meshData);
         }
 
-        //GameObject CreateGameObject(MeshData data)
-        //{
-        //    if (_directionsGO != null)
-        //    {
-        //        _directionsGO.Destroy();
-        //    }
-        //    _directionsGO = new GameObject("direction_waypoint_" + "entity");
-        //    var mesh = _directionsGO.AddComponent<MeshFilter>().mesh;
-        //    mesh.subMeshCount = data.Triangles.Count;
-
-        //    mesh.SetVertices(data.Vertices);
-        //    _counter = data.Triangles.Count;
-        //    for (int i = 0; i < _counter; i++)
-        //    {
-        //        var triangle = data.Triangles[i];
-        //        mesh.SetTriangles(triangle, i);
-        //    }
-
-        //    _counter = data.UV.Count;
-        //    for (int i = 0; i < _counter; i++)
-        //    {
-        //        var uv = data.UV[i];
-        //        mesh.SetUVs(i, uv);
-        //    }
-
-        //    mesh.RecalculateNormals();
-        //    _directionsGO.AddComponent<MeshRenderer>().material = _material;
-        //    //_directionsGO.layer = 12;
-        //    return _directionsGO;
-        //}
-
-        GameObject CreateGameObjectAR(MeshData data)
+        //Render on AR
+        GameObject CreateGameObject(MeshData data)
         {
-            if (_directionsGOAR != null)
+            if (_directionsGO != null)
             {
-                _directionsGOAR.Destroy();
+                _directionsGO.Destroy();
             }
-            _directionsGOAR = new GameObject("direction_waypoint_" + "entity_AR");
-            var mesh = _directionsGOAR.AddComponent<MeshFilter>().mesh;
+            _directionsGO = new GameObject("direction_waypoint_" + "entity_AR");
+            var mesh = _directionsGO.AddComponent<MeshFilter>().mesh;
             mesh.subMeshCount = data.Triangles.Count;
 
             mesh.SetVertices(data.Vertices);
@@ -190,9 +160,41 @@ namespace Mapbox.Unity.MeshGeneration.Factories
             }
 
             mesh.RecalculateNormals();
-            _directionsGOAR.AddComponent<MeshRenderer>().material = _material;
-            _directionsGOAR.layer = 12;
-            return _directionsGOAR;
+            _directionsGO.AddComponent<MeshRenderer>().material = _material;
+            //_directionsGO.layer = 12;
+            return _directionsGO;
+        }
+
+        //Render on the Map
+        GameObject CreateGameObjectMap(MeshData data)
+        {
+            if (_directionsGOMap != null)
+            {
+                _directionsGOMap.Destroy();
+            }
+            _directionsGOMap = new GameObject("direction_waypoint_" + "entity_Map");
+            var mesh = _directionsGOMap.AddComponent<MeshFilter>().mesh;
+            mesh.subMeshCount = data.Triangles.Count;
+
+            mesh.SetVertices(data.Vertices);
+            _counter = data.Triangles.Count;
+            for (int i = 0; i < _counter; i++)
+            {
+                var triangle = data.Triangles[i];
+                mesh.SetTriangles(triangle, i);
+            }
+
+            _counter = data.UV.Count;
+            for (int i = 0; i < _counter; i++)
+            {
+                var uv = data.UV[i];
+                mesh.SetUVs(i, uv);
+            }
+
+            mesh.RecalculateNormals();
+            _directionsGOMap.AddComponent<MeshRenderer>().material = _material;
+            _directionsGOMap.layer = 12;
+            return _directionsGOMap;
         }
     }
 
