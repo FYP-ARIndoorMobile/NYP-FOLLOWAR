@@ -164,7 +164,7 @@ MonoBehaviour:
   bufferAngle: 15
   roomInput: {fileID: 1750320381}
   IndoorCanvas: {fileID: 1750320379}
-  Calibrated: {fileID: 1750320380}
+  IndoorUI: {fileID: 1750320379}
 --- !u!20 &587942381 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 20155940112608238, guid: c10877f7cd5764de18d46d7b777d1faa,
@@ -627,12 +627,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cd8109b97e54624c9775e802910b683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1750320380 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8547580669373343211, guid: a0ebf6cdd41ea4a41aa17bd4790059da,
-    type: 3}
-  m_PrefabInstance: {fileID: 1750320378}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1750320381 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8626155551000219117, guid: a0ebf6cdd41ea4a41aa17bd4790059da,

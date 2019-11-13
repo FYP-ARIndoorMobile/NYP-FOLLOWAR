@@ -17,12 +17,13 @@ public class DestinationManager : BaseButtonController
     //public GameObject endPointPrefab;
     //private GameObject endPointObj;
 
-
     private bool displayPointOfInterests;
 
     [SerializeField] private GameObject[] PointOfInterests;
 
     [SerializeField] private GameObject[] spawnPoints;
+
+    public IndoorUIManager IndoorUI;
 
     void Start()
     {
@@ -98,13 +99,11 @@ public class DestinationManager : BaseButtonController
 
     public void DestinationSelect(string objectName)
     {
-        DebugUIManager.instance.DebugLog("here");
         Reset();
         foreach (GameObject destination in desk)
         {
             if (destination.name == objectName)
             {
-                DebugUIManager.instance.DebugLog("found");
                 displayPointOfInterests = false;
                 rootG.target = destination.transform;
                 //destination.SetActive(true);
@@ -120,9 +119,10 @@ public class DestinationManager : BaseButtonController
                 //    endPointObj.transform.position = destination.transform.position;
                 //    endPointObj.transform.rotation = destination.transform.rotation;
                 //}
+                return;
             }
         }
-        DebugUIManager.instance.DebugLog("end");
+        IndoorUI.Invalid.SetActive(true);
     }
 
     //private void Button2Click()

@@ -26,7 +26,7 @@ public class Augenttedmage : MonoBehaviour
     [SerializeField] private Button roomInput;
     [SerializeField] private IndoorUIManager IndoorCanvas;
 
-    public GameObject Calibrated;    
+    public IndoorUIManager IndoorUI;
 
     void Update()
     {
@@ -59,7 +59,7 @@ public class Augenttedmage : MonoBehaviour
 
                     roomInput.interactable = true;
                     IndoorCanvas.SetDestinationManager(arObj.GetComponentInChildren<DestinationManager>());
-                    Calibrated.SetActive(true);
+                    IndoorCanvas.Calibrated.SetActive(true);
 
                     //if (image.Name == "15")
                     //{
@@ -165,6 +165,7 @@ public class Augenttedmage : MonoBehaviour
 
         DestinationManager hallwayPrefabChildCombined = hallwayPrefabChild.GetComponentInChildren<DestinationManager>();
         spawnPoints = hallwayPrefabChildCombined.GetSpawnPoints();
+        hallwayPrefabChildCombined.IndoorUI = IndoorUI;
 
         foreach (GameObject spawnPoint in spawnPoints)
         {
