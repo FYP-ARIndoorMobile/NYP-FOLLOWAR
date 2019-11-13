@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b18096f64379c64693c44b1e5a9a174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjPrefab: {fileID: 5730705156402006600, guid: 016be4b45ab4ffc4ea14398787307d8d,
+  ObjPrefab: {fileID: 7120224049694663201, guid: 97efbc87ab1ce514f8e34eaa79363ea0,
     type: 3}
   arObj: {fileID: 0}
   isPlaneHorizontal: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   bufferAngle: 15
   roomInput: {fileID: 1750320381}
   IndoorCanvas: {fileID: 1750320379}
-  Calibrated: {fileID: 1750320380}
+  IndoorUI: {fileID: 1750320379}
 --- !u!20 &587942381 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 20155940112608238, guid: c10877f7cd5764de18d46d7b777d1faa,
@@ -627,12 +627,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cd8109b97e54624c9775e802910b683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1750320380 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8547580669373343211, guid: a0ebf6cdd41ea4a41aa17bd4790059da,
-    type: 3}
-  m_PrefabInstance: {fileID: 1750320378}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1750320381 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8626155551000219117, guid: a0ebf6cdd41ea4a41aa17bd4790059da,

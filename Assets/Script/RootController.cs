@@ -63,7 +63,6 @@ public class RootController : MonoBehaviour
 
     private void LateUpdate()
     {
-        DebugUIManager.instance.UpdatingDebugLog((agent.velocity.sqrMagnitude).ToString());
         if (agent.velocity.sqrMagnitude > 1.0f)
         {
             animationPanda.SetTrigger("SetWalking");
