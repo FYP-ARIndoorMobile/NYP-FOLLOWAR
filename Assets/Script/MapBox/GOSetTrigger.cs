@@ -6,13 +6,16 @@ public class GOSetTrigger : MonoBehaviour
 {
     [SerializeField]
     GameObject _GameObjectPrefab;
-    //[SerializeField]
-    //Vibration _vibrate;
+    [SerializeField]
+    Vibration _vibrate;
     [SerializeField]
     GameObject target;
     void Awake()
     {
-        // _vibrate = FindObjectOfType<Vibration>();
+        if (_vibrate != null)
+        {
+            _vibrate = FindObjectOfType<Vibration>();
+        }
         target = GameObject.FindGameObjectWithTag("Player");
     }
     void Start()
@@ -28,11 +31,11 @@ public class GOSetTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            //if (_vibrate != null)
-            //{
-            //    _vibrate.VibrateToggle();
-            //}
-           // print("Hello Touchy TOuch pls");            
+            if (_vibrate != null)
+            {
+                _vibrate.VibrateToggle();
+            }
+            // print("Hello Touchy TOuch pls");            
             _GameObjectPrefab.SetActive(true);
         }
     }
@@ -40,7 +43,7 @@ public class GOSetTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            //Handheld.Vibrate();
+          
             _GameObjectPrefab.SetActive(true);
         }
     }

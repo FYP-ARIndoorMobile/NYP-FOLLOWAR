@@ -43,5 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afb1d8e6d3a445948a1db41a9b2283a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toggle: {fileID: 0}
-  toggle_Dark: {fileID: 0}
+  slider_Vibration: {fileID: 0}

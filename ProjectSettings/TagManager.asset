@@ -10,6 +10,7 @@ TagManager:
   - box
   - Footprint
   - Arrow Prefab
+  - SliderVibrate
   layers:
   - Default
   - TransparentFX
