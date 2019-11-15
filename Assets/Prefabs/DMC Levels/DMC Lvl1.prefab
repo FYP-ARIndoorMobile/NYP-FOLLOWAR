@@ -2577,6 +2577,7 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 7120224049694663239}
   - {fileID: 7120224049694663202}
+  IndoorUI: {fileID: 0}
 --- !u!1 &7120224049694663210
 GameObject:
   m_ObjectHideFlags: 0
@@ -6641,7 +6642,7 @@ NavMeshAgent:
   m_AgentTypeID: 1479372276
   m_Radius: 0.5
   m_Speed: 2.5
-  m_Acceleration: 8
+  m_Acceleration: 100000
   avoidancePriority: 50
   m_AngularSpeed: 0
   m_StoppingDistance: 0

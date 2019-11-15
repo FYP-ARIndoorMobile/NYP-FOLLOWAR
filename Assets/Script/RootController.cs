@@ -63,7 +63,7 @@ public class RootController : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (agent.velocity.sqrMagnitude > 1.0f)
+        if (agent.velocity.sqrMagnitude > 1.8f)
         {
             animationPanda.SetTrigger("SetWalking");
             transform.rotation = Quaternion.LookRotation(agent.velocity.normalized);

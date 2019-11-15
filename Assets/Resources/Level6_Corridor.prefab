@@ -1581,6 +1581,7 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 2516448660565729470}
   - {fileID: 5717455967857288515}
+  IndoorUI: {fileID: 0}
 --- !u!1 &1429832978045980652
 GameObject:
   m_ObjectHideFlags: 0
@@ -5382,44 +5383,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Extra
---- !u!54 &2228536221573144231
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7529068596866085325}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!195 &1075371250277414213
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7529068596866085325}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 2.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 0
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &5036426779182246971
 GameObject:
   m_ObjectHideFlags: 0
@@ -6964,18 +6927,15 @@ MonoBehaviour:
   - {fileID: 1246151646340474146}
   - {fileID: 214964235954950077}
   - {fileID: 3702930278511553665}
-  - {fileID: 4004340769657849430}
   - {fileID: 6182652582098193453}
   - {fileID: 138252254282435350}
   - {fileID: 99851955350435748}
   - {fileID: 7997749586007664290}
-  - {fileID: 2238660075068495841}
   - {fileID: 5834104195484855119}
   - {fileID: 5065076064443306974}
   - {fileID: 520704226345010483}
   - {fileID: 6434566965255288430}
   - {fileID: 134287697142110729}
-  - {fileID: 2420106989761739023}
   - {fileID: 40545940014330527}
   - {fileID: 8789888593094498223}
   - {fileID: 5897079844366003988}
@@ -6993,6 +6953,7 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 2516448660565729470}
   - {fileID: 5717455967857288515}
+  IndoorUI: {fileID: 0}
 --- !u!1 &6431403124405160023
 GameObject:
   m_ObjectHideFlags: 0
@@ -8744,6 +8705,44 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &2228536221573144231
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7529068596866085325}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!195 &1075371250277414213
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7529068596866085325}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 2.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 0
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &7636421366481594285
 GameObject:
   m_ObjectHideFlags: 0
@@ -9273,6 +9272,7 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 2516448660565729470}
   - {fileID: 5717455967857288515}
+  IndoorUI: {fileID: 0}
 --- !u!1 &8130079110384852832
 GameObject:
   m_ObjectHideFlags: 0

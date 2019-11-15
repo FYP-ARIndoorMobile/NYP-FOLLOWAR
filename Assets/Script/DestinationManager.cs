@@ -34,6 +34,9 @@ public class DestinationManager : BaseButtonController
         {
             interestPoint.SetActive(false);
         }
+        //DestinationSelect("622");
+       // FindNearestPOI();
+        //TogglePointOfInterets();
     }
 
 
@@ -41,8 +44,23 @@ public class DestinationManager : BaseButtonController
     {
         if (displayPointOfInterests == true)
         {
-            FindNearestPOI();
+            //FindNearestPOI();
         }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Reset();
+            Reset2();
+            DestinationSelect("622");
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Reset();
+            Reset2();
+            TogglePointOfInterets();
+            FindNearestPOIfromGuideObj();
+        }
+
         //if (endPointObj != null)
         //{
         //    endPointObj.transform.rotation = Quaternion.Euler(0, endPointObj.transform.rotation.eulerAngles.y, 0);
@@ -50,6 +68,7 @@ public class DestinationManager : BaseButtonController
         //    endPointObj.transform.Rotate(0, 180, 0);
         //    //endPointObj.transform.LookAt(rootG.target);
         //}
+
     }
     protected override void OnClick(string objectName)
     {
@@ -172,7 +191,6 @@ public class DestinationManager : BaseButtonController
         {
             interestPoint.SetActive(displayPointOfInterests);
             rootG.target = interestPoint.transform;
-
         }
     }
 
@@ -182,6 +200,7 @@ public class DestinationManager : BaseButtonController
         GameObject nearestObject = null;
         float ObjDist;
 
+        rootController.InstantiateFlag = true;
         foreach (GameObject interestPoint in PointOfInterests)
         {
             ObjDist = Vector3.Distance(DebugUIManager.instance.FirstPersonCamera.transform.position, interestPoint.transform.position);
@@ -204,15 +223,39 @@ public class DestinationManager : BaseButtonController
                 interestPoint.SetActive(false);
             }
         }
+    }
 
-        //if (nearestObject != null)
-        //{
-        //    DebugUIManager.instance.UpdatingDebugLog(nearestObject.name);
-        //}
-        //else
-        //{
-        //    DebugUIManager.instance.UpdatingDebugLog("No OBJ");
-        //}
+    private void FindNearestPOIfromGuideObj()
+    {
+        float nearstObjDist = float.MaxValue;
+        GameObject nearestObject = null;
+        float ObjDist;
+
+        rootController.InstantiateFlag = true;
+        foreach (GameObject interestPoint in PointOfInterests)
+        {
+            ObjDist = Vector3.Distance(Controller.transform.position, interestPoint.transform.position);
+            if (ObjDist < nearstObjDist)
+            {
+                nearstObjDist = ObjDist;
+                nearestObject = interestPoint;
+            }
+        }
+
+        Debug.Log(nearestObject.name);
+
+        foreach (GameObject interestPoint in PointOfInterests)
+        {
+            if (interestPoint == nearestObject)
+            {
+                //interestPoint.SetActive(true);
+                rootG.target = interestPoint.transform;
+            }
+            else
+            {
+                interestPoint.SetActive(false);
+            }
+        }
     }
 
     public GameObject[] GetSpawnPoints()
