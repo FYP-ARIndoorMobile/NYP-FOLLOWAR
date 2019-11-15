@@ -55,6 +55,7 @@ public class RootController : MonoBehaviour
             else if (Vector3.Distance(previousRoot.transform.position, transform.position) > DistFromLastRoot)
             {
                 newRoot = Instantiate(footPrintPrefab, transform.position, transform.rotation);
+                newRoot.transform.Rotate(0, 180, 0);
                 previousRoot.transform.LookAt(newRoot.transform.position);
                 previousRoot = newRoot;
             }

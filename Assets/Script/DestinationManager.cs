@@ -24,6 +24,8 @@ public class DestinationManager : BaseButtonController
 
     public IndoorUIManager IndoorUI;
 
+    public GameObject trailerRoom;
+
     void Start()
     {
         rootG = line.GetComponent<meshLine>();
@@ -50,13 +52,13 @@ public class DestinationManager : BaseButtonController
         {
             Reset();
             Reset2();
-            DestinationSelect("622");
+            DestinationSelect(trailerRoom.name);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             Reset();
             Reset2();
-            TogglePointOfInterets();
+            //TogglePointOfInterets();
             FindNearestPOIfromGuideObj();
         }
 
@@ -264,6 +266,16 @@ public class DestinationManager : BaseButtonController
             {
                 interestPoint.SetActive(false);
             }
+        }
+
+        if (endPointObj == null)
+        {
+            endPointObj = Instantiate(endPointPrefab, nearestObject.transform.position, nearestObject.transform.rotation);
+        }
+        else
+        {
+            endPointObj.transform.position = nearestObject.transform.position;
+            endPointObj.transform.rotation = nearestObject.transform.rotation;
         }
     }
 
