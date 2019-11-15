@@ -55,6 +55,7 @@ public class RootController : MonoBehaviour
             else if (Vector3.Distance(previousRoot.transform.position, transform.position) > DistFromLastRoot)
             {
                 newRoot = Instantiate(footPrintPrefab, transform.position, transform.rotation);
+                newRoot.transform.Rotate(0, 180, 0);
                 previousRoot.transform.LookAt(newRoot.transform.position);
                 previousRoot = newRoot;
             }
@@ -63,7 +64,7 @@ public class RootController : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (agent.velocity.sqrMagnitude > 1.0f)
+        if (agent.velocity.sqrMagnitude > 1.8f)
         {
             animationPanda.SetTrigger("SetWalking");
             transform.rotation = Quaternion.LookRotation(agent.velocity.normalized);

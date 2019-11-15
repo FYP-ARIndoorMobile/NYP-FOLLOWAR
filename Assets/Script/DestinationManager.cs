@@ -11,11 +11,10 @@ public class DestinationManager : BaseButtonController
     private RootController rootController;
     [SerializeField] private GameObject Controller;
 
+    public GameObject endPointPrefab;
+    private GameObject endPointObj;
    
     public GameObject[] desk;
-
-    //public GameObject endPointPrefab;
-    //private GameObject endPointObj;
 
     private bool displayPointOfInterests;
 
@@ -24,6 +23,8 @@ public class DestinationManager : BaseButtonController
     [SerializeField] private GameObject[] spawnPoints;
 
     public IndoorUIManager IndoorUI;
+
+    public GameObject trailerRoom;
 
     void Start()
     {
@@ -34,6 +35,9 @@ public class DestinationManager : BaseButtonController
         {
             interestPoint.SetActive(false);
         }
+        //DestinationSelect("622");
+       // FindNearestPOI();
+        //TogglePointOfInterets();
     }
 
 
@@ -43,13 +47,29 @@ public class DestinationManager : BaseButtonController
         {
             FindNearestPOI();
         }
-        //if (endPointObj != null)
-        //{
-        //    endPointObj.transform.rotation = Quaternion.Euler(0, endPointObj.transform.rotation.eulerAngles.y, 0);
-        //    endPointObj.transform.LookAt(DebugUIManager.instance.FirstPersonCamera.transform.position);
-        //    endPointObj.transform.Rotate(0, 180, 0);
-        //    //endPointObj.transform.LookAt(rootG.target);
-        //}
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Reset();
+            Reset2();
+            DestinationSelect(trailerRoom.name);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Reset();
+            Reset2();
+            //TogglePointOfInterets();
+            FindNearestPOIfromGuideObj();
+        }
+
+        if (endPointObj != null)
+        {
+            endPointObj.transform.rotation = Quaternion.Euler(0, endPointObj.transform.rotation.eulerAngles.y, 0);
+            endPointObj.transform.LookAt(DebugUIManager.instance.FirstPersonCamera.transform.position);
+            endPointObj.transform.Rotate(0, 180, 0);
+            //endPointObj.transform.LookAt(rootG.target);
+        }
+
     }
     protected override void OnClick(string objectName)
     {
@@ -77,15 +97,15 @@ public class DestinationManager : BaseButtonController
                 //desk[i].SetActive(true);
 
                 rootController.InstantiateFlag = true;
-                //if (endPointObj == null)
-                //{
-                //    //endPointObj = Instantiate(endPointPrefab, desk[i].transform.position, desk[i].transform.rotation);
-                //}
-                //else
-                //{
-                //    endPointObj.transform.position = desk[i].transform.position;
-                //    endPointObj.transform.rotation = desk[i].transform.rotation;
-                //}
+                if (endPointObj == null)
+                {
+                    endPointObj = Instantiate(endPointPrefab, desk[i].transform.position, desk[i].transform.rotation);
+                }
+                else
+                {
+                    endPointObj.transform.position = desk[i].transform.position;
+                    endPointObj.transform.rotation = desk[i].transform.rotation;
+                }
                 i = i + 1;
             }
 
@@ -110,15 +130,15 @@ public class DestinationManager : BaseButtonController
 
                 rootController.InstantiateFlag = true;
 
-                //if (endPointObj == null)
-                //{
-                //    //endPointObj = Instantiate(endPointPrefab, destination.transform.position, destination.transform.rotation);
-                //}
-                //else
-                //{
-                //    endPointObj.transform.position = destination.transform.position;
-                //    endPointObj.transform.rotation = destination.transform.rotation;
-                //}
+                if (endPointObj == null)
+                {
+                    endPointObj = Instantiate(endPointPrefab, destination.transform.position, destination.transform.rotation);
+                }
+                else
+                {
+                    endPointObj.transform.position = destination.transform.position;
+                    endPointObj.transform.rotation = destination.transform.rotation;
+                }
                 return;
             }
         }
@@ -172,7 +192,6 @@ public class DestinationManager : BaseButtonController
         {
             interestPoint.SetActive(displayPointOfInterests);
             rootG.target = interestPoint.transform;
-
         }
     }
 
@@ -182,6 +201,7 @@ public class DestinationManager : BaseButtonController
         GameObject nearestObject = null;
         float ObjDist;
 
+        rootController.InstantiateFlag = true;
         foreach (GameObject interestPoint in PointOfInterests)
         {
             ObjDist = Vector3.Distance(DebugUIManager.instance.FirstPersonCamera.transform.position, interestPoint.transform.position);
@@ -205,14 +225,58 @@ public class DestinationManager : BaseButtonController
             }
         }
 
-        //if (nearestObject != null)
-        //{
-        //    DebugUIManager.instance.UpdatingDebugLog(nearestObject.name);
-        //}
-        //else
-        //{
-        //    DebugUIManager.instance.UpdatingDebugLog("No OBJ");
-        //}
+        if (endPointObj == null)
+        {
+            endPointObj = Instantiate(endPointPrefab, nearestObject.transform.position, nearestObject.transform.rotation);
+        }
+        else
+        {
+            endPointObj.transform.position = nearestObject.transform.position;
+            endPointObj.transform.rotation = nearestObject.transform.rotation;
+        }
+    }
+
+    private void FindNearestPOIfromGuideObj()
+    {
+        float nearstObjDist = float.MaxValue;
+        GameObject nearestObject = null;
+        float ObjDist;
+
+        rootController.InstantiateFlag = true;
+        foreach (GameObject interestPoint in PointOfInterests)
+        {
+            ObjDist = Vector3.Distance(Controller.transform.position, interestPoint.transform.position);
+            if (ObjDist < nearstObjDist)
+            {
+                nearstObjDist = ObjDist;
+                nearestObject = interestPoint;
+            }
+        }
+
+        Debug.Log(nearestObject.name);
+
+        foreach (GameObject interestPoint in PointOfInterests)
+        {
+            if (interestPoint == nearestObject)
+            {
+                //interestPoint.SetActive(true);
+                rootG.target = interestPoint.transform;
+            }
+            else
+            {
+                interestPoint.SetActive(false);
+            }
+        }
+
+        if (endPointObj == null)
+        {
+            endPointObj = Instantiate(endPointPrefab, nearestObject.transform.position, nearestObject.transform.rotation);
+        }
+        else
+        {
+            endPointObj.transform.position = nearestObject.transform.position;
+            endPointObj.transform.rotation = nearestObject.transform.rotation;
+        }
     }
 
     public GameObject[] GetSpawnPoints()
