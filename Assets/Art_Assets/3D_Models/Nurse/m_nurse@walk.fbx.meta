@@ -1,0 +1,250 @@
+fileFormatVersion: 2
+guid: 1e69747c1509b1f49bec310d8d8575f6
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Back_0
+    100002: Back_1
+    100004: Back_2
+    100006: BottomEyelid
+    100008: Eyelids
+    100010: Eyes
+    100012: Head
+    100014: joint16
+    100016: joint17
+    100018: joint20
+    100020: joint21
+    100022: L_Ankle
+    100024: L_Cheek
+    100026: L_Elbow
+    100028: L_Feet
+    100030: L_Hand
+    100032: L_Hip
+    100034: L_Knee
+    100036: L_LowerLip1
+    100038: L_LowerLip2
+    100040: L_Shoulder
+    100042: L_Toe
+    100044: L_UpperLip1
+    100046: L_UpperLip2
+    100048: L_Wrist
+    100050: LowerJaw
+    100052: LowerTeeth
+    100054: //RootNode
+    100056: MainFrame
+    100058: MidLowerLip
+    100060: MidUpperLip
+    100062: Mouth
+    100064: Neck
+    100066: Pelvis
+    100068: polySurface45
+    100070: polySurface48
+    100072: polySurface49
+    100074: polySurface50
+    100076: polySurface51
+    100078: R_Ankle
+    100080: R_Cheek
+    100082: R_Elbow
+    100084: R_Feet
+    100086: R_Hand
+    100088: R_Hip
+    100090: R_Knee
+    100092: R_LowerLip1
+    100094: R_LowerLip2
+    100096: R_Shoulder
+    100098: R_Toe
+    100100: R_UpperLip1
+    100102: R_UpperLip2
+    100104: R_Wrist
+    100106: TopEyelid
+    100108: transform8
+    100110: UpperJaw
+    100112: UpperTeeth
+    400000: Back_0
+    400002: Back_1
+    400004: Back_2
+    400006: BottomEyelid
+    400008: Eyelids
+    400010: Eyes
+    400012: Head
+    400014: joint16
+    400016: joint17
+    400018: joint20
+    400020: joint21
+    400022: L_Ankle
+    400024: L_Cheek
+    400026: L_Elbow
+    400028: L_Feet
+    400030: L_Hand
+    400032: L_Hip
+    400034: L_Knee
+    400036: L_LowerLip1
+    400038: L_LowerLip2
+    400040: L_Shoulder
+    400042: L_Toe
+    400044: L_UpperLip1
+    400046: L_UpperLip2
+    400048: L_Wrist
+    400050: LowerJaw
+    400052: LowerTeeth
+    400054: //RootNode
+    400056: MainFrame
+    400058: MidLowerLip
+    400060: MidUpperLip
+    400062: Mouth
+    400064: Neck
+    400066: Pelvis
+    400068: polySurface45
+    400070: polySurface48
+    400072: polySurface49
+    400074: polySurface50
+    400076: polySurface51
+    400078: R_Ankle
+    400080: R_Cheek
+    400082: R_Elbow
+    400084: R_Feet
+    400086: R_Hand
+    400088: R_Hip
+    400090: R_Knee
+    400092: R_LowerLip1
+    400094: R_LowerLip2
+    400096: R_Shoulder
+    400098: R_Toe
+    400100: R_UpperLip1
+    400102: R_UpperLip2
+    400104: R_Wrist
+    400106: TopEyelid
+    400108: transform8
+    400110: UpperJaw
+    400112: UpperTeeth
+    2100000: StingrayPBS2
+    4300000: polySurface45
+    4300002: LowerTeeth
+    4300004: UpperTeeth
+    4300006: polySurface50
+    4300008: polySurface51
+    4300010: polySurface48
+    4300012: polySurface49
+    7400000: walk
+    9500000: //RootNode
+    13700000: LowerTeeth
+    13700002: polySurface45
+    13700004: polySurface48
+    13700006: polySurface49
+    13700008: polySurface50
+    13700010: polySurface51
+    13700012: UpperTeeth
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walk
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
