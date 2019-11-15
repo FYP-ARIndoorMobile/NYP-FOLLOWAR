@@ -2572,6 +2572,7 @@ MonoBehaviour:
   - {fileID: 3844241776345486890}
   - {fileID: 5532185237304464382}
   - {fileID: 8482232714949668676}
+  endPointPrefab: {fileID: 100002, guid: 93273767f80844f41b435d2232c17aa8, type: 3}
   PointOfInterests:
   - {fileID: 7120224049694663219}
   spawnPoints:

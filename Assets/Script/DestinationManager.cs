@@ -11,11 +11,10 @@ public class DestinationManager : BaseButtonController
     private RootController rootController;
     [SerializeField] private GameObject Controller;
 
+    public GameObject endPointPrefab;
+    private GameObject endPointObj;
    
     public GameObject[] desk;
-
-    //public GameObject endPointPrefab;
-    //private GameObject endPointObj;
 
     private bool displayPointOfInterests;
 
@@ -44,7 +43,7 @@ public class DestinationManager : BaseButtonController
     {
         if (displayPointOfInterests == true)
         {
-            //FindNearestPOI();
+            FindNearestPOI();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -61,13 +60,13 @@ public class DestinationManager : BaseButtonController
             FindNearestPOIfromGuideObj();
         }
 
-        //if (endPointObj != null)
-        //{
-        //    endPointObj.transform.rotation = Quaternion.Euler(0, endPointObj.transform.rotation.eulerAngles.y, 0);
-        //    endPointObj.transform.LookAt(DebugUIManager.instance.FirstPersonCamera.transform.position);
-        //    endPointObj.transform.Rotate(0, 180, 0);
-        //    //endPointObj.transform.LookAt(rootG.target);
-        //}
+        if (endPointObj != null)
+        {
+            endPointObj.transform.rotation = Quaternion.Euler(0, endPointObj.transform.rotation.eulerAngles.y, 0);
+            endPointObj.transform.LookAt(DebugUIManager.instance.FirstPersonCamera.transform.position);
+            endPointObj.transform.Rotate(0, 180, 0);
+            //endPointObj.transform.LookAt(rootG.target);
+        }
 
     }
     protected override void OnClick(string objectName)
@@ -96,15 +95,15 @@ public class DestinationManager : BaseButtonController
                 //desk[i].SetActive(true);
 
                 rootController.InstantiateFlag = true;
-                //if (endPointObj == null)
-                //{
-                //    //endPointObj = Instantiate(endPointPrefab, desk[i].transform.position, desk[i].transform.rotation);
-                //}
-                //else
-                //{
-                //    endPointObj.transform.position = desk[i].transform.position;
-                //    endPointObj.transform.rotation = desk[i].transform.rotation;
-                //}
+                if (endPointObj == null)
+                {
+                    endPointObj = Instantiate(endPointPrefab, desk[i].transform.position, desk[i].transform.rotation);
+                }
+                else
+                {
+                    endPointObj.transform.position = desk[i].transform.position;
+                    endPointObj.transform.rotation = desk[i].transform.rotation;
+                }
                 i = i + 1;
             }
 
@@ -129,15 +128,15 @@ public class DestinationManager : BaseButtonController
 
                 rootController.InstantiateFlag = true;
 
-                //if (endPointObj == null)
-                //{
-                //    //endPointObj = Instantiate(endPointPrefab, destination.transform.position, destination.transform.rotation);
-                //}
-                //else
-                //{
-                //    endPointObj.transform.position = destination.transform.position;
-                //    endPointObj.transform.rotation = destination.transform.rotation;
-                //}
+                if (endPointObj == null)
+                {
+                    endPointObj = Instantiate(endPointPrefab, destination.transform.position, destination.transform.rotation);
+                }
+                else
+                {
+                    endPointObj.transform.position = destination.transform.position;
+                    endPointObj.transform.rotation = destination.transform.rotation;
+                }
                 return;
             }
         }
@@ -222,6 +221,16 @@ public class DestinationManager : BaseButtonController
             {
                 interestPoint.SetActive(false);
             }
+        }
+
+        if (endPointObj == null)
+        {
+            endPointObj = Instantiate(endPointPrefab, nearestObject.transform.position, nearestObject.transform.rotation);
+        }
+        else
+        {
+            endPointObj.transform.position = nearestObject.transform.position;
+            endPointObj.transform.rotation = nearestObject.transform.rotation;
         }
     }
 
