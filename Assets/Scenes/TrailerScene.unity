@@ -531,6 +531,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level6_Corridor
       objectReference: {fileID: 0}
+    - target: {fileID: 6434566965255288430, guid: 016be4b45ab4ffc4ea14398787307d8d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8729448182654747744, guid: 016be4b45ab4ffc4ea14398787307d8d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -621,7 +626,8 @@ PrefabInstance:
         type: 3}
       propertyPath: endPointPrefab
       value: 
-      objectReference: {fileID: 100002, guid: 93273767f80844f41b435d2232c17aa8, type: 3}
+      objectReference: {fileID: 4175867798991980130, guid: 05663beab747fac4f8bc2894356d5761,
+        type: 3}
     - target: {fileID: 8858330414953667786, guid: 016be4b45ab4ffc4ea14398787307d8d,
         type: 3}
       propertyPath: trailerRoom
@@ -700,11 +706,6 @@ PrefabInstance:
     - target: {fileID: 3732843559774922845, guid: 016be4b45ab4ffc4ea14398787307d8d,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6434566965255288430, guid: 016be4b45ab4ffc4ea14398787307d8d,
-        type: 3}
-      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8396187962711279072, guid: 016be4b45ab4ffc4ea14398787307d8d,

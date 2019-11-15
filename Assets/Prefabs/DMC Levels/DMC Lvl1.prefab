@@ -2544,7 +2544,8 @@ MonoBehaviour:
   button: {fileID: 0}
   line: {fileID: 7120224049694663209}
   Controller: {fileID: 9165095996153049355}
-  endPointPrefab: {fileID: 100002, guid: 93273767f80844f41b435d2232c17aa8, type: 3}
+  endPointPrefab: {fileID: 4175867798991980130, guid: 05663beab747fac4f8bc2894356d5761,
+    type: 3}
   desk:
   - {fileID: 7120224049694663250}
   - {fileID: 7120224049694663286}
