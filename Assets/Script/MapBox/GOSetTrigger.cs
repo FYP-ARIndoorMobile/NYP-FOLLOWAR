@@ -12,10 +12,8 @@ public class GOSetTrigger : MonoBehaviour
     GameObject target;
     void Awake()
     {
-        if (_vibrate != null)
-        {
-            _vibrate = FindObjectOfType<Vibration>();
-        }
+      
+         _vibrate = GameObject.FindGameObjectWithTag("Vibrate").GetComponent<Vibration>();
         target = GameObject.FindGameObjectWithTag("Player");
     }
     void Start()
@@ -33,7 +31,7 @@ public class GOSetTrigger : MonoBehaviour
         {
             if (_vibrate != null)
             {
-                _vibrate.VibrateToggle();
+                _vibrate.Vibrate();
             }
             // print("Hello Touchy TOuch pls");            
             _GameObjectPrefab.SetActive(true);
