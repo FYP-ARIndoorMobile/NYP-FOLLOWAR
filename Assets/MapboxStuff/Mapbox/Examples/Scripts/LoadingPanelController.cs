@@ -23,7 +23,7 @@ namespace Mapbox.Examples
 		AbstractMap _map;
 		void Awake()
 		{
-            _disablePrefab.gameObject.SetActive(false);
+            _disablePrefab.gameObject.SetActive(true);
 
 			_map = FindObjectOfType<AbstractMap>();
 			_map.OnInitialized += _map_OnInitialized;
