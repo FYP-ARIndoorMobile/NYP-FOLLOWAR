@@ -7,17 +7,18 @@ public class GOSetTrigger : MonoBehaviour
     [SerializeField]
     GameObject _GameObjectPrefab;
     [SerializeField]
-    Vibration _vibrate;
+    CustomVibrate _vibrate;
     [SerializeField]
     GameObject target;
     void Awake()
     {
-      
-         _vibrate = GameObject.FindGameObjectWithTag("Vibrate").GetComponent<Vibration>();
+
+        _vibrate = FindObjectOfType<CustomVibrate>();
         target = GameObject.FindGameObjectWithTag("Player");
     }
     void Start()
     {
+        PlayerPrefs.GetFloat("VibVolume");
         _GameObjectPrefab.SetActive(false);
         this.transform.position = this.transform.localPosition;
     }
@@ -25,14 +26,24 @@ public class GOSetTrigger : MonoBehaviour
     {
         transform.LookAt(target.transform);
     }
+    public void PlayerPref()
+    {
+
+        if (PlayerPrefs.GetFloat("VibVolume") == 1)
+        {
+            _vibrate.Vibrate();
+            Debug.Log("Vibrate");
+        }
+        else
+        {
+            Debug.Log("Dont Vibrate");
+        }
+    }
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            if (_vibrate != null)
-            {
-                _vibrate.Vibrate();
-            }
+            PlayerPref();
             // print("Hello Touchy TOuch pls");            
             _GameObjectPrefab.SetActive(true);
         }
@@ -52,4 +63,5 @@ public class GOSetTrigger : MonoBehaviour
             _GameObjectPrefab.SetActive(false);
         }
     }
+
 }
