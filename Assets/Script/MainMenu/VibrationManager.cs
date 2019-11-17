@@ -20,7 +20,7 @@ public class VibrationManager: MonoBehaviour
     {
         PlayerPrefs.SetFloat ("VibVolume", volSlider.value);
         volume = volSlider.value;
-        Debug.Log(volume);
+       // Debug.Log(volume);
     }
 
     public void Vibrate()
