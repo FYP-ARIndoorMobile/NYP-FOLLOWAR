@@ -26,12 +26,9 @@ public class CustomSound : MonoBehaviour
 
 
 
-            Debug.Log("Play");
+            //Debug.Log("Play");
         }
-        else
-        {
-            Debug.Log("Dont Play");
-        }
+           // Debug.Log("Dont Play");
     }
 
 
