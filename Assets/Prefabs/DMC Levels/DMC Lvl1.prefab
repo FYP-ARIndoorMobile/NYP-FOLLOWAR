@@ -3941,11 +3941,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c630fe6251a3e704fb1b4369129f0310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footPrintPrefab: {fileID: 7176932477555365512, guid: 81aa34df92fd56146a80eeaffcf96be0,
+  footPrintPrefab: {fileID: 4763645879139549954, guid: 026810396723fb548b67b0ecdb296498,
     type: 3}
   InstantiateFlag: 1
   DistFromLastRoot: 1
-  guideAnimation: {fileID: 5785987102777708619}
 --- !u!54 &3791329021172579093
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9564,7 +9563,6 @@ MonoBehaviour:
     type: 3}
   InstantiateFlag: 1
   DistFromLastRoot: 1
-  guideAnimation: {fileID: 0}
 --- !u!54 &7120224049694663475
 Rigidbody:
   m_ObjectHideFlags: 0
