@@ -35,6 +35,7 @@ public class DestinationManager : BaseButtonController
         {
             interestPoint.SetActive(false);
         }
+
         //DestinationSelect("622");
        // FindNearestPOI();
         //TogglePointOfInterets();
