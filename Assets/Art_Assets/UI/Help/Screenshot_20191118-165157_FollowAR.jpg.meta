@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6de93f6917363f8418b9931f0e8fd2c7
+guid: 7114568379d7beb409862e71e8285fa8
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -95,7 +95,7 @@ TextureImporter:
     buildTarget: Android
     maxTextureSize: 1024
     resizeAlgorithm: 0
-    textureFormat: 47
+    textureFormat: 34
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -108,7 +108,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 54721145cba87ee4a816d73f3fe8e454
     vertices: []
     indices: 
     edges: []
