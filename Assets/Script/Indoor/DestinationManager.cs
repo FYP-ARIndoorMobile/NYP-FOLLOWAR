@@ -22,10 +22,7 @@ public class DestinationManager : BaseButtonController
 
     [SerializeField] private GameObject[] spawnPoints;
 
-    public IndoorUIManager IndoorUI;
-
-    public GameObject trailerRoom;
-
+    public IndoorUIManager IndoorUI;  
     void Start()
     {
         rootG = line.GetComponent<meshLine>();
@@ -35,10 +32,6 @@ public class DestinationManager : BaseButtonController
         {
             interestPoint.SetActive(false);
         }
-
-        //DestinationSelect("622");
-       // FindNearestPOI();
-        //TogglePointOfInterets();
     }
 
 
@@ -49,25 +42,11 @@ public class DestinationManager : BaseButtonController
             FindNearestPOI();
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            Reset();
-            Reset2();
-            DestinationSelect(trailerRoom.name);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            Reset();
-            Reset2();
-            //TogglePointOfInterets();
-            FindNearestPOIfromGuideObj();
-        }
-
         if (endPointObj != null)
         {
-            endPointObj.transform.rotation = Quaternion.Euler(0, endPointObj.transform.rotation.eulerAngles.y, 0);
             endPointObj.transform.LookAt(DebugUIManager.instance.FirstPersonCamera.transform.position);
             endPointObj.transform.Rotate(0, 180, 0);
+            endPointObj.transform.rotation = Quaternion.Euler(0, endPointObj.transform.rotation.eulerAngles.y, 0);
             //endPointObj.transform.LookAt(rootG.target);
         }
 
