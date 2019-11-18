@@ -17,7 +17,7 @@ public class RootController : MonoBehaviour
     GameObject previousRoot, newRoot;
     public float DistFromLastRoot = 1.0f;
 
-    private Animator animationPanda;
+    private Animator guideAnimation;
 
     private NavMeshAgent agent;
 
@@ -30,7 +30,8 @@ public class RootController : MonoBehaviour
 
         InstantiateFlag = false;
 
-        animationPanda = GetComponent<Animator>();
+        guideAnimation = GetComponent<Animator>();      
+
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
     }
@@ -55,7 +56,7 @@ public class RootController : MonoBehaviour
             else if (Vector3.Distance(previousRoot.transform.position, transform.position) > DistFromLastRoot)
             {
                 newRoot = Instantiate(footPrintPrefab, transform.position, transform.rotation);
-                newRoot.transform.Rotate(0, 180, 0);
+                //newRoot.transform.Rotate(0, 180, 0);
                 previousRoot.transform.LookAt(newRoot.transform.position);
                 previousRoot = newRoot;
             }
@@ -66,16 +67,16 @@ public class RootController : MonoBehaviour
     {
         if (agent.velocity.sqrMagnitude > 1.8f)
         {
-            animationPanda.SetTrigger("SetWalking");
+            guideAnimation.SetTrigger("SetWalking");
             transform.rotation = Quaternion.LookRotation(agent.velocity.normalized);
-            transform.Rotate(0, 180, 0);
+            //transform.Rotate(0, 180, 0);
             transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
         }
         else
         {
-            animationPanda.SetTrigger("SetIdle");
+            guideAnimation.SetTrigger("SetIdle");
             transform.LookAt(DebugUIManager.instance.FirstPersonCamera.transform.position);
-            transform.Rotate(0, 180, 0);
+            //transform.Rotate(0, 180, 0);
             transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
         }
     }
