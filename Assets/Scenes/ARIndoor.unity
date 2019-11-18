@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b18096f64379c64693c44b1e5a9a174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjPrefab: {fileID: 7120224049694663201, guid: 97efbc87ab1ce514f8e34eaa79363ea0,
+  ObjPrefab: {fileID: 5730705156402006600, guid: 016be4b45ab4ffc4ea14398787307d8d,
     type: 3}
   arObj: {fileID: 0}
   isPlaneHorizontal: 0
@@ -443,6 +443,10 @@ PrefabInstance:
     - target: {fileID: 1536853937296922, guid: 26558ae1d2e7243728486d789f984c53, type: 3}
       propertyPath: m_Name
       value: PointCloud
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536853937296922, guid: 26558ae1d2e7243728486d789f984c53, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4205356930328266, guid: 26558ae1d2e7243728486d789f984c53, type: 3}
       propertyPath: m_LocalPosition.x
@@ -860,7 +864,7 @@ PrefabInstance:
     - target: {fileID: 6093052986499464707, guid: 832477cee95c88c45a07102dbcdd11bd,
         type: 3}
       propertyPath: boolPointCloud
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6093052986499464707, guid: 832477cee95c88c45a07102dbcdd11bd,
         type: 3}
@@ -885,7 +889,7 @@ PrefabInstance:
     - target: {fileID: 6093052986773502917, guid: 832477cee95c88c45a07102dbcdd11bd,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6093052986786488603, guid: 832477cee95c88c45a07102dbcdd11bd,
         type: 3}
