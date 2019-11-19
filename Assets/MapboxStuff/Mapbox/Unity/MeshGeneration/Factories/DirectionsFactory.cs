@@ -34,7 +34,9 @@ namespace Mapbox.Unity.MeshGeneration.Factories
 		private Directions _directions;
 		private int _counter;
 
-        GameObject _directionsGO;
+        //Render on AR
+       // GameObject _directionsGO;
+        //Render on Map
         GameObject _directionsGOMap;
         private bool _recalculateNext;
 
@@ -129,41 +131,41 @@ namespace Mapbox.Unity.MeshGeneration.Factories
 				mod.Run(feat, meshData, _map.WorldRelativeScale);
 			}
 
-			CreateGameObject(meshData);
+			//CreateGameObject(meshData);
             CreateGameObjectMap(meshData);
         }
 
         //Render on AR
-        GameObject CreateGameObject(MeshData data)
-        {
-            if (_directionsGO != null)
-            {
-                _directionsGO.Destroy();
-            }
-            _directionsGO = new GameObject("direction_waypoint_" + "entity_AR");
-            var mesh = _directionsGO.AddComponent<MeshFilter>().mesh;
-            mesh.subMeshCount = data.Triangles.Count;
+        //GameObject CreateGameObject(MeshData data)
+        //{
+        //    if (_directionsGO != null)
+        //    {
+        //        _directionsGO.Destroy();
+        //    }
+        //    _directionsGO = new GameObject("direction_waypoint_" + "entity_AR");
+        //    var mesh = _directionsGO.AddComponent<MeshFilter>().mesh;
+        //    mesh.subMeshCount = data.Triangles.Count;
 
-            mesh.SetVertices(data.Vertices);
-            _counter = data.Triangles.Count;
-            for (int i = 0; i < _counter; i++)
-            {
-                var triangle = data.Triangles[i];
-                mesh.SetTriangles(triangle, i);
-            }
+        //    mesh.SetVertices(data.Vertices);
+        //    _counter = data.Triangles.Count;
+        //    for (int i = 0; i < _counter; i++)
+        //    {
+        //        var triangle = data.Triangles[i];
+        //        mesh.SetTriangles(triangle, i);
+        //    }
 
-            _counter = data.UV.Count;
-            for (int i = 0; i < _counter; i++)
-            {
-                var uv = data.UV[i];
-                mesh.SetUVs(i, uv);
-            }
+        //    _counter = data.UV.Count;
+        //    for (int i = 0; i < _counter; i++)
+        //    {
+        //        var uv = data.UV[i];
+        //        mesh.SetUVs(i, uv);
+        //    }
 
-            mesh.RecalculateNormals();
-            _directionsGO.AddComponent<MeshRenderer>().material = _material;
-            //_directionsGO.layer = 12;
-            return _directionsGO;
-        }
+        //    mesh.RecalculateNormals();
+        //    _directionsGO.AddComponent<MeshRenderer>().material = _material;
+        //    //_directionsGO.layer = 12;
+        //    return _directionsGO;
+        //}
 
         //Render on the Map
         GameObject CreateGameObjectMap(MeshData data)
