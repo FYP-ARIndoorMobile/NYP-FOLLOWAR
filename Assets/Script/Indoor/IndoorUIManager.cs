@@ -103,7 +103,7 @@ public class IndoorUIManager : MonoBehaviour
                 destinationManager.Reset();
                 destinationManager.Reset2();
 
-                destinationManager.TogglePointOfInterets();
+                destinationManager.FindNearestPOI();
                 break;
             case "Reset":
                 break;
