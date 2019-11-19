@@ -60,6 +60,7 @@ public class Augenttedmage : MonoBehaviour
                     roomInput.interactable = true;
                     IndoorCanvas.SetDestinationManager(arObj.GetComponentInChildren<DestinationManager>());
                     IndoorCanvas.Calibrated.SetActive(true);
+                    lockArObj = true;
 
                     //if (image.Name == "15")
                     //{

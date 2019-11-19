@@ -48,6 +48,8 @@ public class DestinationManager : BaseButtonController
             endPointObj.transform.Rotate(0, 180, 0);
             endPointObj.transform.rotation = Quaternion.Euler(0, endPointObj.transform.rotation.eulerAngles.y, 0);
             //endPointObj.transform.LookAt(rootG.target);
+
+            DebugUIManager.instance.UpdatingDebugLog(Vector3.Distance(DebugUIManager.instance.FirstPersonCamera.transform.position, endPointObj.transform.position).ToString());
         }
 
     }
