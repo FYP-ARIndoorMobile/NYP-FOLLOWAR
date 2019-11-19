@@ -772,6 +772,7 @@ GameObject:
   - component: {fileID: 2011603397188496329}
   - component: {fileID: 3216964733839259795}
   - component: {fileID: 6477261973816680036}
+  - component: {fileID: 4594067392545252001}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -875,19 +876,31 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 83279655838789132}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 4594067392545252001}
+        m_MethodName: ChangeScenes
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &4594067392545252001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669372561288436279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 794ec0c1fcfd1a54ca7ebc8682b0eb19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1001605554045383170
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,7 +935,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.49998856, y: -23.4}
+  m_AnchoredPosition: {x: 0.49998856, y: -27.9}
   m_SizeDelta: {x: 980, y: 1796.8212}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5371321619360141628
@@ -966,9 +979,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'do you want to stay on
-
-    this screen?'
+  m_Text: "do you want to go\n to the main menu\nthis screen?"
 --- !u!1 &1136002820041876218
 GameObject:
   m_ObjectHideFlags: 0
@@ -4282,6 +4293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Calibrated: {fileID: 8547580669373343211}
   Invalid: {fileID: 459878467122147174}
+  Reached: {fileID: 83279655838789132}
 --- !u!1 &6458820058727634729
 GameObject:
   m_ObjectHideFlags: 0

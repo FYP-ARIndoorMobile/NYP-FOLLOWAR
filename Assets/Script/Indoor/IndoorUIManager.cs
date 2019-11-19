@@ -26,6 +26,7 @@ public class IndoorUIManager : MonoBehaviour
 
     public GameObject Calibrated;
     public GameObject Invalid;
+    public GameObject Reached;
     //public float PopSpeed = 4.0f;
 
     // Start is called before the first frame update

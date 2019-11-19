@@ -24,8 +24,6 @@ public class Augenttedmage : MonoBehaviour
     private float spawnPointRotation;
 
     [SerializeField] private Button roomInput;
-    [SerializeField] private IndoorUIManager IndoorCanvas;
-
     public IndoorUIManager IndoorUI;
 
     void Update()
@@ -58,8 +56,8 @@ public class Augenttedmage : MonoBehaviour
                     spawnPointRotation = SpawnAt(image.Name, anchor);
 
                     roomInput.interactable = true;
-                    IndoorCanvas.SetDestinationManager(arObj.GetComponentInChildren<DestinationManager>());
-                    IndoorCanvas.Calibrated.SetActive(true);
+                    IndoorUI.SetDestinationManager(arObj.GetComponentInChildren<DestinationManager>());
+                    IndoorUI.Calibrated.SetActive(true);
                     lockArObj = true;
 
                     //if (image.Name == "15")

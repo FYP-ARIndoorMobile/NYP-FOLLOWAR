@@ -22,7 +22,8 @@ public class DestinationManager : BaseButtonController
 
     [SerializeField] private GameObject[] spawnPoints;
 
-    public IndoorUIManager IndoorUI;  
+    public IndoorUIManager IndoorUI;
+    private bool reachedMsgPlayed;
     void Start()
     {
         rootG = line.GetComponent<meshLine>();
@@ -48,8 +49,12 @@ public class DestinationManager : BaseButtonController
             endPointObj.transform.Rotate(0, 180, 0);
             endPointObj.transform.rotation = Quaternion.Euler(0, endPointObj.transform.rotation.eulerAngles.y, 0);
             //endPointObj.transform.LookAt(rootG.target);
-
-            DebugUIManager.instance.UpdatingDebugLog(Vector3.Distance(DebugUIManager.instance.FirstPersonCamera.transform.position, endPointObj.transform.position).ToString());
+            
+            if (Vector3.Distance(DebugUIManager.instance.FirstPersonCamera.transform.position, endPointObj.transform.position) < 3 && reachedMsgPlayed == false)
+            {
+                IndoorUI.Reached.SetActive(true);
+                reachedMsgPlayed = true;
+            }
         }
 
     }
