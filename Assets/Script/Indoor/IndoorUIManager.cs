@@ -99,7 +99,7 @@ public class IndoorUIManager : MonoBehaviour
             case "Room Input":
                 RoomInput();            
                 break;
-            case "Info":
+            case "Toilet":
                 destinationManager.Reset();
                 destinationManager.Reset2();
 

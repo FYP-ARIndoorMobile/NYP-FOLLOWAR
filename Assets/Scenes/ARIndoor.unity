@@ -163,7 +163,6 @@ MonoBehaviour:
   bufferDist: 0.1
   bufferAngle: 15
   roomInput: {fileID: 1750320381}
-  IndoorCanvas: {fileID: 1750320379}
   IndoorUI: {fileID: 1750320379}
 --- !u!20 &587942381 stripped
 Camera:
@@ -615,6 +614,46 @@ PrefabInstance:
     - target: {fileID: 3636167260320614523, guid: a0ebf6cdd41ea4a41aa17bd4790059da,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247371495132789848, guid: a0ebf6cdd41ea4a41aa17bd4790059da,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 224.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8547580669373343211, guid: a0ebf6cdd41ea4a41aa17bd4790059da,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5441494195060124784, guid: a0ebf6cdd41ea4a41aa17bd4790059da,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620692658067574409, guid: a0ebf6cdd41ea4a41aa17bd4790059da,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013154165720294068, guid: a0ebf6cdd41ea4a41aa17bd4790059da,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6324078699705537388, guid: a0ebf6cdd41ea4a41aa17bd4790059da,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820773086169928885, guid: a0ebf6cdd41ea4a41aa17bd4790059da,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 210449401282568411, guid: a0ebf6cdd41ea4a41aa17bd4790059da,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
