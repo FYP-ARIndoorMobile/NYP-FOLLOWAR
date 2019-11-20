@@ -31,6 +31,8 @@ public class DestinationManager : BaseButtonController
         {
             interestPoint.SetActive(false);
         }
+
+        Controller.transform.position += new Vector3(3,0,3);
     }
 
 
