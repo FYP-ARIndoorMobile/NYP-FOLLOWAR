@@ -26,6 +26,7 @@ public class IndoorUIManager : MonoBehaviour
 
     public GameObject Calibrated;
     public GameObject Invalid;
+    public GameObject Reached;
     //public float PopSpeed = 4.0f;
 
     // Start is called before the first frame update
@@ -98,11 +99,11 @@ public class IndoorUIManager : MonoBehaviour
             case "Room Input":
                 RoomInput();            
                 break;
-            case "Info":
+            case "Toilet":
                 destinationManager.Reset();
                 destinationManager.Reset2();
 
-                destinationManager.TogglePointOfInterets();
+                destinationManager.FindNearestPOI();
                 break;
             case "Reset":
                 break;

@@ -33,7 +33,7 @@ public class SetTriggers : MonoBehaviour
             //}
            // _GameObjectPrefab.SetActive(true);
             _directionPanel.SetActive(true);
-            Debug.Log("TOuchy touch");
+           // Debug.Log("TOuchy touch");
         }
     }
     void OnTriggerStay(Collider other)

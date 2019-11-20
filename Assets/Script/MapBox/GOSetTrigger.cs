@@ -32,11 +32,11 @@ public class GOSetTrigger : MonoBehaviour
         if (PlayerPrefs.GetFloat("VibVolume") == 1)
         {
             _vibrate.Vibrate();
-            Debug.Log("Vibrate");
+            //Debug.Log("Vibrate");
         }
         else
         {
-            Debug.Log("Dont Vibrate");
+            //Debug.Log("Dont Vibrate");
         }
     }
     void OnTriggerEnter(Collider other)
