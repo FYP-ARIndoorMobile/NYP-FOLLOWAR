@@ -8,13 +8,6 @@ public class IndoorUIManager : MonoBehaviour
 {
     private IndoorUIComponent[] indoorUIComponents;
 
-    private Vector3 LevelsUIPos, Level1UIPos, Level2UIPos, Level3UIPos, Level4UIPos;
-    private bool LevelsStatus;
-    private IndoorUIComponent LevelsUI, Level1UI, Level2UI, Level3UI, Level4UI;
-
-    
-    private TouchScreenKeyboard keyboard;
-
     private IndoorUIComponent InputBoxUI, RoomInputUI, CancelUI, OkayUI, InfoUI, ToiletUI;
 
     private DestinationManager destinationManager;
@@ -34,27 +27,6 @@ public class IndoorUIManager : MonoBehaviour
     {
         //Store all UI components
         indoorUIComponents = GetComponentsInChildren<IndoorUIComponent>();
-        //rootController2 = Controller2.GetComponent<RootController>();
-
-        //Store Level objects
-        //LevelsUI = GetUIComponent("Levels");
-        //Level1UI = GetUIComponent("Level 1");
-        //Level2UI = GetUIComponent("Level 2");
-        //Level3UI = GetUIComponent("Level 3");
-        //Level4UI = GetUIComponent("Level 4");
-
-        //Store end posiitons
-        //LevelsUIPos = LevelsUI.transform.position;
-        //Level1UIPos = Level1UI.transform.position;
-        //Level2UIPos = Level2UI.transform.position;
-        //Level3UIPos = Level3UI.transform.position;
-        //Level4UIPos = Level4UI.transform.position;
-
-        //Set position to start position
-        //Level1UI.transform.position = LevelsUI.transform.position;
-        //Level2UI.transform.position = LevelsUI.transform.position;
-        //Level3UI.transform.position = LevelsUI.transform.position;
-        //Level4UI.transform.position = LevelsUI.transform.position;
 
         InputBoxUI = GetUIComponent("Input Box");
         RoomInputUI = GetUIComponent("Room Input");
@@ -81,9 +53,6 @@ public class IndoorUIManager : MonoBehaviour
         DebugUIManager.instance.DebugLog(obj.name);
         switch (obj.name)
         {
-            case "Levels":
-                LevelsStatus = !LevelsStatus;
-                break;
             case "Okay":
                 SubmitRoom(RoomInputUI.GetComponent<TMP_InputField>().text);
                 if (InputBoxUI.gameObject.activeSelf == false)
@@ -120,38 +89,6 @@ public class IndoorUIManager : MonoBehaviour
         }
         return null;
     }
-
-    /*
-    private void MovingUI()
-    {
-        if (LevelsStatus == true)
-        {
-            //Move out
-            Level1UI.transform.position = Vector3.Lerp(Level1UI.transform.position, Level1UIPos, Time.deltaTime * PopSpeed);
-            Level2UI.transform.position = Vector3.Lerp(Level2UI.transform.position, Level2UIPos, Time.deltaTime * PopSpeed);
-            Level3UI.transform.position = Vector3.Lerp(Level3UI.transform.position, Level3UIPos, Time.deltaTime * PopSpeed);
-            Level4UI.transform.position = Vector3.Lerp(Level4UI.transform.position, Level4UIPos, Time.deltaTime * PopSpeed);
-        }
-        else
-        {
-            //Move in
-            Level1UI.transform.position = Vector3.Lerp(Level1UI.transform.position, LevelsUIPos, Time.deltaTime * PopSpeed);
-            Level2UI.transform.position = Vector3.Lerp(Level2UI.transform.position, LevelsUIPos, Time.deltaTime * PopSpeed);
-            Level3UI.transform.position = Vector3.Lerp(Level3UI.transform.position, LevelsUIPos, Time.deltaTime * PopSpeed);
-            Level4UI.transform.position = Vector3.Lerp(Level4UI.transform.position, LevelsUIPos, Time.deltaTime * PopSpeed);
-        }
-    }
-    */
-
-    /*
-    private void RoomInput()
-    {
-        if (keyboard == null)
-            keyboard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.NumberPad, false, false, false, false, "Input 3 digit room number", 3);
-        else
-            keyboard = TouchScreenKeyboard.Open(keyboard.text, TouchScreenKeyboardType.NumberPad, false, false, false, false, "Input 3 digit room number", 3);
-    }
-    */
 
     private void RoomInput()
     {
