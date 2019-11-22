@@ -10,7 +10,6 @@ public class Augenttedmage : MonoBehaviour
     [SerializeField] private GameObject ObjPrefab;   
     public GameObject arObj = null;
     [SerializeField] private bool isPlaneHorizontal;
-    private Vector3 PosOffset, RotOffset;
 
     private Anchor anchor;
     private Vector3 lastAnchorPos;
@@ -59,20 +58,6 @@ public class Augenttedmage : MonoBehaviour
                     IndoorUI.SetDestinationManager(arObj.GetComponentInChildren<DestinationManager>());
                     IndoorUI.Calibrated.SetActive(true);
                     lockArObj = true;
-
-                    //if (image.Name == "15")
-                    //{
-                    //    DebugUIManager.instance.DebugLog("15 detected");
-                    //    PosOffset = new Vector3(7.4f, 0, 0);
-                    //    RotOffset = new Vector3(0, 0, 180);
-                    //}
-                    //else if (image.Name == "Cafe")
-                    //{
-                    //    DebugUIManager.instance.DebugLog("Cafe detected");
-                    //    PosOffset = new Vector3(-7, 0, -3);
-                    //    RotOffset = new Vector3(0, 0, 90);
-                    //}
-                    //DebugUIManager.instance.DebugLog("Offset: " + PosOffset.ToString() + RotOffset.ToString());
                 }
                 else
                 {
