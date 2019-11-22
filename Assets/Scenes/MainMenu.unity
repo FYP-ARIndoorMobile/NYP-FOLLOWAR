@@ -1594,7 +1594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &109249526
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3871,7 +3871,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'fact cat '
+  m_Text: "FUn Fact Cat \n- learn about diabetes"
 --- !u!222 &182099411
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15359,7 +15359,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'fact cat '
+  m_Text: "FUn Fact Cat \n- learn about diabetes"
 --- !u!222 &795207138
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17583,7 +17583,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d756f8668e36dae4eb9729d605753ab9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 444bb1d89f75ca14894b239ec48334b8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18880,7 +18880,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d756f8668e36dae4eb9729d605753ab9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 444bb1d89f75ca14894b239ec48334b8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -33886,7 +33886,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 635563782}
+      - m_Target: {fileID: 954415957}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -33897,7 +33897,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1367623335}
+      - m_Target: {fileID: 635563782}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -34792,7 +34792,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: AR CAt
+  m_Text: Be sure to look out for fun fact cat!
 --- !u!222 &1834917781
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -38340,7 +38340,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: AR CAt
+  m_Text: Be sure to look out for fun fact cat!
 --- !u!222 &2004761556
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -39067,7 +39067,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 109249525}
+      - m_Target: {fileID: 724227595}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -39078,7 +39078,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1596346202}
+      - m_Target: {fileID: 109249525}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -39678,7 +39678,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: guide dog
+  m_Text: 'guide dog
+
+    - Giving out direction'
 --- !u!222 &2065977854
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -54006,7 +54008,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: guide dog
+  m_Text: 'guide dog
+
+    - Giving out direction'
 --- !u!222 &2107315200502032561
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -69792,17 +69796,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: PP
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 8155372933673600763}
         m_MethodName: SetActive
         m_Mode: 6
